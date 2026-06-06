@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pod2Swim — Support</title>
+<meta name="description" content="Support and help for Pod2Swim, the iOS app that loads podcasts onto your swim headset.">
+<style>
+  :root {
+    --blue: #1f7ae0;
+    --blue-dark: #0f4c91;
+    --ink: #16202b;
+    --muted: #5b6b7a;
+    --surface: #f4f8fc;
+    --card: #ffffff;
+    --line: rgba(31,122,224,0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  header .drop { font-size: 52px; line-height: 1; }
+  header h1 { margin: 14px 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  header p { margin: 0; opacity: 0.92; font-size: 16px; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  section { margin-bottom: 28px; }
+  h2 {
+    font-size: 13px; font-weight: 800; letter-spacing: 1.4px;
+    text-transform: uppercase; color: var(--blue-dark); margin: 0 0 12px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(15,76,145,0.05);
+  }
+  .faq { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .faq:first-child { padding-top: 0; }
+  .faq:last-child { border-bottom: 0; padding-bottom: 0; }
+  .faq h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+  .faq p { margin: 0; color: var(--muted); font-size: 15px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact a { font-weight: 700; font-size: 18px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="drop">💧</div>
+  <h1>Pod2Swim Support</h1>
+  <p>Podcasts on your swim headset — help &amp; answers</p>
+</header>
+
+<main>
+  <section class="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p style="margin:0 0 8px;">Questions, bugs, or feature ideas? Email us and we'll get back to you.</p>
+      <a href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Getting started</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>What does Pod2Swim do?</h3>
+        <p>It loads podcast episodes onto a Shokz OpenSwim / OpenSwim Pro — or any MP3-player headset that mounts as USB storage — so you can listen while you swim, where Bluetooth doesn't reach. Subscribe, queue episodes, and the app downloads them and copies them straight onto the headset in playback order.</p>
+      </div>
+      <div class="faq">
+        <h3>How do I get episodes onto my headset?</h3>
+        <p>Subscribe to a podcast, add the episodes you want to the <strong>Queue</strong>, and wait for them to finish downloading (each row shows its status). Plug the headset into your iPhone with a USB‑C or Lightning adapter, open the Queue tab, and tap <strong>Export</strong>. The first time, pick the headset's folder in the Files picker — the app remembers it after that.</p>
+      </div>
+      <div class="faq">
+        <h3>What do I need?</h3>
+        <p>An iPhone running iOS 17 or later, an internet connection for downloads, and a USB‑C or Lightning adapter so the headset shows up as readable storage in the Files picker.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Using the app</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>Replace All vs. Add to End — what's the difference?</h3>
+        <p><strong>Replace All</strong> deletes the audio files already on the headset and writes a fresh playlist from your queue. <strong>Add to End</strong> keeps what's there and appends your queue after it. You're asked each time, with a "don't ask again" option that remembers your choice.</p>
+      </div>
+      <div class="faq">
+        <h3>Why don't my episodes play in the right order?</h3>
+        <p>OpenSwim Pro plays files in the order they were transmitted, which maps to their file timestamps. Pod2Swim stamps each exported file in ascending order by queue position, so position 1 plays first. If order still looks wrong, re-export with <strong>Replace All</strong> so the headset starts from a clean set.</p>
+      </div>
+      <div class="faq">
+        <h3>Can I speed up playback?</h3>
+        <p>Yes. Each podcast has a speed setting from 0.75× to 2.5×. When an episode downloads, it's processed into a sped‑up file with the pitch preserved, and that's what gets exported. Set the default for new subscriptions in Settings, or override it per podcast in the Library.</p>
+      </div>
+      <div class="faq">
+        <h3>The headset isn't detected when I tap Export or Scan.</h3>
+        <p>Make sure the headset is plugged in and powered on, and that it appears under "Locations" in the Files app. If the saved folder can't be reached, the app falls back to the Files picker — re‑select the headset's folder there. Some adapters need to be seated firmly; try reconnecting the cable.</p>
+      </div>
+      <div class="faq">
+        <h3>How do I free up storage?</h3>
+        <p>Removing an episode from the queue deletes its downloaded files. Settings shows total downloaded storage with a <strong>Delete All Downloads</strong> button, and an auto‑delete window that removes exported files a set number of days after export (7 days by default).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <div class="card">
+      <p style="margin:0;">Pod2Swim collects no personal data — no account, no analytics, no ads. Everything stays on your device. Read the full <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Pod2Swim · Support · <a href="privacy.html">Privacy Policy</a>
+</footer>
+</body>
+</html>
