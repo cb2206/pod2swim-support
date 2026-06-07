@@ -1,0 +1,90 @@
+{
+  "languageName": "Français",
+  "support": {
+    "title": "Pod2Swim — Assistance",
+    "metaDesc": "Assistance et aide pour Pod2Swim, l'app iOS qui charge des podcasts sur ton casque de natation.",
+    "headerTitle": "Assistance Pod2Swim",
+    "headerSubtitle": "Des podcasts sur ton casque de natation — aide et réponses",
+    "contactH": "Contact",
+    "contactText": "Des questions, des bugs ou des idées de fonctionnalités ? Écris-nous et nous te répondrons.",
+    "gettingStartedH": "Premiers pas",
+    "gettingStarted": [
+      {
+        "q": "Que fait Pod2Swim ?",
+        "a": "Il charge des épisodes de podcast sur un Shokz OpenSwim / OpenSwim Pro — ou n'importe quel casque lecteur MP3 qui se monte comme un stockage USB — pour que tu puisses écouter pendant que tu nages, là où le Bluetooth ne passe pas. Abonne-toi, mets des épisodes en file d'attente, et l'app les télécharge puis les copie directement sur le casque dans l'ordre de lecture."
+      },
+      {
+        "q": "Comment mettre des épisodes sur mon casque ?",
+        "a": "Abonne-toi à un podcast, ajoute les épisodes que tu veux à la <strong>File d'attente</strong>, et attends qu'ils finissent de se télécharger (chaque ligne indique son état). Branche le casque sur ton iPhone avec un adaptateur USB‑C ou Lightning, ouvre l'onglet File d'attente et touche <strong>Envoyer vers le casque</strong>. La première fois, sélectionne le dossier du casque dans le sélecteur Fichiers — l'app le mémorise ensuite."
+      },
+      {
+        "q": "De quoi ai-je besoin ?",
+        "a": "Un iPhone sous iOS 17 ou version ultérieure, une connexion internet pour les téléchargements, et un adaptateur USB‑C ou Lightning pour que le casque apparaisse comme un stockage lisible dans le sélecteur Fichiers."
+      }
+    ],
+    "usingH": "Utiliser l'app",
+    "using": [
+      {
+        "q": "Tout remplacer ou Ajouter à la fin — quelle différence ?",
+        "a": "<strong>Tout remplacer</strong> supprime les fichiers audio déjà présents sur le casque et écrit une nouvelle playlist à partir de ta file d'attente. <strong>Ajouter à la fin</strong> conserve ce qui est là et ajoute ta file d'attente à la suite. On te demande à chaque fois, avec une option « ne plus me demander » qui mémorise ton choix."
+      },
+      {
+        "q": "Pourquoi mes épisodes ne se lisent-ils pas dans le bon ordre ?",
+        "a": "L'OpenSwim Pro lit les fichiers dans l'ordre où ils ont été transmis, ce qui correspond à leurs horodatages de fichier. Pod2Swim horodate chaque fichier exporté dans l'ordre croissant selon la position dans la file d'attente, donc la position 1 se lit en premier. Si l'ordre semble toujours erroné, réexporte avec <strong>Tout remplacer</strong> pour que le casque reparte d'un jeu propre."
+      },
+      {
+        "q": "Puis-je accélérer la lecture ?",
+        "a": "Oui. Chaque podcast a un réglage de vitesse de 0,75× à 2,5×. Lorsqu'un épisode se télécharge, il est traité en un fichier accéléré avec la hauteur de son préservée, et c'est lui qui est exporté. Définis la valeur par défaut pour les nouveaux abonnements dans les Réglages, ou modifie-la par podcast dans la Bibliothèque."
+      },
+      {
+        "q": "Le casque n'est pas détecté quand je touche Envoyer ou Analyser.",
+        "a": "Assure-toi que le casque est branché et allumé, et qu'il apparaît sous « Emplacements » dans l'app Fichiers. Si le dossier enregistré est inaccessible, l'app bascule vers le sélecteur Fichiers — re‑sélectionne le dossier du casque à cet endroit. Certains adaptateurs doivent être bien enfoncés ; essaie de rebrancher le câble."
+      },
+      {
+        "q": "Comment libérer de l'espace de stockage ?",
+        "a": "Retirer un épisode de la file d'attente supprime ses fichiers téléchargés. Les Réglages affichent le stockage total téléchargé avec un bouton <strong>Supprimer tous les téléchargements</strong>, ainsi qu'un délai de suppression automatique qui efface les fichiers exportés un certain nombre de jours après l'export (7 jours par défaut)."
+      }
+    ],
+    "privacyH": "Confidentialité",
+    "privacyBlurb": "Pod2Swim ne collecte aucune donnée personnelle — pas de compte, pas d'analytique, pas de publicité. Tout reste sur ton appareil. Lis la <a href=\"privacy.html\">politique de confidentialité</a> complète.",
+    "footer": "Pod2Swim · Assistance · <a href=\"privacy.html\">Politique de confidentialité</a>"
+  },
+  "privacy": {
+    "title": "Pod2Swim — Politique de confidentialité",
+    "metaDesc": "Politique de confidentialité de Pod2Swim. L'app ne collecte aucune donnée personnelle.",
+    "headerTitle": "Politique de confidentialité",
+    "headerSub": "Pod2Swim · Dernière mise à jour : 6 juin 2026",
+    "back": "← Retour à l'assistance",
+    "sections": [
+      {
+        "h2": "En bref",
+        "body": "<p>Pod2Swim ne collecte, ne stocke ni ne transmet aucune donnée personnelle. L'app n'a pas de système de compte, pas d'analytique et pas de publicité.</p>"
+      },
+      {
+        "h2": "Ce qui reste sur ton appareil",
+        "body": "<p>Tout ce que l'app crée — tes abonnements aux podcasts, ta file d'attente d'export et l'audio qu'elle télécharge — est stocké localement sur ton iPhone et ne le quitte jamais sauf si tu le décides (par exemple, lorsque tu copies des épisodes sur ton propre casque).</p>"
+      },
+      {
+        "h2": "Requêtes réseau",
+        "body": "<p>L'app effectue des requêtes réseau uniquement pour :</p><ul><li>Rechercher dans l'annuaire public Apple Podcasts lorsque tu cherches un podcast auquel t'abonner.</li><li>Récupérer les flux RSS des podcasts auxquels tu t'abonnes.</li><li>Télécharger les épisodes que tu ajoutes à ta file d'attente.</li></ul><p>Ces requêtes vont directement vers ces serveurs tiers (Apple et les hébergeurs de podcasts). Aucune donnée ne transite par un serveur exploité par le développeur, car un tel serveur n'existe pas.</p>"
+      },
+      {
+        "h2": "Contenu tiers",
+        "body": "<p>Les flux et les épisodes de podcasts sont fournis par des tiers et sont soumis à leurs propres pratiques de confidentialité. Pod2Swim ne récupère que le contenu que tu choisis ; il ne partage aucune information te concernant avec eux au-delà de ce qui est techniquement nécessaire pour effectuer la requête.</p>"
+      },
+      {
+        "h2": "Confidentialité des enfants",
+        "body": "<p>Pod2Swim ne collecte sciemment aucune information auprès de quiconque, y compris les enfants.</p>"
+      },
+      {
+        "h2": "Modifications",
+        "body": "<p>Si cette politique change, la version mise à jour sera publiée sur cette page avec une nouvelle date de « dernière mise à jour ».</p>"
+      },
+      {
+        "h2": "Contact",
+        "body": "<p>Des questions sur la confidentialité ? Écris à <a href=\"mailto:pod2swim@cbgroup.global\">pod2swim@cbgroup.global</a>.</p>"
+      }
+    ],
+    "footer": "Pod2Swim · <a href=\"index.html\">Assistance</a> · Politique de confidentialité"
+  }
+}

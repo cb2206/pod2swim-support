@@ -52,14 +52,28 @@
   a:hover { text-decoration: underline; }
   .contact a { font-weight: 700; font-size: 18px; }
   footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+  .langbar { background: var(--card); border-bottom: 1px solid var(--line);
+    text-align: center; padding: 10px 16px; font-size: 13px; }
+  .langbar a { margin: 0 7px; color: var(--muted); white-space: nowrap; }
+  .langbar a.active { color: var(--blue-dark); font-weight: 700; }
 </style>
 </head>
 <body>
 <header>
   <div class="drop">💧</div>
   <h1>Pod2Swim Support</h1>
-  <p>Podcasts on your swim headset — help &amp; answers</p>
+  <p>Podcasts on your swim headset — help & answers</p>
 </header>
+<nav class="langbar">
+  <a href="index.html" class="active">English</a>
+  <a href="de/index.html">Deutsch</a>
+  <a href="es/index.html">Español</a>
+  <a href="fr/index.html">Français</a>
+  <a href="it/index.html">Italiano</a>
+  <a href="ja/index.html">日本語</a>
+  <a href="pt-br/index.html">Português</a>
+  <a href="zh-hans/index.html">简体中文</a>
+</nav>
 
 <main>
   <section class="contact">

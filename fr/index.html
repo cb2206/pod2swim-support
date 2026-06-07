@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pod2Swim — Assistance</title>
+<meta name="description" content="Assistance et aide pour Pod2Swim, l'app iOS qui charge des podcasts sur ton casque de natation.">
+<style>
+  :root {
+    --blue: #1f7ae0;
+    --blue-dark: #0f4c91;
+    --ink: #16202b;
+    --muted: #5b6b7a;
+    --surface: #f4f8fc;
+    --card: #ffffff;
+    --line: rgba(31,122,224,0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  header .drop { font-size: 52px; line-height: 1; }
+  header h1 { margin: 14px 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  header p { margin: 0; opacity: 0.92; font-size: 16px; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  section { margin-bottom: 28px; }
+  h2 {
+    font-size: 13px; font-weight: 800; letter-spacing: 1.4px;
+    text-transform: uppercase; color: var(--blue-dark); margin: 0 0 12px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(15,76,145,0.05);
+  }
+  .faq { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .faq:first-child { padding-top: 0; }
+  .faq:last-child { border-bottom: 0; padding-bottom: 0; }
+  .faq h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+  .faq p { margin: 0; color: var(--muted); font-size: 15px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact a { font-weight: 700; font-size: 18px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+  .langbar { background: var(--card); border-bottom: 1px solid var(--line);
+    text-align: center; padding: 10px 16px; font-size: 13px; }
+  .langbar a { margin: 0 7px; color: var(--muted); white-space: nowrap; }
+  .langbar a.active { color: var(--blue-dark); font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <div class="drop">💧</div>
+  <h1>Assistance Pod2Swim</h1>
+  <p>Des podcasts sur ton casque de natation — aide et réponses</p>
+</header>
+<nav class="langbar">
+  <a href="../index.html">English</a>
+  <a href="../de/index.html">Deutsch</a>
+  <a href="../es/index.html">Español</a>
+  <a href="../fr/index.html" class="active">Français</a>
+  <a href="../it/index.html">Italiano</a>
+  <a href="../ja/index.html">日本語</a>
+  <a href="../pt-br/index.html">Português</a>
+  <a href="../zh-hans/index.html">简体中文</a>
+</nav>
+
+<main>
+  <section class="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p style="margin:0 0 8px;">Des questions, des bugs ou des idées de fonctionnalités ? Écris-nous et nous te répondrons.</p>
+      <a href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Premiers pas</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>Que fait Pod2Swim ?</h3>
+        <p>Il charge des épisodes de podcast sur un Shokz OpenSwim / OpenSwim Pro — ou n'importe quel casque lecteur MP3 qui se monte comme un stockage USB — pour que tu puisses écouter pendant que tu nages, là où le Bluetooth ne passe pas. Abonne-toi, mets des épisodes en file d'attente, et l'app les télécharge puis les copie directement sur le casque dans l'ordre de lecture.</p>
+      </div>
+      <div class="faq">
+        <h3>Comment mettre des épisodes sur mon casque ?</h3>
+        <p>Abonne-toi à un podcast, ajoute les épisodes que tu veux à la <strong>File d'attente</strong>, et attends qu'ils finissent de se télécharger (chaque ligne indique son état). Branche le casque sur ton iPhone avec un adaptateur USB‑C ou Lightning, ouvre l'onglet File d'attente et touche <strong>Envoyer vers le casque</strong>. La première fois, sélectionne le dossier du casque dans le sélecteur Fichiers — l'app le mémorise ensuite.</p>
+      </div>
+      <div class="faq">
+        <h3>De quoi ai-je besoin ?</h3>
+        <p>Un iPhone sous iOS 17 ou version ultérieure, une connexion internet pour les téléchargements, et un adaptateur USB‑C ou Lightning pour que le casque apparaisse comme un stockage lisible dans le sélecteur Fichiers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Utiliser l'app</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>Tout remplacer ou Ajouter à la fin — quelle différence ?</h3>
+        <p><strong>Tout remplacer</strong> supprime les fichiers audio déjà présents sur le casque et écrit une nouvelle playlist à partir de ta file d'attente. <strong>Ajouter à la fin</strong> conserve ce qui est là et ajoute ta file d'attente à la suite. On te demande à chaque fois, avec une option « ne plus me demander » qui mémorise ton choix.</p>
+      </div>
+      <div class="faq">
+        <h3>Pourquoi mes épisodes ne se lisent-ils pas dans le bon ordre ?</h3>
+        <p>L'OpenSwim Pro lit les fichiers dans l'ordre où ils ont été transmis, ce qui correspond à leurs horodatages de fichier. Pod2Swim horodate chaque fichier exporté dans l'ordre croissant selon la position dans la file d'attente, donc la position 1 se lit en premier. Si l'ordre semble toujours erroné, réexporte avec <strong>Tout remplacer</strong> pour que le casque reparte d'un jeu propre.</p>
+      </div>
+      <div class="faq">
+        <h3>Puis-je accélérer la lecture ?</h3>
+        <p>Oui. Chaque podcast a un réglage de vitesse de 0,75× à 2,5×. Lorsqu'un épisode se télécharge, il est traité en un fichier accéléré avec la hauteur de son préservée, et c'est lui qui est exporté. Définis la valeur par défaut pour les nouveaux abonnements dans les Réglages, ou modifie-la par podcast dans la Bibliothèque.</p>
+      </div>
+      <div class="faq">
+        <h3>Le casque n'est pas détecté quand je touche Envoyer ou Analyser.</h3>
+        <p>Assure-toi que le casque est branché et allumé, et qu'il apparaît sous « Emplacements » dans l'app Fichiers. Si le dossier enregistré est inaccessible, l'app bascule vers le sélecteur Fichiers — re‑sélectionne le dossier du casque à cet endroit. Certains adaptateurs doivent être bien enfoncés ; essaie de rebrancher le câble.</p>
+      </div>
+      <div class="faq">
+        <h3>Comment libérer de l'espace de stockage ?</h3>
+        <p>Retirer un épisode de la file d'attente supprime ses fichiers téléchargés. Les Réglages affichent le stockage total téléchargé avec un bouton <strong>Supprimer tous les téléchargements</strong>, ainsi qu'un délai de suppression automatique qui efface les fichiers exportés un certain nombre de jours après l'export (7 jours par défaut).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Confidentialité</h2>
+    <div class="card">
+      <p style="margin:0;">Pod2Swim ne collecte aucune donnée personnelle — pas de compte, pas d'analytique, pas de publicité. Tout reste sur ton appareil. Lis la <a href="privacy.html">politique de confidentialité</a> complète.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Pod2Swim · Assistance · <a href="privacy.html">Politique de confidentialité</a>
+</footer>
+</body>
+</html>

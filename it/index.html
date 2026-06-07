@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pod2Swim — Assistenza</title>
+<meta name="description" content="Assistenza e aiuto per Pod2Swim, l'app iOS che carica i podcast sui tuoi auricolari da nuoto.">
+<style>
+  :root {
+    --blue: #1f7ae0;
+    --blue-dark: #0f4c91;
+    --ink: #16202b;
+    --muted: #5b6b7a;
+    --surface: #f4f8fc;
+    --card: #ffffff;
+    --line: rgba(31,122,224,0.12);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--surface);
+    line-height: 1.55;
+  }
+  header {
+    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff;
+    padding: 56px 20px 48px;
+    text-align: center;
+  }
+  header .drop { font-size: 52px; line-height: 1; }
+  header h1 { margin: 14px 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
+  header p { margin: 0; opacity: 0.92; font-size: 16px; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  section { margin-bottom: 28px; }
+  h2 {
+    font-size: 13px; font-weight: 800; letter-spacing: 1.4px;
+    text-transform: uppercase; color: var(--blue-dark); margin: 0 0 12px;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 16px; padding: 22px 24px;
+    box-shadow: 0 1px 3px rgba(15,76,145,0.05);
+  }
+  .faq { border-bottom: 1px solid var(--line); padding: 16px 0; }
+  .faq:first-child { padding-top: 0; }
+  .faq:last-child { border-bottom: 0; padding-bottom: 0; }
+  .faq h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
+  .faq p { margin: 0; color: var(--muted); font-size: 15px; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .contact a { font-weight: 700; font-size: 18px; }
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
+  .langbar { background: var(--card); border-bottom: 1px solid var(--line);
+    text-align: center; padding: 10px 16px; font-size: 13px; }
+  .langbar a { margin: 0 7px; color: var(--muted); white-space: nowrap; }
+  .langbar a.active { color: var(--blue-dark); font-weight: 700; }
+</style>
+</head>
+<body>
+<header>
+  <div class="drop">💧</div>
+  <h1>Assistenza Pod2Swim</h1>
+  <p>Podcast sui tuoi auricolari da nuoto — aiuto e risposte</p>
+</header>
+<nav class="langbar">
+  <a href="../index.html">English</a>
+  <a href="../de/index.html">Deutsch</a>
+  <a href="../es/index.html">Español</a>
+  <a href="../fr/index.html">Français</a>
+  <a href="../it/index.html" class="active">Italiano</a>
+  <a href="../ja/index.html">日本語</a>
+  <a href="../pt-br/index.html">Português</a>
+  <a href="../zh-hans/index.html">简体中文</a>
+</nav>
+
+<main>
+  <section class="contact">
+    <h2>Contatti</h2>
+    <div class="card">
+      <p style="margin:0 0 8px;">Domande, bug o idee per nuove funzioni? Scrivici e ti risponderemo.</p>
+      <a href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Per iniziare</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>Cosa fa Pod2Swim?</h3>
+        <p>Carica gli episodi dei podcast su uno Shokz OpenSwim / OpenSwim Pro — o su qualsiasi auricolare lettore MP3 che si monta come memoria USB — così puoi ascoltare mentre nuoti, dove il Bluetooth non arriva. Iscriviti, metti gli episodi in coda e l'app li scarica e li copia direttamente sugli auricolari nell'ordine di riproduzione.</p>
+      </div>
+      <div class="faq">
+        <h3>Come metto gli episodi sui miei auricolari?</h3>
+        <p>Iscriviti a un podcast, aggiungi gli episodi che vuoi alla <strong>Coda</strong> e aspetta che finiscano di scaricarsi (ogni riga mostra il proprio stato). Collega gli auricolari al tuo iPhone con un adattatore USB‑C o Lightning, apri la scheda Coda e tocca <strong>Invia agli auricolari</strong>. La prima volta, scegli la cartella degli auricolari nel selettore File — dopodiché l'app la ricorderà.</p>
+      </div>
+      <div class="faq">
+        <h3>Cosa mi serve?</h3>
+        <p>Un iPhone con iOS 17 o versione successiva, una connessione a internet per i download e un adattatore USB‑C o Lightning affinché gli auricolari compaiano come memoria leggibile nel selettore File.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Usare l'app</h2>
+    <div class="card">
+      <div class="faq">
+        <h3>Sostituisci tutto vs. Aggiungi alla fine — qual è la differenza?</h3>
+        <p><strong>Sostituisci tutto</strong> elimina i file audio già presenti sugli auricolari e scrive una nuova playlist a partire dalla tua coda. <strong>Aggiungi alla fine</strong> mantiene ciò che c'è e accoda i tuoi episodi dopo. Ti viene chiesto ogni volta, con un'opzione "non chiedere più" che ricorda la tua scelta.</p>
+      </div>
+      <div class="faq">
+        <h3>Perché i miei episodi non si riproducono nell'ordine giusto?</h3>
+        <p>OpenSwim Pro riproduce i file nell'ordine in cui sono stati trasmessi, che corrisponde ai timestamp dei file. Pod2Swim assegna a ogni file esportato un timestamp crescente in base alla posizione in coda, così la posizione 1 viene riprodotta per prima. Se l'ordine sembra ancora sbagliato, riesporta con <strong>Sostituisci tutto</strong> così gli auricolari ripartono da un set pulito.</p>
+      </div>
+      <div class="faq">
+        <h3>Posso velocizzare la riproduzione?</h3>
+        <p>Sì. Ogni podcast ha un'impostazione di velocità da 0,75× a 2,5×. Quando un episodio viene scaricato, viene elaborato in un file accelerato mantenendo il tono, ed è questo che viene esportato. Imposta il valore predefinito per le nuove iscrizioni in Impostazioni, oppure modificalo per ogni podcast nella Libreria.</p>
+      </div>
+      <div class="faq">
+        <h3>Gli auricolari non vengono rilevati quando tocco Invia agli auricolari o Scansiona.</h3>
+        <p>Assicurati che gli auricolari siano collegati e accesi e che compaiano sotto "Posizioni" nell'app File. Se la cartella salvata non è raggiungibile, l'app torna al selettore File — riseleziona lì la cartella degli auricolari. Alcuni adattatori devono essere inseriti bene; prova a ricollegare il cavo.</p>
+      </div>
+      <div class="faq">
+        <h3>Come libero spazio di archiviazione?</h3>
+        <p>Rimuovendo un episodio dalla coda ne vengono eliminati i file scaricati. Impostazioni mostra lo spazio totale scaricato con un pulsante <strong>Elimina tutti i download</strong> e un intervallo di eliminazione automatica che rimuove i file esportati un certo numero di giorni dopo l'esportazione (7 giorni per impostazione predefinita).</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Privacy</h2>
+    <div class="card">
+      <p style="margin:0;">Pod2Swim non raccoglie alcun dato personale — nessun account, nessuna analisi, nessuna pubblicità. Tutto resta sul tuo dispositivo. Leggi l'<a href="privacy.html">informativa sulla privacy</a> completa.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Pod2Swim · Assistenza · <a href="privacy.html">Informativa sulla privacy</a>
+</footer>
+</body>
+</html>

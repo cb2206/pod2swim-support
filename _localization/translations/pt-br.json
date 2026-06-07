@@ -1,0 +1,90 @@
+{
+  "languageName": "Português",
+  "support": {
+    "title": "Pod2Swim — Suporte",
+    "metaDesc": "Suporte e ajuda para o Pod2Swim, o app de iOS que carrega podcasts nos seus fones de natação.",
+    "headerTitle": "Suporte do Pod2Swim",
+    "headerSubtitle": "Podcasts nos seus fones de natação — ajuda e respostas",
+    "contactH": "Contato",
+    "contactText": "Dúvidas, bugs ou ideias de recursos? Mande um e-mail para a gente e responderemos.",
+    "gettingStartedH": "Primeiros passos",
+    "gettingStarted": [
+      {
+        "q": "O que o Pod2Swim faz?",
+        "a": "Ele carrega episódios de podcast em um Shokz OpenSwim / OpenSwim Pro — ou em qualquer fone com MP3 player que apareça como armazenamento USB — para você ouvir enquanto nada, onde o Bluetooth não chega. Assine, coloque episódios na fila, e o app os baixa e copia direto nos fones, na ordem de reprodução."
+      },
+      {
+        "q": "Como coloco episódios nos meus fones?",
+        "a": "Assine um podcast, adicione os episódios que quiser à <strong>Fila</strong> e espere os downloads terminarem (cada linha mostra seu status). Conecte os fones ao seu iPhone com um adaptador USB‑C ou Lightning, abra a aba Fila e toque em <strong>Enviar aos fones</strong>. Na primeira vez, escolha a pasta dos fones no seletor do app Arquivos — depois disso o app vai lembrar dela."
+      },
+      {
+        "q": "Do que eu preciso?",
+        "a": "Um iPhone com iOS 17 ou posterior, conexão com a internet para os downloads e um adaptador USB‑C ou Lightning para que os fones apareçam como armazenamento legível no seletor do app Arquivos."
+      }
+    ],
+    "usingH": "Usando o app",
+    "using": [
+      {
+        "q": "Substituir tudo vs. Adicionar ao final — qual é a diferença?",
+        "a": "<strong>Substituir tudo</strong> exclui os arquivos de áudio que já estão nos fones e grava uma playlist nova a partir da sua fila. <strong>Adicionar ao final</strong> mantém o que está lá e acrescenta sua fila depois. Você é perguntado a cada vez, com a opção \"não perguntar de novo\" que lembra a sua escolha."
+      },
+      {
+        "q": "Por que meus episódios não tocam na ordem certa?",
+        "a": "O OpenSwim Pro reproduz os arquivos na ordem em que foram transmitidos, que corresponde aos seus carimbos de data e hora. O Pod2Swim carimba cada arquivo exportado em ordem crescente pela posição na fila, então a posição 1 toca primeiro. Se a ordem ainda parecer errada, exporte novamente com <strong>Substituir tudo</strong> para que os fones comecem com um conjunto limpo."
+      },
+      {
+        "q": "Dá para acelerar a reprodução?",
+        "a": "Sim. Cada podcast tem um ajuste de velocidade de 0,75× a 2,5×. Quando um episódio é baixado, ele é processado em um arquivo acelerado com o tom preservado, e é esse que será exportado. Defina o padrão para novas assinaturas em Ajustes, ou personalize por podcast na Biblioteca."
+      },
+      {
+        "q": "Os fones não são detectados quando toco em Enviar aos fones ou Escanear.",
+        "a": "Verifique se os fones estão conectados e ligados, e se aparecem em \"Locais\" no app Arquivos. Se a pasta salva não puder ser acessada, o app volta para o seletor do app Arquivos — selecione de novo a pasta dos fones ali. Alguns adaptadores precisam estar bem encaixados; tente reconectar o cabo."
+      },
+      {
+        "q": "Como libero espaço de armazenamento?",
+        "a": "Remover um episódio da fila exclui os arquivos baixados dele. Os Ajustes mostram o armazenamento total baixado com um botão <strong>Excluir todos os downloads</strong>, e uma janela de exclusão automática que remove os arquivos exportados um certo número de dias após a exportação (7 dias por padrão)."
+      }
+    ],
+    "privacyH": "Privacidade",
+    "privacyBlurb": "O Pod2Swim não coleta nenhum dado pessoal — sem conta, sem análises, sem anúncios. Tudo fica no seu dispositivo. Leia a <a href=\"privacy.html\">política de privacidade</a> completa.",
+    "footer": "Pod2Swim · Suporte · <a href=\"privacy.html\">Política de Privacidade</a>"
+  },
+  "privacy": {
+    "title": "Pod2Swim — Política de Privacidade",
+    "metaDesc": "Política de privacidade do Pod2Swim. O app não coleta nenhum dado pessoal.",
+    "headerTitle": "Política de Privacidade",
+    "headerSub": "Pod2Swim · Última atualização: 6 de junho de 2026",
+    "back": "← Voltar ao Suporte",
+    "sections": [
+      {
+        "h2": "A versão curta",
+        "body": "<p>O Pod2Swim não coleta, armazena nem transmite nenhum dado pessoal. O app não tem sistema de conta, análises nem publicidade.</p>"
+      },
+      {
+        "h2": "O que fica no seu dispositivo",
+        "body": "<p>Tudo o que o app cria — suas assinaturas de podcast, sua fila de exportação e o áudio que ele baixa — fica armazenado localmente no seu iPhone e nunca sai dele, exceto quando você determina (por exemplo, ao copiar episódios para os seus próprios fones).</p>"
+      },
+      {
+        "h2": "Requisições de rede",
+        "body": "<p>O app faz requisições de rede apenas para:</p><ul><li>Buscar no diretório público do Apple Podcasts quando você procura um podcast para assinar.</li><li>Obter os feeds RSS dos podcasts que você assina.</li><li>Baixar os episódios que você adiciona à sua fila.</li></ul><p>Essas requisições vão diretamente a esses servidores de terceiros (a Apple e os provedores dos podcasts). Nenhum dado passa por qualquer servidor operado pelo desenvolvedor, porque esse servidor não existe.</p>"
+      },
+      {
+        "h2": "Conteúdo de terceiros",
+        "body": "<p>Os feeds e episódios de podcast são fornecidos por terceiros e estão sujeitos às próprias práticas de privacidade deles. O Pod2Swim apenas recupera o conteúdo que você escolhe; ele não compartilha nenhuma informação sobre você com eles além do que é tecnicamente necessário para fazer a requisição.</p>"
+      },
+      {
+        "h2": "Privacidade das crianças",
+        "body": "<p>O Pod2Swim não coleta conscientemente nenhuma informação de ninguém, inclusive de crianças.</p>"
+      },
+      {
+        "h2": "Mudanças",
+        "body": "<p>Se esta política mudar, a versão atualizada será publicada nesta página com uma nova data de \"última atualização\".</p>"
+      },
+      {
+        "h2": "Contato",
+        "body": "<p>Dúvidas sobre privacidade? Mande um e-mail para <a href=\"mailto:pod2swim@cbgroup.global\">pod2swim@cbgroup.global</a>.</p>"
+      }
+    ],
+    "footer": "Pod2Swim · <a href=\"index.html\">Suporte</a> · Política de Privacidade"
+  }
+}
