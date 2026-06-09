@@ -1,0 +1,46 @@
+{
+  "langName": "Italiano",
+  "name": "Pod2Swim",
+  "subtitle": "Podcast nelle tue cuffie",
+  "tagline": "Trasforma le vasche in tempo per i podcast. Carica gli episodi sulle OpenSwim e ascolta sott'acqua: niente Bluetooth, niente telefono a bordo piscina.",
+  "intro": "Pod2Swim trasforma la tua nuotata in tempo per i podcast.",
+  "pitch": "Il Bluetooth non funziona sott'acqua, perciò Pod2Swim carica i tuoi podcast preferiti direttamente sulle Shokz OpenSwim — o su qualsiasi cuffia che si monta come memoria USB — pronti per la riproduzione, vasca dopo vasca. Niente telefono a bordo piscina, niente streaming, nessun segnale richiesto.",
+  "sections": [
+    {
+      "title": "COME FUNZIONA",
+      "bullets": [
+        "Iscriviti a qualsiasi podcast con la ricerca integrata.",
+        "Sfoglia gli episodi più recenti di tutti i tuoi programmi in un unico feed cronologico.",
+        "Metti in coda quello che vuoi per la prossima nuotata — Pod2Swim lo scarica in background.",
+        "Collega le cuffie ed esporta l'intera coda con un solo tocco, nell'ordine di riproduzione.",
+        "Analizza le cuffie quando vuoi per vedere esattamente cosa è caricato."
+      ]
+    },
+    {
+      "title": "PENSATO PER CHI NUOTA",
+      "bullets": [
+        "L'audio resta sulle cuffie, così puoi lasciare il telefono nell'armadietto.",
+        "Accelerazione opzionale da 0,75× a 2,5× per ogni podcast, con il tono preservato — ascolta di più prima che chiuda la piscina.",
+        "Scegli Sostituisci tutto o Aggiungi alla fine durante il trasferimento, così controlli sempre cosa c'è sul dispositivo.",
+        "Gli episodi vengono caricati nell'ordine di riproduzione, così la coda si ascolta esattamente come l'hai organizzata."
+      ]
+    },
+    {
+      "title": "ARCHIVIAZIONE SEMPLICE",
+      "bullets": [
+        "La coda è l'unica fonte di verità — aggiungi per scaricare, rimuovi per liberare spazio.",
+        "Vedi lo spazio totale scaricato e liberalo con un solo tocco.",
+        "L'eliminazione automatica opzionale dopo l'esportazione mantiene tutto in ordine."
+      ]
+    }
+  ],
+  "compatH": "Compatibilità",
+  "compat": "Pod2Swim funziona con OpenSwim, OpenSwim Pro e altre cuffie lettore MP3 che compaiono come unità USB nell'app File. Ti servirà un adattatore USB-C o Lightning per collegare le cuffie all'iPhone.",
+  "disclaimer": "Pod2Swim non è affiliata a Shokz. Shokz e OpenSwim sono marchi dei rispettivi proprietari.",
+  "badge": "Presto sull'App Store",
+  "soon": "Presto disponibile",
+  "shotsH": "Uno sguardo all'app",
+  "support": "Supporto",
+  "privacy": "Privacy",
+  "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."
+}

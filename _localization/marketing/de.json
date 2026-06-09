@@ -1,0 +1,46 @@
+{
+  "langName": "Deutsch",
+  "name": "Pod2Swim",
+  "subtitle": "Podcasts beim Schwimmen hören",
+  "tagline": "Mach aus Bahnen Podcast-Zeit. Lade Folgen auf deinen OpenSwim und hör unter Wasser – ohne Bluetooth, ohne Handy am Beckenrand.",
+  "intro": "Pod2Swim macht aus deinem Schwimmtraining Podcast-Zeit.",
+  "pitch": "Bluetooth funktioniert unter Wasser nicht – deshalb lädt Pod2Swim deine Lieblingspodcasts direkt auf einen Shokz OpenSwim oder jeden anderen Kopfhörer, der sich als USB-Speicher einbinden lässt. Bahn für Bahn abspielbereit. Kein Handy am Beckenrand, kein Streaming, kein Empfang nötig.",
+  "sections": [
+    {
+      "title": "SO FUNKTIONIERT'S",
+      "bullets": [
+        "Abonniere jeden Podcast über die integrierte Suche.",
+        "Sieh die neuesten Folgen all deiner Shows in einem chronologischen Feed.",
+        "Reihe ein, was du beim nächsten Schwimmen hören willst – Pod2Swim lädt es im Hintergrund herunter.",
+        "Schließ deinen Kopfhörer an und übertrage die ganze Warteschlange mit einem Tippen, in Abspielreihenfolge.",
+        "Scanne den Kopfhörer jederzeit und sieh genau, was gespeichert ist."
+      ]
+    },
+    {
+      "title": "FÜR SCHWIMMER GEMACHT",
+      "bullets": [
+        "Deine Audios liegen auf dem Kopfhörer – das Handy bleibt im Spind.",
+        "Optionales Beschleunigen von 0,75× bis 2,5× pro Podcast, mit erhaltener Tonhöhe – hör mehr, bevor das Bad schließt.",
+        "Wähle beim Übertragen „Alle ersetzen“ oder „Am Ende anfügen“ und behalte die Kontrolle.",
+        "Folgen landen in Abspielreihenfolge, genau so, wie du sie sortiert hast."
+      ]
+    },
+    {
+      "title": "EINFACHER SPEICHER",
+      "bullets": [
+        "Die Warteschlange ist die zentrale Quelle – hinzufügen lädt herunter, entfernen schafft Platz.",
+        "Sieh den gesamten belegten Speicher und leere ihn mit einem Tippen.",
+        "Optionales automatisches Löschen nach dem Übertragen hält alles aufgeräumt."
+      ]
+    }
+  ],
+  "compatH": "Kompatibilität",
+  "compat": "Pod2Swim funktioniert mit dem OpenSwim, OpenSwim Pro und anderen MP3-Player-Kopfhörern, die in der Dateien-App als USB-Laufwerk erscheinen. Du brauchst einen USB-C- oder Lightning-Adapter, um den Kopfhörer mit deinem iPhone zu verbinden.",
+  "disclaimer": "Pod2Swim steht in keiner Verbindung zu Shokz. Shokz und OpenSwim sind Marken ihrer jeweiligen Inhaber.",
+  "badge": "Bald im App Store",
+  "soon": "Bald verfügbar",
+  "shotsH": "Ein Blick in die App",
+  "support": "Support",
+  "privacy": "Datenschutz",
+  "metaDesc": "Pod2Swim lädt deine Lieblingspodcasts auf einen Shokz OpenSwim oder jeden USB-Kopfhörer – zum Hören unter Wasser, ohne Bluetooth und ohne Handy am Beckenrand."
+}

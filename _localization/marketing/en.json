@@ -1,0 +1,46 @@
+{
+  "langName": "English",
+  "name": "Pod2Swim",
+  "subtitle": "Podcasts on your swim headset",
+  "tagline": "Turn pool laps into podcast time. Load episodes onto your OpenSwim and listen underwater — no Bluetooth, no phone at the poolside.",
+  "intro": "Pod2Swim turns your swim into podcast time.",
+  "pitch": "Bluetooth doesn't work underwater, so Pod2Swim loads your favourite podcasts straight onto a Shokz OpenSwim — or any headset that mounts as USB storage — ready to play, lap after lap. No phone at the poolside, no streaming, no signal required.",
+  "sections": [
+    {
+      "title": "HOW IT WORKS",
+      "bullets": [
+        "Subscribe to any podcast with the built-in search.",
+        "Browse the newest episodes from all your shows in one chronological feed.",
+        "Queue what you want for your next swim — Pod2Swim downloads it in the background.",
+        "Plug in your headset and export the whole queue in a single tap, in playback order.",
+        "Scan the headset any time to see exactly what's loaded."
+      ]
+    },
+    {
+      "title": "BUILT FOR SWIMMERS",
+      "bullets": [
+        "Your audio lives on the headset, so you can leave the phone in the locker.",
+        "Optional speed-up from 0.75× to 2.5× per podcast, with the pitch preserved — fit more in before the pool closes.",
+        "Choose Replace All or Add to End on transfer, so you stay in control of what's on the device.",
+        "Episodes land in playback order, so your queue plays exactly as you arranged it."
+      ]
+    },
+    {
+      "title": "SIMPLE STORAGE",
+      "bullets": [
+        "The queue is the single source of truth — add to download, remove to free space.",
+        "See total downloaded storage and clear it in one tap.",
+        "Optional auto-delete after export keeps things tidy."
+      ]
+    }
+  ],
+  "compatH": "Compatibility",
+  "compat": "Pod2Swim works with the OpenSwim, OpenSwim Pro, and other MP3-player headsets that appear as a USB drive in the Files app. You'll need a USB-C or Lightning adapter to connect the headset to your iPhone.",
+  "disclaimer": "Pod2Swim is not affiliated with Shokz. Shokz and OpenSwim are trademarks of their respective owner.",
+  "badge": "Coming soon to the App Store",
+  "soon": "Coming soon",
+  "shotsH": "A look inside",
+  "support": "Support",
+  "privacy": "Privacy Policy",
+  "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."
+}

@@ -2,7 +2,8 @@
 """Generate localized support + privacy pages for pod2swim-support.
 
 Source of truth: _localization/translations/<code>.json (one per language).
-Output: <code>/index.html and <code>/privacy.html (English at repo root).
+Output: support/<code>/index.html and support/<code>/privacy.html
+(English at support/ ; the repo root index.html is the marketing page).
 Run from the repo root:  python3 _localization/gen_pages.py
 """
 import json, os
@@ -231,9 +232,10 @@ def main():
                for loc in present}
     names = {loc: content[loc]["languageName"] for loc in present}
     LOCALES = present  # langbar only links to locales we actually have
+    support_root = os.path.join(REPO, "support")
     for loc in present:
         lang = LANG_ATTR[loc]
-        outdir = REPO if loc == "en" else os.path.join(REPO, loc)
+        outdir = support_root if loc == "en" else os.path.join(support_root, loc)
         os.makedirs(outdir, exist_ok=True)
         open(os.path.join(outdir, "index.html"), "w").write(
             support_html(content[loc], lang, langbar(loc, "index.html", names)))
