@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pod2Swim — Support</title>
 <meta name="description" content="Support and help for Pod2Swim, the iOS app that loads podcasts onto your swim headset.">
+<link rel="icon" type="image/png" href="../assets/icon.png">
 <style>
   :root {
     --blue: #1f7ae0;
@@ -22,19 +23,57 @@
     color: var(--ink);
     background: var(--surface);
     line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
   }
-  header {
-    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
-    color: #fff;
-    padding: 56px 20px 48px;
-    text-align: center;
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
   }
-  header .drop { font-size: 52px; line-height: 1; }
-  header h1 { margin: 14px 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
-  header p { margin: 0; opacity: 0.92; font-size: 16px; }
-  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800;
+    letter-spacing: -0.3px; color: var(--ink); font-size: 17px; }
+  .brand:hover { text-decoration: none; }
+  .brand img { width: 28px; height: 28px; border-radius: 7px; }
+  .navright { display: flex; align-items: center; gap: 16px; }
+  .picker { position: relative; }
+  .picker select {
+    appearance: none; -webkit-appearance: none;
+    font: inherit; font-size: 14px; font-weight: 600; color: var(--blue-dark);
+    background: rgba(31,122,224,0.08); border: 1px solid var(--line);
+    border-radius: 999px; padding: 7px 30px 7px 14px; cursor: pointer;
+  }
+  .picker::after {
+    content: ""; position: absolute; right: 13px; top: 50%;
+    width: 7px; height: 7px; border-right: 2px solid var(--blue-dark);
+    border-bottom: 2px solid var(--blue-dark); transform: translateY(-65%) rotate(45deg);
+    pointer-events: none;
+  }
+  .hero {
+    background: linear-gradient(165deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff; text-align: center; padding: 40px 20px 44px;
+  }
+  .hero .icon { width: 76px; height: 76px; border-radius: 18px; display: block;
+    margin: 0 auto 16px; box-shadow: 0 14px 34px rgba(8,40,80,0.4); }
+  .hero h1 { margin: 0 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+  .hero .subtitle { margin: 0; font-size: 16px; font-weight: 500; opacity: 0.93; }
+  main { max-width: 720px; margin: 0 auto; padding: 28px 20px 56px; }
+  .back { display: inline-block; margin-bottom: 22px; font-weight: 600; font-size: 14px; }
+  footer {
+    border-top: 1px solid var(--line); text-align: center;
+    color: var(--muted); font-size: 14px; padding: 28px 20px 52px;
+  }
+  footer .links { margin-bottom: 10px; }
+  footer .links a { margin: 0 8px; font-weight: 600; }
+  footer .mail { display: block; margin: 4px 0 12px; }
+  footer .copy { font-size: 13px; }
   section { margin-bottom: 28px; }
-  h2 {
+  .sec-h {
     font-size: 13px; font-weight: 800; letter-spacing: 1.4px;
     text-transform: uppercase; color: var(--blue-dark); margin: 0 0 12px;
   }
@@ -48,44 +87,45 @@
   .faq:last-child { border-bottom: 0; padding-bottom: 0; }
   .faq h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
   .faq p { margin: 0; color: var(--muted); font-size: 15px; }
-  a { color: var(--blue); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .contact a { font-weight: 700; font-size: 18px; }
-  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
-  .langbar { background: var(--card); border-bottom: 1px solid var(--line);
-    text-align: center; padding: 10px 16px; font-size: 13px; }
-  .langbar a { margin: 0 7px; color: var(--muted); white-space: nowrap; }
-  .langbar a.active { color: var(--blue-dark); font-weight: 700; }
+  .contact a.email { font-weight: 700; font-size: 18px; }
 </style>
 </head>
 <body>
-<header>
-  <div class="drop">💧</div>
-  <h1>Pod2Swim Support</h1>
-  <p>Podcasts on your swim headset — help & answers</p>
-</header>
-<nav class="langbar">
-  <a href="index.html" class="active">English</a>
-  <a href="de/index.html">Deutsch</a>
-  <a href="es/index.html">Español</a>
-  <a href="fr/index.html">Français</a>
-  <a href="it/index.html">Italiano</a>
-  <a href="ja/index.html">日本語</a>
-  <a href="pt-br/index.html">Português</a>
-  <a href="zh-hans/index.html">简体中文</a>
+<nav class="nav">
+  <a class="brand" href="../"><img src="../assets/icon.png" alt="Pod2Swim"> Pod2Swim</a>
+  <span class="navright">
+    <span class="picker"><select aria-label="Language" onchange="if(this.value)location.href=this.value">
+        <option value="index.html" selected>English</option>
+        <option value="de/index.html">Deutsch</option>
+        <option value="es/index.html">Español</option>
+        <option value="fr/index.html">Français</option>
+        <option value="it/index.html">Italiano</option>
+        <option value="ja/index.html">日本語</option>
+        <option value="pt-br/index.html">Português</option>
+        <option value="zh-hans/index.html">简体中文</option>
+      </select></span>
+  </span>
 </nav>
 
+<header class="hero">
+  <img class="icon" src="../assets/icon.png" alt="Pod2Swim app icon">
+  <h1>Pod2Swim Support</h1>
+  <p class="subtitle">Podcasts on your swim headset — help & answers</p>
+</header>
+
 <main>
+  <a class="back" href="../">← Back to Pod2Swim</a>
+
   <section class="contact">
-    <h2>Contact</h2>
+    <h2 class="sec-h">Contact</h2>
     <div class="card">
       <p style="margin:0 0 8px;">Questions, bugs, or feature ideas? Email us and we'll get back to you.</p>
-      <a href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+      <a class="email" href="mailto:hello@pod2swim.com">hello@pod2swim.com</a>
     </div>
   </section>
 
   <section>
-    <h2>Getting started</h2>
+    <h2 class="sec-h">Getting started</h2>
     <div class="card">
       <div class="faq">
         <h3>What does Pod2Swim do?</h3>
@@ -93,17 +133,17 @@
       </div>
       <div class="faq">
         <h3>How do I get episodes onto my headset?</h3>
-        <p>Subscribe to a podcast, add the episodes you want to the <strong>Queue</strong>, and wait for them to finish downloading (each row shows its status). Plug the headset into your iPhone with a USB‑C or Lightning adapter, open the Queue tab, and tap <strong>Export</strong>. The first time, pick the headset's folder in the Files picker — the app remembers it after that.</p>
+        <p>Subscribe to a podcast, add the episodes you want to the <strong>Queue</strong>, and wait for them to finish downloading (each row shows its status). Plug the headset into your iPhone with a <a href="https://amzn.to/43mRukS" target="_blank" rel="nofollow sponsored noopener">USB‑C or Lightning adapter</a>, open the Queue tab, and tap <strong>Export</strong>. The first time, pick the headset's folder in the Files picker — the app remembers it after that.</p>
       </div>
       <div class="faq">
         <h3>What do I need?</h3>
-        <p>An iPhone running iOS 17 or later, an internet connection for downloads, and a USB‑C or Lightning adapter so the headset shows up as readable storage in the Files picker.</p>
+        <p>An iPhone running iOS 17 or later, an internet connection for downloads, and a <a href="https://amzn.to/43mRukS" target="_blank" rel="nofollow sponsored noopener">USB‑C or Lightning adapter</a> so the headset shows up as readable storage in the Files picker.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>Using the app</h2>
+    <h2 class="sec-h">Using the app</h2>
     <div class="card">
       <div class="faq">
         <h3>Replace All vs. Add to End — what's the difference?</h3>
@@ -129,7 +169,7 @@
   </section>
 
   <section>
-    <h2>Privacy</h2>
+    <h2 class="sec-h">Privacy</h2>
     <div class="card">
       <p style="margin:0;">Pod2Swim collects no personal data — no account, no analytics, no ads. Everything stays on your device. Read the full <a href="privacy.html">privacy policy</a>.</p>
     </div>
@@ -137,7 +177,9 @@
 </main>
 
 <footer>
-  Pod2Swim · Support · <a href="privacy.html">Privacy Policy</a>
+  <div class="links">Pod2Swim · Support · <a href="privacy.html">Privacy Policy</a></div>
+  <a class="mail" href="mailto:hello@pod2swim.com">hello@pod2swim.com</a>
+  <div class="copy">© 2026 Christian Bartels</div>
 </footer>
 </body>
 </html>

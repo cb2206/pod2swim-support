@@ -66,6 +66,34 @@ SHOTS = ["p2s-1.png", "p2s-2.png", "p2s-3.png", "p2s-4.png",
          "p2s-5.png", "p2s-6.png", "p2s-7.png"]
 
 
+# Amazon affiliate link for the USB-C / Lightning adapter. The exact adapter
+# noun-phrase in each locale's compatibility line gets wrapped in this link.
+AMZN = "https://amzn.to/43mRukS"
+MARKETING_ADAPTER = {
+    "en": "USB-C or Lightning adapter",
+    "de": "USB-C- oder Lightning-Adapter",
+    "es": "adaptador USB-C o Lightning",
+    "fr": "adaptateur USB-C ou Lightning",
+    "it": "adattatore USB-C o Lightning",
+    "ja": "USB-CまたはLightningのアダプタ",
+    "pt-br": "adaptador USB-C ou Lightning",
+    "zh-hans": "USB-C 或 Lightning 转接头",
+}
+
+
+def adapter_link(phrase):
+    return (f'<a href="{AMZN}" target="_blank" '
+            f'rel="nofollow sponsored noopener">{phrase}</a>')
+
+
+def linkify_adapter(text, code):
+    phrase = MARKETING_ADAPTER.get(code)
+    if phrase and phrase in text:
+        return text.replace(phrase, adapter_link(phrase), 1)
+    print(f"  WARNING: marketing adapter phrase not found for {code}")
+    return text
+
+
 def read(loc_folder, field):
     p = os.path.join(META, loc_folder, field + ".txt")
     with open(p, encoding="utf-8") as f:
@@ -103,7 +131,7 @@ def build_locale(code):
         "pitch": pitch,
         "sections": sections,
         "compatH": c["compatH"],
-        "compat": compat,
+        "compat": linkify_adapter(compat, code),
         "disclaimer": disclaimer,
         "badge": c["badge"],
         "soon": c["soon"],
@@ -125,6 +153,7 @@ PAGE = """<!DOCTYPE html>
 <meta property="og:description" content="Podcasts on your swim headset. Load episodes onto your OpenSwim and listen underwater — no Bluetooth, no phone at the poolside.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/icon.png">
+<meta name="impact-site-verification" value="e8cd3ad2-3b6c-485b-94a3-6e549ba2b57e">
 <link rel="icon" type="image/png" href="assets/icon.png">
 <style>
   :root {
@@ -162,6 +191,8 @@ PAGE = """<!DOCTYPE html>
   .brand { display: flex; align-items: center; gap: 10px; font-weight: 800;
     letter-spacing: -0.3px; color: var(--ink); font-size: 17px; }
   .brand img { width: 28px; height: 28px; border-radius: 7px; }
+  .navright { display: flex; align-items: center; gap: 16px; }
+  .navlink { font-weight: 600; font-size: 14px; color: var(--blue-dark); }
   .picker { position: relative; }
   .picker select {
     appearance: none; -webkit-appearance: none;
@@ -266,7 +297,10 @@ PAGE = """<!DOCTYPE html>
 <body>
 <nav class="nav">
   <span class="brand"><img src="assets/icon.png" alt="Pod2Swim"> Pod2Swim</span>
-  <span class="picker"><select id="lang" aria-label="Language"></select></span>
+  <span class="navright">
+    <a class="navlink" id="nav-support" href="support/">Support</a>
+    <span class="picker"><select id="lang" aria-label="Language"></select></span>
+  </span>
 </nav>
 
 <header class="hero">
@@ -305,7 +339,7 @@ PAGE = """<!DOCTYPE html>
     <a id="f-support" href="support/">Support</a>
     <a id="f-privacy" href="support/privacy.html">Privacy Policy</a>
   </div>
-  <a class="mail" href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+  <a class="mail" href="mailto:hello@pod2swim.com">hello@pod2swim.com</a>
   <div id="f-copy">© 2026 Christian Bartels</div>
 </footer>
 
@@ -347,7 +381,7 @@ function render(code){
   document.getElementById("m-pitch").textContent = t.pitch;
   document.getElementById("m-shotsH").textContent = t.shotsH;
   document.getElementById("m-compatH").textContent = t.compatH;
-  document.getElementById("m-compat").textContent = t.compat;
+  document.getElementById("m-compat").innerHTML = t.compat;
   document.getElementById("m-disclaimer").textContent = t.disclaimer;
 
   const feats = document.getElementById("m-features");
@@ -380,6 +414,8 @@ function render(code){
   sup.textContent = t.support; sup.href = supportPath(code);
   const pri = document.getElementById("f-privacy");
   pri.textContent = t.privacy; pri.href = privacyPath(code);
+  const navSup = document.getElementById("nav-support");
+  navSup.textContent = t.support; navSup.href = supportPath(code);
 
   document.getElementById("lang").value = code;
 }

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pod2Swim — サポート</title>
 <meta name="description" content="ポッドキャストをスイム用ヘッドセットに書き込むiOSアプリ、Pod2Swimのサポートとヘルプ。">
+<link rel="icon" type="image/png" href="../../assets/icon.png">
 <style>
   :root {
     --blue: #1f7ae0;
@@ -22,19 +23,57 @@
     color: var(--ink);
     background: var(--surface);
     line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
   }
-  header {
-    background: linear-gradient(160deg, var(--blue) 0%, var(--blue-dark) 100%);
-    color: #fff;
-    padding: 56px 20px 48px;
-    text-align: center;
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .nav {
+    position: sticky; top: 0; z-index: 20;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 20px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
   }
-  header .drop { font-size: 52px; line-height: 1; }
-  header h1 { margin: 14px 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; }
-  header p { margin: 0; opacity: 0.92; font-size: 16px; }
-  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800;
+    letter-spacing: -0.3px; color: var(--ink); font-size: 17px; }
+  .brand:hover { text-decoration: none; }
+  .brand img { width: 28px; height: 28px; border-radius: 7px; }
+  .navright { display: flex; align-items: center; gap: 16px; }
+  .picker { position: relative; }
+  .picker select {
+    appearance: none; -webkit-appearance: none;
+    font: inherit; font-size: 14px; font-weight: 600; color: var(--blue-dark);
+    background: rgba(31,122,224,0.08); border: 1px solid var(--line);
+    border-radius: 999px; padding: 7px 30px 7px 14px; cursor: pointer;
+  }
+  .picker::after {
+    content: ""; position: absolute; right: 13px; top: 50%;
+    width: 7px; height: 7px; border-right: 2px solid var(--blue-dark);
+    border-bottom: 2px solid var(--blue-dark); transform: translateY(-65%) rotate(45deg);
+    pointer-events: none;
+  }
+  .hero {
+    background: linear-gradient(165deg, var(--blue) 0%, var(--blue-dark) 100%);
+    color: #fff; text-align: center; padding: 40px 20px 44px;
+  }
+  .hero .icon { width: 76px; height: 76px; border-radius: 18px; display: block;
+    margin: 0 auto 16px; box-shadow: 0 14px 34px rgba(8,40,80,0.4); }
+  .hero h1 { margin: 0 0 6px; font-size: 30px; font-weight: 800; letter-spacing: -0.6px; }
+  .hero .subtitle { margin: 0; font-size: 16px; font-weight: 500; opacity: 0.93; }
+  main { max-width: 720px; margin: 0 auto; padding: 28px 20px 56px; }
+  .back { display: inline-block; margin-bottom: 22px; font-weight: 600; font-size: 14px; }
+  footer {
+    border-top: 1px solid var(--line); text-align: center;
+    color: var(--muted); font-size: 14px; padding: 28px 20px 52px;
+  }
+  footer .links { margin-bottom: 10px; }
+  footer .links a { margin: 0 8px; font-weight: 600; }
+  footer .mail { display: block; margin: 4px 0 12px; }
+  footer .copy { font-size: 13px; }
   section { margin-bottom: 28px; }
-  h2 {
+  .sec-h {
     font-size: 13px; font-weight: 800; letter-spacing: 1.4px;
     text-transform: uppercase; color: var(--blue-dark); margin: 0 0 12px;
   }
@@ -48,44 +87,45 @@
   .faq:last-child { border-bottom: 0; padding-bottom: 0; }
   .faq h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; }
   .faq p { margin: 0; color: var(--muted); font-size: 15px; }
-  a { color: var(--blue); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .contact a { font-weight: 700; font-size: 18px; }
-  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 20px 48px; }
-  .langbar { background: var(--card); border-bottom: 1px solid var(--line);
-    text-align: center; padding: 10px 16px; font-size: 13px; }
-  .langbar a { margin: 0 7px; color: var(--muted); white-space: nowrap; }
-  .langbar a.active { color: var(--blue-dark); font-weight: 700; }
+  .contact a.email { font-weight: 700; font-size: 18px; }
 </style>
 </head>
 <body>
-<header>
-  <div class="drop">💧</div>
-  <h1>Pod2Swim サポート</h1>
-  <p>スイム用ヘッドセットでポッドキャストを — ヘルプと回答</p>
-</header>
-<nav class="langbar">
-  <a href="../index.html">English</a>
-  <a href="../de/index.html">Deutsch</a>
-  <a href="../es/index.html">Español</a>
-  <a href="../fr/index.html">Français</a>
-  <a href="../it/index.html">Italiano</a>
-  <a href="../ja/index.html" class="active">日本語</a>
-  <a href="../pt-br/index.html">Português</a>
-  <a href="../zh-hans/index.html">简体中文</a>
+<nav class="nav">
+  <a class="brand" href="../../"><img src="../../assets/icon.png" alt="Pod2Swim"> Pod2Swim</a>
+  <span class="navright">
+    <span class="picker"><select aria-label="Language" onchange="if(this.value)location.href=this.value">
+        <option value="../index.html">English</option>
+        <option value="../de/index.html">Deutsch</option>
+        <option value="../es/index.html">Español</option>
+        <option value="../fr/index.html">Français</option>
+        <option value="../it/index.html">Italiano</option>
+        <option value="../ja/index.html" selected>日本語</option>
+        <option value="../pt-br/index.html">Português</option>
+        <option value="../zh-hans/index.html">简体中文</option>
+      </select></span>
+  </span>
 </nav>
 
+<header class="hero">
+  <img class="icon" src="../../assets/icon.png" alt="Pod2Swim app icon">
+  <h1>Pod2Swim サポート</h1>
+  <p class="subtitle">スイム用ヘッドセットでポッドキャストを — ヘルプと回答</p>
+</header>
+
 <main>
+  <a class="back" href="../../">← Pod2Swim に戻る</a>
+
   <section class="contact">
-    <h2>お問い合わせ</h2>
+    <h2 class="sec-h">お問い合わせ</h2>
     <div class="card">
       <p style="margin:0 0 8px;">ご質問、不具合のご報告、機能のご要望がありましたら、メールでお寄せください。折り返しご連絡いたします。</p>
-      <a href="mailto:pod2swim@cbgroup.global">pod2swim@cbgroup.global</a>
+      <a class="email" href="mailto:hello@pod2swim.com">hello@pod2swim.com</a>
     </div>
   </section>
 
   <section>
-    <h2>はじめに</h2>
+    <h2 class="sec-h">はじめに</h2>
     <div class="card">
       <div class="faq">
         <h3>Pod2Swimでは何ができますか？</h3>
@@ -93,17 +133,17 @@
       </div>
       <div class="faq">
         <h3>エピソードをヘッドセットに入れるにはどうすればよいですか？</h3>
-        <p>ポッドキャストを登録し、聴きたいエピソードを<strong>キュー</strong>に追加して、ダウンロードが完了するまで待ちます（各行に状態が表示されます）。USB‑CまたはLightningアダプタでヘッドセットをiPhoneに接続し、キュータブを開いて<strong>書き出し済み</strong>をタップします。初回は「ファイル」のピッカーでヘッドセットのフォルダを選んでください。以降はアプリが記憶します。</p>
+        <p>ポッドキャストを登録し、聴きたいエピソードを<strong>キュー</strong>に追加して、ダウンロードが完了するまで待ちます（各行に状態が表示されます）。<a href="https://amzn.to/43mRukS" target="_blank" rel="nofollow sponsored noopener">USB‑CまたはLightningアダプタ</a>でヘッドセットをiPhoneに接続し、キュータブを開いて<strong>書き出し済み</strong>をタップします。初回は「ファイル」のピッカーでヘッドセットのフォルダを選んでください。以降はアプリが記憶します。</p>
       </div>
       <div class="faq">
         <h3>何が必要ですか？</h3>
-        <p>iOS 17以降が動作するiPhone、ダウンロード用のインターネット接続、そしてヘッドセットを「ファイル」のピッカーで読み取り可能なストレージとして表示するためのUSB‑CまたはLightningアダプタが必要です。</p>
+        <p>iOS 17以降が動作するiPhone、ダウンロード用のインターネット接続、そしてヘッドセットを「ファイル」のピッカーで読み取り可能なストレージとして表示するための<a href="https://amzn.to/43mRukS" target="_blank" rel="nofollow sponsored noopener">USB‑CまたはLightningアダプタ</a>が必要です。</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2>アプリの使い方</h2>
+    <h2 class="sec-h">アプリの使い方</h2>
     <div class="card">
       <div class="faq">
         <h3>「すべて置き換える」と「末尾に追加」の違いは何ですか？</h3>
@@ -129,7 +169,7 @@
   </section>
 
   <section>
-    <h2>プライバシー</h2>
+    <h2 class="sec-h">プライバシー</h2>
     <div class="card">
       <p style="margin:0;">Pod2Swimは個人データを一切収集しません。アカウントも、解析も、広告もありません。すべてがお使いのデバイス内にとどまります。詳しくは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。</p>
     </div>
@@ -137,7 +177,9 @@
 </main>
 
 <footer>
-  Pod2Swim · サポート · <a href="privacy.html">プライバシーポリシー</a>
+  <div class="links">Pod2Swim · サポート · <a href="privacy.html">プライバシーポリシー</a></div>
+  <a class="mail" href="mailto:hello@pod2swim.com">hello@pod2swim.com</a>
+  <div class="copy">© 2026 Christian Bartels</div>
 </footer>
 </body>
 </html>
