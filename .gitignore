@@ -1,0 +1,3 @@
+# Porkbun API credentials — never commit
+scripts/.porkbun.env
+.porkbun.env
