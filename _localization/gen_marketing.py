@@ -23,6 +23,10 @@ APP_REPO = (sys.argv[1] if len(sys.argv) > 1
             else os.environ.get("POD2SWIM_APP_REPO", "/Users/cb/dev/Pod2Swim"))
 META = os.path.join(APP_REPO, "fastlane", "metadata")
 
+# Live App Store listing (Pod2Swim, app id 6766092966). The id-only URL
+# redirects to each visitor's local storefront.
+APP_STORE_URL = "https://apps.apple.com/app/id6766092966"
+
 # site code -> App Store locale folder
 LOCALES = {
     "en": "en-US", "de": "de-DE", "es": "es-ES", "fr": "fr-FR",
@@ -36,28 +40,28 @@ LANG_NAME = {"en": "English", "de": "Deutsch", "es": "Español", "fr": "Françai
 
 # Short UI strings that are not part of the App Store description.
 CHROME = {
-    "en": {"badge": "Coming soon to the App Store", "soon": "Coming soon",
+    "en": {"badge": "Download on the",
            "shotsH": "A look inside", "support": "Support", "privacy": "Privacy Policy",
            "compatH": "Compatibility", "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."},
-    "de": {"badge": "Bald im App Store", "soon": "Bald verfügbar",
+    "de": {"badge": "Laden im",
            "shotsH": "Ein Blick in die App", "support": "Support", "privacy": "Datenschutz",
            "compatH": "Kompatibilität", "metaDesc": "Pod2Swim lädt deine Lieblingspodcasts auf einen Shokz OpenSwim oder jeden USB-Kopfhörer – zum Hören unter Wasser, ohne Bluetooth und ohne Handy am Beckenrand."},
-    "es": {"badge": "Próximamente en la App Store", "soon": "Muy pronto",
+    "es": {"badge": "Consíguelo en el",
            "shotsH": "Un vistazo a la app", "support": "Soporte", "privacy": "Privacidad",
            "compatH": "Compatibilidad", "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde."},
-    "fr": {"badge": "Bientôt sur l'App Store", "soon": "Bientôt disponible",
+    "fr": {"badge": "Télécharger dans l'",
            "shotsH": "Un aperçu de l'app", "support": "Assistance", "privacy": "Confidentialité",
            "compatH": "Compatibilité", "metaDesc": "Pod2Swim charge tes podcasts préférés sur un Shokz OpenSwim ou tout casque USB pour écouter sous l'eau, sans Bluetooth ni téléphone au bord du bassin."},
-    "it": {"badge": "Presto sull'App Store", "soon": "Presto disponibile",
+    "it": {"badge": "Scaricala su",
            "shotsH": "Uno sguardo all'app", "support": "Supporto", "privacy": "Privacy",
            "compatH": "Compatibilità", "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."},
-    "ja": {"badge": "近日 App Store で公開", "soon": "近日公開",
+    "ja": {"badge": "ダウンロード",
            "shotsH": "アプリの中身をチラ見せ", "support": "サポート", "privacy": "プライバシー",
            "compatH": "対応機器", "metaDesc": "Pod2Swimは、お気に入りのポッドキャストをShokz OpenSwimなどのUSBヘッドセットに転送。Bluetoothもプールサイドのスマホもなしで、水中で楽しめます。"},
-    "pt-br": {"badge": "Em breve na App Store", "soon": "Em breve",
+    "pt-br": {"badge": "Baixar na",
               "shotsH": "Um olhar pelo app", "support": "Suporte", "privacy": "Privacidade",
               "compatH": "Compatibilidade", "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda."},
-    "zh-hans": {"badge": "即将登陆 App Store", "soon": "即将上线",
+    "zh-hans": {"badge": "前往下载",
                 "shotsH": "先睹为快", "support": "支持", "privacy": "隐私政策",
                 "compatH": "兼容设备", "metaDesc": "Pod2Swim 把你喜欢的播客导入 Shokz OpenSwim 等 USB 耳机，水下也能畅听——无需蓝牙，手机留在岸边。"},
 }
@@ -134,7 +138,6 @@ def build_locale(code):
         "compat": linkify_adapter(compat, code),
         "disclaimer": disclaimer,
         "badge": c["badge"],
-        "soon": c["soon"],
         "shotsH": c["shotsH"],
         "support": c["support"],
         "privacy": c["privacy"],
@@ -220,22 +223,23 @@ PAGE = """<!DOCTYPE html>
   .hero .subtitle { margin: 0 0 18px; font-size: 19px; font-weight: 600; opacity: 0.95; }
   .hero .tagline { max-width: 560px; margin: 0 auto 30px; font-size: 17px; opacity: 0.92; }
 
-  /* coming-soon badge */
+  /* App Store download badge */
   .badgewrap { display: inline-flex; flex-direction: column; align-items: center; gap: 9px; }
   .appstore {
     display: inline-flex; align-items: center; gap: 11px;
     background: #0c0c0c; color: #fff; border-radius: 11px;
-    padding: 10px 18px; filter: grayscale(1); opacity: 0.55; cursor: not-allowed;
+    padding: 10px 18px; text-decoration: none;
     border: 1px solid rgba(255,255,255,0.25); user-select: none;
+    transition: transform .12s ease, box-shadow .12s ease;
   }
+  .appstore:hover {
+    text-decoration: none; transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(8,40,80,0.4);
+  }
+  .appstore:active { transform: translateY(0); }
   .appstore svg { width: 26px; height: 26px; fill: #fff; }
   .appstore .small { font-size: 11px; line-height: 1; opacity: 0.85; }
   .appstore .big { font-size: 19px; font-weight: 600; line-height: 1.15; letter-spacing: -0.2px; }
-  .soonpill {
-    font-size: 12px; font-weight: 700; letter-spacing: 0.4px; text-transform: uppercase;
-    background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35);
-    color: #fff; padding: 5px 12px; border-radius: 999px;
-  }
 
   main { max-width: 860px; margin: 0 auto; padding: 0 20px; }
   .pitch { font-size: 18px; color: #25323f; max-width: 680px;
@@ -309,11 +313,10 @@ PAGE = """<!DOCTYPE html>
   <p class="subtitle" id="h-subtitle"></p>
   <p class="tagline" id="h-tagline"></p>
   <div class="badgewrap">
-    <span class="appstore" role="img" aria-label="App Store — coming soon">
+    <a class="appstore" id="appstore-link" href="__APPSTORE__" target="_blank" rel="noopener" aria-label="Download Pod2Swim on the App Store">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.78c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.28-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.29 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.13 6.04c.64-.78 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
-      <span><span class="small" id="b-small">Coming soon</span><br><span class="big">App Store</span></span>
-    </span>
-    <span class="soonpill" id="b-pill">Coming soon</span>
+      <span><span class="small" id="b-small">Download on the</span><br><span class="big">App Store</span></span>
+    </a>
   </div>
 </header>
 
@@ -377,7 +380,6 @@ function render(code){
   document.getElementById("h-subtitle").textContent = t.subtitle;
   document.getElementById("h-tagline").textContent = t.tagline;
   document.getElementById("b-small").textContent = t.badge;
-  document.getElementById("b-pill").textContent = t.soon;
   document.getElementById("m-pitch").textContent = t.pitch;
   document.getElementById("m-shotsH").textContent = t.shotsH;
   document.getElementById("m-compatH").textContent = t.compatH;
@@ -448,6 +450,7 @@ def main():
         with open(os.path.join(mdir, code + ".json"), "w", encoding="utf-8") as f:
             json.dump(data[code], f, ensure_ascii=False, indent=2)
     page = (PAGE
+            .replace("__APPSTORE__", APP_STORE_URL)
             .replace("__SHOTS__", json.dumps(SHOTS))
             .replace("__I18N__", json.dumps(data, ensure_ascii=False))
             .replace("__ORDER__", json.dumps(ORDER))
