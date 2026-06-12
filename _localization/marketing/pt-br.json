@@ -2,15 +2,15 @@
   "langName": "Português",
   "name": "Pod2Swim",
   "subtitle": "Podcasts no fone de natação",
-  "tagline": "Transforme suas voltas na piscina em hora de podcast. Carregue episódios no seu OpenSwim e ouça embaixo d'água — sem Bluetooth, sem celular na borda.",
+  "tagline": "Transforme suas voltas na piscina em hora de podcast. Carregue episódios no seu <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a> e ouça embaixo d'água — sem Bluetooth, sem celular na borda.",
   "intro": "O Pod2Swim transforma o seu treino na piscina em hora de podcast.",
-  "pitch": "O Bluetooth não funciona embaixo d'água, então o Pod2Swim carrega os seus podcasts favoritos direto num Shokz OpenSwim — ou em qualquer fone que apareça como pen drive USB — prontinhos para tocar, volta após volta. Sem celular na borda, sem streaming, sem precisar de sinal.",
+  "pitch": "O Bluetooth não funciona embaixo d'água, então o Pod2Swim carrega os seus podcasts favoritos direto num <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Shokz OpenSwim</a> — ou em qualquer fone que apareça como pen drive USB — prontinhos para tocar, volta após volta. Sem celular na borda, sem streaming, sem precisar de sinal.",
   "sections": [
     {
       "title": "COMO FUNCIONA",
       "bullets": [
         "Assine qualquer podcast pela busca integrada.",
-        "Veja os episódios mais novos de todos os seus programas num único feed em ordem cronológica.",
+        "Veja os episódios mais novos de todos os seus podcasts num único feed em ordem cronológica.",
         "Coloque na fila o que quiser para o próximo treino — o Pod2Swim baixa em segundo plano.",
         "Conecte o fone e exporte a fila inteira com um toque, na ordem de reprodução.",
         "Escaneie o fone quando quiser para ver exatamente o que está carregado."
@@ -20,7 +20,7 @@
       "title": "FEITO PARA NADADORES",
       "bullets": [
         "O seu áudio fica no fone, então você pode deixar o celular no armário.",
-        "Acelere de 0,75× a 2,5× por podcast, sem distorcer a voz — ouça mais antes da piscina fechar.",
+        "Ajuste a velocidade de reprodução de 0,75× a 2,5× por podcast, sem distorcer a voz — ouça mais antes da piscina fechar.",
         "Escolha Substituir Tudo ou Adicionar ao Fim na transferência, mantendo o controle do que vai pro aparelho.",
         "Os episódios entram na ordem de reprodução, então a sua fila toca exatamente como você montou."
       ]
@@ -28,15 +28,15 @@
     {
       "title": "ARMAZENAMENTO SIMPLES",
       "bullets": [
-        "A fila é a única fonte da verdade — adicione para baixar, remova para liberar espaço.",
+        "A fila comanda tudo — adicione para baixar, remova para liberar espaço.",
         "Veja o total baixado e limpe tudo com um toque.",
         "A exclusão automática após a exportação mantém tudo organizado."
       ]
     }
   ],
   "compatH": "Compatibilidade",
-  "compat": "O Pod2Swim funciona com o OpenSwim, o OpenSwim Pro e outros fones tocadores de MP3 que aparecem como pen drive USB no app Arquivos. Você vai precisar de um <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C ou Lightning</a> para conectar o fone ao seu iPhone.",
-  "disclaimer": "O Pod2Swim não tem vínculo com a Shokz. Shokz e OpenSwim são marcas registradas dos seus respectivos donos.",
+  "compat": "O Pod2Swim funciona com o <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, o <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> e outros fones com player de MP3 que aparecem como pen drive USB no app Arquivos. Você vai precisar de um <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C ou Lightning</a> para conectar o fone ao seu iPhone.",
+  "disclaimer": "O Pod2Swim não tem vínculo com a Shokz. Shokz e OpenSwim são marcas registradas de seus respectivos proprietários.",
   "badge": "Baixar na",
   "shotsH": "Um olhar pelo app",
   "support": "Suporte",

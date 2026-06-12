@@ -11,7 +11,7 @@ page links back to the marketing page via the brand and a "back" link.
 
 Run from the repo root:  python3 _localization/gen_pages.py
 """
-import json, os
+import json, os, re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -52,17 +52,29 @@ def adapter_link(phrase):
             f'rel="nofollow sponsored noopener">{phrase}</a>')
 
 
+# Shokz affiliate link (Impact). Brand names are Latin-script in every locale,
+# so one regex covers all languages. Longest alternative first, so
+# "Shokz OpenSwim Pro" becomes one link, not nested fragments.
+SHOKZ = "https://shokzsingaporepteltd.pxf.io/QYAGnM"
+SHOKZ_RE = re.compile(r"Shokz OpenSwim Pro|Shokz OpenSwim|OpenSwim Pro|OpenSwim|Shokz")
+
+
+def shokz_link(match):
+    return (f'<a href="{SHOKZ}" target="_blank" '
+            f'rel="nofollow sponsored noopener">{match.group(0)}</a>')
+
+
 def linkify_support(content, loc):
-    """Wrap the adapter noun-phrase in every FAQ answer with the affiliate link."""
+    """Wrap the adapter noun-phrase and Shokz/OpenSwim brand mentions in every
+    FAQ answer with the respective affiliate link."""
     phrase = SUPPORT_ADAPTER.get(loc)
-    if not phrase:
-        return
     hit = False
     for key in ("gettingStarted", "using"):
         for item in content["support"].get(key, []):
-            if phrase in item["a"]:
+            if phrase and phrase in item["a"]:
                 item["a"] = item["a"].replace(phrase, adapter_link(phrase))
                 hit = True
+            item["a"] = SHOKZ_RE.sub(shokz_link, item["a"])
     if not hit:
         print(f"  WARNING: support adapter phrase not found for {loc}")
 

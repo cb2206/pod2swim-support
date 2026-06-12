@@ -1,10 +1,10 @@
 {
   "langName": "日本語",
   "name": "Pod2Swim",
-  "subtitle": "水泳ヘッドセットでポッドキャスト",
-  "tagline": "プールでの一往復をポッドキャストの時間に。お気に入りのエピソードをOpenSwimに転送して、水中でそのまま再生。Bluetoothもプールサイドのスマホも要りません。",
+  "subtitle": "水泳用ヘッドセットでポッドキャスト",
+  "tagline": "プールでのひと泳ぎを、ポッドキャストの時間に。お気に入りのエピソードを<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>に転送して、水中でそのまま再生。Bluetoothもプールサイドのスマホも要りません。",
   "intro": "Pod2Swimは、泳ぐ時間をポッドキャストの時間に変えます。",
-  "pitch": "Bluetoothは水中では使えません。そこでPod2Swimは、お気に入りのポッドキャストをShokz OpenSwim（またはUSBストレージとして認識されるヘッドセット）へ直接転送。何往復でも、すぐに再生できます。プールサイドにスマホは不要。ストリーミングも電波もいりません。",
+  "pitch": "Bluetoothは水中では使えません。そこでPod2Swimは、お気に入りのポッドキャストを<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Shokz OpenSwim</a>（またはUSBストレージとして認識されるヘッドセット）へ直接転送。何往復でも、すぐに再生できます。プールサイドにスマホは不要。ストリーミングも電波もいりません。",
   "sections": [
     {
       "title": "使い方",
@@ -20,7 +20,7 @@
       "title": "スイマーのために",
       "bullets": [
         "音声はヘッドセット内に保存されるので、スマホはロッカーに置いたままでOK。",
-        "ポッドキャストごとに0.75倍〜2.5倍の再生速度を設定可能。音程はそのままなので、プールが閉まる前にもっと聴けます。",
+        "ポッドキャストごとに0.75倍〜2.5倍の再生速度を設定可能。音程はそのまま、プールが閉まる前にもっとたくさん聴けます。",
         "転送時に「すべて置き換え」または「末尾に追加」を選べるので、デバイスの中身は思いのまま。",
         "エピソードは再生順に書き込まれ、並べたとおりに再生されます。"
       ]
@@ -35,7 +35,7 @@
     }
   ],
   "compatH": "対応機器",
-  "compat": "Pod2Swimは、OpenSwim、OpenSwim Pro、その他「ファイル」アプリでUSBドライブとして表示されるMP3プレーヤー型ヘッドセットに対応しています。ヘッドセットをiPhoneに接続するには、<a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-CまたはLightningのアダプタ</a>が必要です。",
+  "compat": "Pod2Swimは、<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>、<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a>、その他「ファイル」アプリでUSBドライブとして表示されるMP3プレーヤー型ヘッドセットに対応しています。ヘッドセットをiPhoneに接続するには、<a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-CまたはLightningのアダプタ</a>が必要です。",
   "disclaimer": "Pod2SwimはShokzと提携関係にありません。ShokzおよびOpenSwimは、それぞれの所有者の商標です。",
   "badge": "ダウンロード",
   "shotsH": "アプリの中身をチラ見せ",

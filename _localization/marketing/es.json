@@ -2,25 +2,25 @@
   "langName": "Español",
   "name": "Pod2Swim",
   "subtitle": "Pódcasts mientras nadas",
-  "tagline": "Convierte tus largos en tiempo de pódcast. Carga episodios en tu OpenSwim y escúchalos bajo el agua: sin Bluetooth y sin móvil en el borde de la piscina.",
+  "tagline": "Convierte tus largos en tiempo de pódcast. Carga episodios en tu <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a> y escúchalos bajo el agua: sin Bluetooth y sin móvil en el borde de la piscina.",
   "intro": "Pod2Swim convierte tu sesión de natación en tiempo de pódcast.",
-  "pitch": "El Bluetooth no funciona bajo el agua, así que Pod2Swim carga tus pódcasts favoritos directamente en un Shokz OpenSwim, o en cualquier auricular que se monte como almacenamiento USB, listos para sonar largo tras largo. Sin móvil en el borde, sin streaming y sin necesidad de cobertura.",
+  "pitch": "El Bluetooth no funciona bajo el agua, así que Pod2Swim carga tus pódcasts favoritos directamente en un <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Shokz OpenSwim</a>, o en cualquier auricular que se monte como almacenamiento USB, listos para sonar largo tras largo. Sin móvil al borde de la piscina, sin streaming y sin necesidad de cobertura.",
   "sections": [
     {
       "title": "CÓMO FUNCIONA",
       "bullets": [
         "Suscríbete a cualquier pódcast con el buscador integrado.",
-        "Explora los episodios más recientes de todos tus programas en un único feed cronológico.",
-        "Pon en cola lo que quieras para tu próximo baño: Pod2Swim lo descarga en segundo plano.",
+        "Explora los episodios más recientes de todos tus pódcasts en un único feed cronológico.",
+        "Añade a la cola lo que quieras para tu próximo baño: Pod2Swim lo descarga en segundo plano.",
         "Conecta el auricular y exporta toda la cola con un solo toque, en orden de reproducción.",
-        "Analiza el auricular cuando quieras para ver exactamente qué tienes cargado."
+        "Escanea el auricular cuando quieras para ver exactamente qué tienes cargado."
       ]
     },
     {
       "title": "HECHO PARA NADADORES",
       "bullets": [
-        "Tu audio vive en el auricular, así que puedes dejar el móvil en la taquilla.",
-        "Acelera el audio de 0,75× a 2,5× por pódcast, manteniendo el tono: aprovecha más antes de que cierren la piscina.",
+        "El audio se guarda en el propio auricular, así que puedes dejar el móvil en la taquilla.",
+        "Ajusta la velocidad de reproducción de 0,75× a 2,5× en cada pódcast, manteniendo el tono: escucha más antes de que cierren la piscina.",
         "Elige Reemplazar todo o Añadir al final al transferir, para controlar siempre qué hay en el dispositivo.",
         "Los episodios llegan en orden de reproducción, así tu cola suena tal y como la preparaste."
       ]
@@ -28,14 +28,14 @@
     {
       "title": "ALMACENAMIENTO SENCILLO",
       "bullets": [
-        "La cola es la única fuente de verdad: añade para descargar, quita para liberar espacio.",
+        "Todo se controla desde la cola: añade para descargar, quita para liberar espacio.",
         "Consulta el almacenamiento total descargado y bórralo con un toque.",
         "El borrado automático opcional tras la exportación lo mantiene todo ordenado."
       ]
     }
   ],
   "compatH": "Compatibilidad",
-  "compat": "Pod2Swim funciona con el OpenSwim, el OpenSwim Pro y otros auriculares reproductores de MP3 que aparecen como una unidad USB en la app Archivos. Necesitarás un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C o Lightning</a> para conectar el auricular a tu iPhone.",
+  "compat": "Pod2Swim funciona con el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> y otros auriculares con reproductor MP3 que aparecen como una unidad USB en la app Archivos. Necesitarás un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C o Lightning</a> para conectar el auricular a tu iPhone.",
   "disclaimer": "Pod2Swim no está afiliado a Shokz. Shokz y OpenSwim son marcas comerciales de su respectivo propietario.",
   "badge": "Consíguelo en el",
   "shotsH": "Un vistazo a la app",

@@ -2,16 +2,16 @@
   "langName": "Français",
   "name": "Pod2Swim",
   "subtitle": "Tes podcasts sous l'eau",
-  "tagline": "Transforme tes longueurs en moment podcast. Charge tes épisodes sur ton OpenSwim et écoute sous l'eau — sans Bluetooth, sans téléphone au bord du bassin.",
+  "tagline": "Transforme tes longueurs en moment podcast. Charge tes épisodes sur ton <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a> et écoute sous l'eau — sans Bluetooth, sans téléphone au bord du bassin.",
   "intro": "Pod2Swim transforme ta séance de natation en moment podcast.",
-  "pitch": "Le Bluetooth ne passe pas sous l'eau, alors Pod2Swim charge tes podcasts préférés directement sur un Shokz OpenSwim — ou tout casque qui se monte comme une clé USB — prêts à jouer, longueur après longueur. Pas de téléphone au bord du bassin, pas de streaming, aucun signal requis.",
+  "pitch": "Le Bluetooth ne passe pas sous l'eau, alors Pod2Swim charge tes podcasts préférés directement sur un <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Shokz OpenSwim</a> — ou tout casque qui se monte comme une clé USB — prêts à l'écoute, longueur après longueur. Pas de téléphone au bord du bassin, pas de streaming, aucun signal requis.",
   "sections": [
     {
       "title": "COMMENT ÇA MARCHE",
       "bullets": [
         "Abonne-toi à n'importe quel podcast grâce à la recherche intégrée.",
-        "Parcours les nouveaux épisodes de toutes tes émissions dans un seul fil chronologique.",
-        "Ajoute à la file ce que tu veux pour ta prochaine séance — Pod2Swim le télécharge en arrière-plan.",
+        "Parcours les nouveaux épisodes de tous tes podcasts dans un seul fil chronologique.",
+        "Ajoute à la file d'attente ce que tu veux pour ta prochaine séance — Pod2Swim le télécharge en arrière-plan.",
         "Branche ton casque et exporte toute la file d'un seul geste, dans l'ordre de lecture.",
         "Scanne le casque à tout moment pour voir exactement ce qui est chargé."
       ]
@@ -19,8 +19,8 @@
     {
       "title": "CONÇU POUR LES NAGEURS",
       "bullets": [
-        "Ton audio vit sur le casque : tu peux laisser ton téléphone au vestiaire.",
-        "Accélération optionnelle de 0,75× à 2,5× par podcast, sans déformer la voix — écoute-en plus avant la fermeture de la piscine.",
+        "Tes épisodes sont stockés sur le casque : tu peux laisser ton téléphone au vestiaire.",
+        "Vitesse de lecture réglable de 0,75× à 2,5× pour chaque podcast, sans déformer la voix — écoute-en plus avant la fermeture de la piscine.",
         "Choisis Tout remplacer ou Ajouter à la fin lors du transfert : tu gardes le contrôle de ce qui est sur l'appareil.",
         "Les épisodes arrivent dans l'ordre de lecture, exactement comme tu les as rangés."
       ]
@@ -28,15 +28,15 @@
     {
       "title": "UN STOCKAGE SIMPLE",
       "bullets": [
-        "La file est la seule référence — ajoute pour télécharger, retire pour libérer de l'espace.",
+        "La file d'attente fait foi — ajoute un épisode pour le télécharger, retire-le pour libérer de l'espace.",
         "Visualise l'espace total téléchargé et vide-le d'un seul geste.",
-        "Suppression automatique optionnelle après l'export pour rester au propre."
+        "Suppression automatique optionnelle après l'export, pour que tout reste bien rangé."
       ]
     }
   ],
   "compatH": "Compatibilité",
-  "compat": "Pod2Swim fonctionne avec l'OpenSwim, l'OpenSwim Pro et d'autres casques lecteurs MP3 qui apparaissent comme une clé USB dans l'app Fichiers. Il te faudra un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptateur USB-C ou Lightning</a> pour relier le casque à ton iPhone.",
-  "disclaimer": "Pod2Swim n'est pas affilié à Shokz. Shokz et OpenSwim sont des marques déposées de leur propriétaire respectif.",
+  "compat": "Pod2Swim fonctionne avec l'<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, l'<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> et d'autres casques lecteurs MP3 qui apparaissent comme une clé USB dans l'app Fichiers. Il te faudra un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptateur USB-C ou Lightning</a> pour relier le casque à ton iPhone.",
+  "disclaimer": "Pod2Swim n'est pas affilié à Shokz. Shokz et OpenSwim sont des marques déposées de leurs propriétaires respectifs.",
   "badge": "Télécharger dans l'",
   "shotsH": "Un aperçu de l'app",
   "support": "Assistance",

@@ -2,9 +2,9 @@
   "langName": "简体中文",
   "name": "Pod2Swim",
   "subtitle": "把播客装进你的游泳耳机",
-  "tagline": "让每一趟泳池往返都变成播客时间。把节目导入 OpenSwim，水下也能畅听——无需蓝牙，手机留在岸边或储物柜，照样听到精彩内容。",
+  "tagline": "让泳池里的每一趟都变成播客时间。把播客导入 <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>，水下也能畅听——无需蓝牙，手机留在岸边或储物柜，照样听到精彩内容。",
   "intro": "Pod2Swim 让你的每一次游泳都变成播客时间。",
-  "pitch": "蓝牙在水下无法工作，所以 Pod2Swim 会把你喜欢的播客直接导入 Shokz OpenSwim——或任何可作为 USB 存储设备挂载的耳机——一趟接一趟，随时畅听。无需把手机带到岸边，无需在线播放，更不依赖任何信号。",
+  "pitch": "蓝牙在水下无法工作，所以 Pod2Swim 会把你喜欢的播客直接导入 <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">Shokz OpenSwim</a>——或任何可作为 USB 存储设备挂载的耳机——一趟接一趟，随时畅听。无需把手机带到岸边，无需在线播放，更不依赖任何信号。",
   "sections": [
     {
       "title": "使用方法",
@@ -21,21 +21,21 @@
       "bullets": [
         "音频保存在耳机里，手机可以安心留在储物柜。",
         "每个播客可选 0.75× 至 2.5× 的倍速播放，并保持音调不变——泳池关门前听得更多。",
-        "导出时可选「全部替换」或「追加到末尾」，让你随时掌控设备里的内容。",
+        "导出时可选“全部替换”或“追加到末尾”，让你随时掌控设备里的内容。",
         "单集按播放顺序写入，队列怎么排就怎么播。"
       ]
     },
     {
       "title": "简单的存储管理",
       "bullets": [
-        "队列即唯一依据——加入即下载，移除即释放空间。",
+        "一切以队列为准——加入即下载，移除即释放空间。",
         "查看已下载内容的总占用，一键即可清空。",
-        "可选导出后自动删除，保持整洁。"
+        "可选导出后自动删除，保持存储空间整洁。"
       ]
     }
   ],
   "compatH": "兼容设备",
-  "compat": "Pod2Swim 支持 OpenSwim、OpenSwim Pro，以及其他能在「文件」App 中显示为 USB 驱动器的 MP3 播放器耳机。你需要一个 <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C 或 Lightning 转接头</a>，把耳机连接到 iPhone。",
+  "compat": "Pod2Swim 支持 <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>、<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a>，以及其他能在“文件”App 中显示为 USB 驱动器的 MP3 播放器耳机。你需要一个 <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C 或 Lightning 转接头</a>，把耳机连接到 iPhone。",
   "disclaimer": "Pod2Swim 与 Shokz 没有任何隶属关系。Shokz 和 OpenSwim 是其各自所有者的商标。",
   "badge": "前往下载",
   "shotsH": "先睹为快",

@@ -14,7 +14,7 @@ Usage (from the support repo root):
 Default app-repo path: ../Pod2Swim  (overridable via the argument or the
 POD2SWIM_APP_REPO env var).
 """
-import json, os, sys, html
+import json, os, re, sys, html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -90,6 +90,22 @@ def adapter_link(phrase):
             f'rel="nofollow sponsored noopener">{phrase}</a>')
 
 
+# Shokz affiliate link (Impact). Every Shokz / OpenSwim brand mention in the
+# user-visible copy gets wrapped — except the trademark disclaimer, which has
+# to stay a plain non-affiliation statement. The brand names are Latin-script
+# in every locale, so one regex covers all languages. Longest alternative
+# first, so "Shokz OpenSwim Pro" becomes one link, not nested fragments.
+SHOKZ = "https://shokzsingaporepteltd.pxf.io/QYAGnM"
+SHOKZ_RE = re.compile(r"Shokz OpenSwim Pro|Shokz OpenSwim|OpenSwim Pro|OpenSwim|Shokz")
+
+
+def linkify_shokz(text):
+    return SHOKZ_RE.sub(
+        lambda m: (f'<a href="{SHOKZ}" target="_blank" '
+                   f'rel="nofollow sponsored noopener">{m.group(0)}</a>'),
+        text)
+
+
 def linkify_adapter(text, code):
     phrase = MARKETING_ADAPTER.get(code)
     if phrase and phrase in text:
@@ -130,12 +146,12 @@ def build_locale(code):
         "langName": LANG_NAME[code],
         "name": read(folder, "name"),
         "subtitle": read(folder, "subtitle"),
-        "tagline": read(folder, "promotional_text"),
+        "tagline": linkify_shokz(read(folder, "promotional_text")),
         "intro": intro,
-        "pitch": pitch,
+        "pitch": linkify_shokz(pitch),
         "sections": sections,
         "compatH": c["compatH"],
-        "compat": linkify_adapter(compat, code),
+        "compat": linkify_shokz(linkify_adapter(compat, code)),
         "disclaimer": disclaimer,
         "badge": c["badge"],
         "shotsH": c["shotsH"],
@@ -222,6 +238,7 @@ PAGE = """<!DOCTYPE html>
   .hero h1 { margin: 0 0 6px; font-size: 38px; font-weight: 800; letter-spacing: -0.8px; }
   .hero .subtitle { margin: 0 0 18px; font-size: 19px; font-weight: 600; opacity: 0.95; }
   .hero .tagline { max-width: 560px; margin: 0 auto 30px; font-size: 17px; opacity: 0.92; }
+  .hero .tagline a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
   /* App Store download badge */
   .badgewrap { display: inline-flex; flex-direction: column; align-items: center; gap: 9px; }
@@ -378,9 +395,9 @@ function render(code){
 
   document.getElementById("h-name").textContent = t.name;
   document.getElementById("h-subtitle").textContent = t.subtitle;
-  document.getElementById("h-tagline").textContent = t.tagline;
+  document.getElementById("h-tagline").innerHTML = t.tagline;
   document.getElementById("b-small").textContent = t.badge;
-  document.getElementById("m-pitch").textContent = t.pitch;
+  document.getElementById("m-pitch").innerHTML = t.pitch;
   document.getElementById("m-shotsH").textContent = t.shotsH;
   document.getElementById("m-compatH").textContent = t.compatH;
   document.getElementById("m-compat").innerHTML = t.compat;
