@@ -106,6 +106,23 @@ def linkify_shokz(text):
         text)
 
 
+# Affiliate-disclosure sentence appended to the trademark disclaimer on the
+# website only (the page is the sole place the affiliate links appear). Kept out
+# of the App Store description source so the store copy stays link-free. Covers
+# both the Shokz and Amazon adapter links — "links on this site" is deliberately
+# generic since the line is only ever rendered on pod2swim.com.
+DISCLOSURE = {
+    "en": "As a Shokz affiliate, Pod2Swim may earn a commission on purchases made through links on this site.",
+    "de": "Als Shokz-Partner kann Pod2Swim eine Provision für Käufe über Links auf dieser Website erhalten.",
+    "es": "Como afiliado de Shokz, Pod2Swim puede ganar una comisión por las compras realizadas a través de los enlaces de este sitio.",
+    "fr": "En tant qu'affilié Shokz, Pod2Swim peut percevoir une commission sur les achats effectués via les liens de ce site.",
+    "it": "In qualità di affiliato Shokz, Pod2Swim può guadagnare una commissione sugli acquisti effettuati tramite i link di questo sito.",
+    "ja": "ShokzのアフィリエイトとしてPod2Swimは、このサイト上のリンク経由の購入で手数料を得る場合があります。",
+    "pt-br": "Como afiliado da Shokz, o Pod2Swim pode receber uma comissão por compras feitas através dos links neste site.",
+    "zh-hans": "作为 Shokz 联盟会员，Pod2Swim 可能会从通过本网站链接完成的购买中获得佣金。",
+}
+
+
 def linkify_adapter(text, code):
     phrase = MARKETING_ADAPTER.get(code)
     if phrase and phrase in text:
@@ -152,7 +169,9 @@ def build_locale(code):
         "sections": sections,
         "compatH": c["compatH"],
         "compat": linkify_shokz(linkify_adapter(compat, code)),
-        "disclaimer": disclaimer,
+        # CJK runs sentences together with no inter-sentence space.
+        "disclaimer": (disclaimer + ("" if code in ("ja", "zh-hans") else " ")
+                       + DISCLOSURE[code]).strip(),
         "badge": c["badge"],
         "shotsH": c["shotsH"],
         "support": c["support"],
