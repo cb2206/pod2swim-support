@@ -41,5 +41,18 @@
   "shotsH": "Uno sguardo all'app",
   "support": "Supporto",
   "privacy": "Privacy",
-  "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."
+  "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina.",
+  "changelogH": "Novità",
+  "changelog": [
+    {
+      "version": "1.2",
+      "date": "2026-06-16",
+      "entries": [
+        "Ricerca globale degli episodi — trova qualsiasi episodio fra tutti i tuoi podcast dalla scheda «Recenti», con un ordinamento migliore per titolo.",
+        "Trasferimenti alle cuffie più affidabili — niente più episodi troncati o non riproducibili.",
+        "I cambi di velocità rielaborano sul posto gli episodi in coda, e Riprova mantiene la posizione nella coda.",
+        "Risolto un blocco nello scorrimento della scheda «Recenti», gestione di feed e URL più robusta, formulazioni rifinite."
+      ]
+    }
+  ]
 }

@@ -70,6 +70,77 @@ SHOTS = ["p2s-1.png", "p2s-2.png", "p2s-3.png", "p2s-4.png",
          "p2s-5.png", "p2s-6.png", "p2s-7.png"]
 
 
+# ---------------------------------------------------------------------------
+# Changelog. Rendered on the landing page and maintained going forward: for
+# each App Store release, PREPEND one entry (newest first) with the version, an
+# ISO release date (formatted per-locale in the browser), and 3-5 short bullets
+# per locale. Keep it concise — the full notes live in the App Store "What's
+# New" (fastlane/metadata/<locale>/release_notes.txt).
+# ---------------------------------------------------------------------------
+CHANGELOG_H = {
+    "en": "What's new", "de": "Neuigkeiten", "es": "Novedades",
+    "fr": "Nouveautés", "it": "Novità", "ja": "新着情報",
+    "pt-br": "Novidades", "zh-hans": "更新内容",
+}
+
+CHANGELOG = [
+    {
+        "version": "1.2",
+        "date": "2026-06-16",
+        "entries": {
+            "en": [
+                "Global episode search — find any episode across all your podcasts from the Latest tab, with smarter title-match ranking.",
+                "More reliable headset transfers — no more truncated or unplayable episodes.",
+                "Speed changes now re-process queued episodes in place, and Retry keeps an episode's spot in the queue.",
+                "Fixed a Latest-tab scroll freeze, hardened podcast feed and URL handling, and polished wording.",
+            ],
+            "de": [
+                "Globale Folgensuche – finde jede Folge aus all deinen Podcasts direkt im Tab „Neueste“, mit besserer Sortierung nach Titeltreffern.",
+                "Zuverlässigere Übertragung auf den Kopfhörer – keine abgeschnittenen oder unspielbaren Folgen mehr.",
+                "Tempoänderungen verarbeiten eingereihte Folgen direkt neu, und „Erneut versuchen“ behält die Position in der Warteschlange bei.",
+                "Einfrieren im Tab „Neueste“ behoben, robustere Feed- und URL-Verarbeitung und feinere Formulierungen.",
+            ],
+            "es": [
+                "Búsqueda global de episodios: encuentra cualquier episodio de todos tus pódcasts desde la pestaña «Recientes», con mejor orden por coincidencia de título.",
+                "Transferencias al auricular más fiables: se acabaron los episodios cortados o que no se reproducen.",
+                "Los cambios de velocidad reprocesan en el sitio los episodios en cola, y Reintentar mantiene su posición en la cola.",
+                "Corregido un bloqueo al desplazar la pestaña «Recientes», gestión de feeds y URL más robusta y textos pulidos.",
+            ],
+            "fr": [
+                "Recherche globale d'épisodes — retrouve n'importe quel épisode de tous tes podcasts depuis l'onglet « Récents », avec un meilleur classement par titre.",
+                "Transferts vers le casque plus fiables — fini les épisodes tronqués ou illisibles.",
+                "Les changements de vitesse retraitent les épisodes en file sur place, et Réessayer conserve la place dans la file.",
+                "Correction d'un blocage au défilement de l'onglet « Récents », gestion des flux et URL plus robuste, formulations peaufinées.",
+            ],
+            "it": [
+                "Ricerca globale degli episodi — trova qualsiasi episodio fra tutti i tuoi podcast dalla scheda «Recenti», con un ordinamento migliore per titolo.",
+                "Trasferimenti alle cuffie più affidabili — niente più episodi troncati o non riproducibili.",
+                "I cambi di velocità rielaborano sul posto gli episodi in coda, e Riprova mantiene la posizione nella coda.",
+                "Risolto un blocco nello scorrimento della scheda «Recenti», gestione di feed e URL più robusta, formulazioni rifinite.",
+            ],
+            "ja": [
+                "全エピソード横断の検索 — 「最新」タブから、登録中のすべてのポッドキャストのエピソードを検索。タイトル一致の並び順も改善。",
+                "ヘッドセットへの転送がより確実に — 途中で切れたり再生できないエピソードがなくなりました。",
+                "速度変更でキュー内のエピソードをその場で再処理。「再試行」はキュー内の位置を保持します。",
+                "「最新」タブのスクロール時の固まりを修正、フィードとURLの処理を強化、文言を調整。",
+            ],
+            "pt-br": [
+                "Busca global de episódios — encontre qualquer episódio entre todos os seus podcasts na aba “Recentes”, com melhor ordenação por título.",
+                "Transferências para o fone mais confiáveis — sem mais episódios cortados ou que não tocam.",
+                "Mudanças de velocidade reprocessam no lugar os episódios na fila, e Tentar de novo mantém a posição na fila.",
+                "Corrigido um congelamento ao rolar a aba “Recentes”, tratamento de feeds e URLs mais robusto e textos refinados.",
+            ],
+            "zh-hans": [
+                "全局单集搜索——在“最新”标签页中查找你订阅的所有播客的任意单集，并优化了标题匹配排序。",
+                "更可靠的耳机传输——不再出现被截断或无法播放的单集。",
+                "更改倍速会就地重新处理队列中的单集，“重试”会保留其在队列中的位置。",
+                "修复「最新」标签页滚动卡顿，增强信息流与 URL 处理，并润色文案。",
+            ],
+        },
+    },
+]
+
+
 # Amazon affiliate link for the USB-C / Lightning adapter. The exact adapter
 # noun-phrase in each locale's compatibility line gets wrapped in this link.
 AMZN = "https://amzn.to/43mRukS"
@@ -177,6 +248,9 @@ def build_locale(code):
         "support": c["support"],
         "privacy": c["privacy"],
         "metaDesc": c["metaDesc"],
+        "changelogH": CHANGELOG_H[code],
+        "changelog": [{"version": e["version"], "date": e["date"],
+                       "entries": e["entries"][code]} for e in CHANGELOG],
     }
 
 
@@ -314,6 +388,32 @@ PAGE = """<!DOCTYPE html>
     box-shadow: 0 14px 36px rgba(15,76,145,0.16); background: #fff;
   }
 
+  /* changelog */
+  .changelog { margin: 56px 0 8px; }
+  .changelog h2 { text-align: center; font-size: 24px; font-weight: 800;
+    letter-spacing: -0.4px; margin: 0 0 26px; color: var(--ink); }
+  .release {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 22px 24px 8px; margin: 0 auto 18px; max-width: 680px;
+    box-shadow: 0 1px 3px rgba(15,76,145,0.05);
+  }
+  .release-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 12px; flex-wrap: wrap; margin: 0 0 14px;
+  }
+  .release-head .ver { font-size: 17px; font-weight: 800; letter-spacing: -0.2px;
+    color: var(--blue-dark); }
+  .release-head .date { font-size: 13px; font-weight: 600; color: var(--muted); }
+  .release ul { list-style: none; margin: 0; padding: 0; }
+  .release li {
+    position: relative; padding: 0 0 16px 26px; font-size: 15px; color: #2a3a48;
+  }
+  .release li::before {
+    content: ""; position: absolute; left: 2px; top: 7px;
+    width: 9px; height: 9px; border-radius: 50%;
+    background: var(--blue); box-shadow: 0 0 0 4px rgba(31,122,224,0.14);
+  }
+
   .fineprint { max-width: 680px; margin: 40px auto 0; }
   .fineprint h2 { font-size: 13px; font-weight: 800; letter-spacing: 1.2px;
     text-transform: uppercase; color: var(--blue-dark); margin: 0 0 8px; }
@@ -338,6 +438,7 @@ PAGE = """<!DOCTYPE html>
 <nav class="nav">
   <span class="brand"><img src="assets/icon.png" alt="Pod2Swim"> Pod2Swim</span>
   <span class="navright">
+    <a class="navlink" id="nav-changelog" href="#changelog">What's new</a>
     <a class="navlink" id="nav-support" href="support/">Support</a>
     <span class="picker"><select id="lang" aria-label="Language"></select></span>
   </span>
@@ -364,6 +465,11 @@ PAGE = """<!DOCTYPE html>
   <section class="shots">
     <h2 id="m-shotsH"></h2>
     <div class="gallery" id="m-gallery"></div>
+  </section>
+
+  <section class="changelog" id="changelog">
+    <h2 id="m-changelogH"></h2>
+    <div id="m-changelog"></div>
   </section>
 
   <section class="fineprint">
@@ -434,6 +540,28 @@ function render(code){
     feats.appendChild(card);
   }
 
+  document.getElementById("m-changelogH").textContent = t.changelogH;
+  const cl = document.getElementById("m-changelog");
+  cl.innerHTML = "";
+  let dfmt;
+  try { dfmt = new Intl.DateTimeFormat(LANG_ATTR[code] || code, {year:"numeric", month:"long", day:"numeric"}); }
+  catch(e){ dfmt = null; }
+  for (const v of t.changelog){
+    const rel = el("div", "release");
+    const head = el("div", "release-head");
+    const ver = el("span", "ver"); ver.textContent = t.name + " " + v.version;
+    const date = el("span", "date");
+    let dstr = v.date;
+    if (dfmt){ try { dstr = dfmt.format(new Date(v.date + "T00:00:00")); } catch(e){} }
+    date.textContent = dstr;
+    head.appendChild(ver); head.appendChild(date);
+    rel.appendChild(head);
+    const ul = el("ul");
+    for (const item of v.entries){ const li = el("li"); li.textContent = item; ul.appendChild(li); }
+    rel.appendChild(ul);
+    cl.appendChild(rel);
+  }
+
   const g = document.getElementById("m-gallery");
   if (!g.dataset.filled){
     SHOTS.forEach((src, i) => {
@@ -454,6 +582,7 @@ function render(code){
   pri.textContent = t.privacy; pri.href = privacyPath(code);
   const navSup = document.getElementById("nav-support");
   navSup.textContent = t.support; navSup.href = supportPath(code);
+  document.getElementById("nav-changelog").textContent = t.changelogH;
 
   document.getElementById("lang").value = code;
 }

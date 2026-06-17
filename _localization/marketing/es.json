@@ -41,5 +41,18 @@
   "shotsH": "Un vistazo a la app",
   "support": "Soporte",
   "privacy": "Privacidad",
-  "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde."
+  "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde.",
+  "changelogH": "Novedades",
+  "changelog": [
+    {
+      "version": "1.2",
+      "date": "2026-06-16",
+      "entries": [
+        "Búsqueda global de episodios: encuentra cualquier episodio de todos tus pódcasts desde la pestaña «Recientes», con mejor orden por coincidencia de título.",
+        "Transferencias al auricular más fiables: se acabaron los episodios cortados o que no se reproducen.",
+        "Los cambios de velocidad reprocesan en el sitio los episodios en cola, y Reintentar mantiene su posición en la cola.",
+        "Corregido un bloqueo al desplazar la pestaña «Recientes», gestión de feeds y URL más robusta y textos pulidos."
+      ]
+    }
+  ]
 }

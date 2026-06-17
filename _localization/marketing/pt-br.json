@@ -41,5 +41,18 @@
   "shotsH": "Um olhar pelo app",
   "support": "Suporte",
   "privacy": "Privacidade",
-  "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda."
+  "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda.",
+  "changelogH": "Novidades",
+  "changelog": [
+    {
+      "version": "1.2",
+      "date": "2026-06-16",
+      "entries": [
+        "Busca global de episódios — encontre qualquer episódio entre todos os seus podcasts na aba “Recentes”, com melhor ordenação por título.",
+        "Transferências para o fone mais confiáveis — sem mais episódios cortados ou que não tocam.",
+        "Mudanças de velocidade reprocessam no lugar os episódios na fila, e Tentar de novo mantém a posição na fila.",
+        "Corrigido um congelamento ao rolar a aba “Recentes”, tratamento de feeds e URLs mais robusto e textos refinados."
+      ]
+    }
+  ]
 }

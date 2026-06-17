@@ -41,5 +41,18 @@
   "shotsH": "A look inside",
   "support": "Support",
   "privacy": "Privacy Policy",
-  "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."
+  "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside.",
+  "changelogH": "What's new",
+  "changelog": [
+    {
+      "version": "1.2",
+      "date": "2026-06-16",
+      "entries": [
+        "Global episode search — find any episode across all your podcasts from the Latest tab, with smarter title-match ranking.",
+        "More reliable headset transfers — no more truncated or unplayable episodes.",
+        "Speed changes now re-process queued episodes in place, and Retry keeps an episode's spot in the queue.",
+        "Fixed a Latest-tab scroll freeze, hardened podcast feed and URL handling, and polished wording."
+      ]
+    }
+  ]
 }
