@@ -53,7 +53,7 @@
     "title": "Pod2Swim — Política de Privacidade",
     "metaDesc": "Política de privacidade do Pod2Swim. O app não coleta nenhum dado pessoal.",
     "headerTitle": "Política de Privacidade",
-    "headerSub": "Pod2Swim · Última atualização: 6 de junho de 2026",
+    "headerSub": "Pod2Swim · Última atualização: 20 de julho de 2026",
     "back": "← Voltar ao Suporte",
     "sections": [
       {
@@ -62,7 +62,7 @@
       },
       {
         "h2": "O que fica no seu dispositivo",
-        "body": "<p>Tudo o que o app cria — suas assinaturas de podcast, sua fila de exportação e o áudio que ele baixa — fica armazenado localmente no seu iPhone e nunca sai dele, exceto quando você determina (por exemplo, ao copiar episódios para os seus próprios fones).</p>"
+        "body": "<p>Tudo o que o app cria — suas assinaturas de podcast, sua fila de exportação e o áudio que ele baixa — fica armazenado localmente no seu dispositivo e nunca sai dele, exceto quando você determina (por exemplo, ao copiar episódios para os seus próprios fones).</p>"
       },
       {
         "h2": "Requisições de rede",

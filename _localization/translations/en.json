@@ -53,7 +53,7 @@
     "title": "Pod2Swim — Privacy Policy",
     "metaDesc": "Privacy policy for Pod2Swim. The app collects no personal data.",
     "headerTitle": "Privacy Policy",
-    "headerSub": "Pod2Swim · Last updated 6 June 2026",
+    "headerSub": "Pod2Swim · Last updated 20 July 2026",
     "back": "← Back to Support",
     "sections": [
       {
@@ -62,7 +62,7 @@
       },
       {
         "h2": "What stays on your device",
-        "body": "<p>Everything the app creates — your podcast subscriptions, your export queue, and the audio it downloads — is stored locally on your iPhone and never leaves it except as you direct (for example, when you copy episodes onto your own headset).</p>"
+        "body": "<p>Everything the app creates — your podcast subscriptions, your export queue, and the audio it downloads — is stored locally on your phone and never leaves it except as you direct (for example, when you copy episodes onto your own headset).</p>"
       },
       {
         "h2": "Network requests",
