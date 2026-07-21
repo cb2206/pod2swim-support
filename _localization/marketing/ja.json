@@ -32,18 +32,36 @@
         "ダウンロード済みの合計容量を表示し、ワンタップで削除できます。",
         "書き出し後の自動削除（任意）で、いつもすっきり。"
       ]
+    },
+    {
+      "title": "無料トライアルと買い切り",
+      "bullets": [
+        "無料でダウンロードして、7日間すべての機能を試せます。",
+        "一度の購入でPod2Swimをずっと利用できます。サブスクリプションはありません。",
+        "有料アプリだった頃にPod2Swimを購入した方は、追加料金なしで自動的にロック解除されます。"
+      ]
     }
   ],
   "compatH": "対応機器",
   "compat": "Pod2Swimは、<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>、<a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a>、その他「ファイル」アプリでUSBドライブとして表示されるMP3プレーヤー型ヘッドセットに対応しています。ヘッドセットをiPhoneに接続するには、<a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-CまたはLightningのアダプタ</a>が必要です。",
   "disclaimer": "Pod2SwimはShokzと提携関係にありません。ShokzおよびOpenSwimは、それぞれの所有者の商標です。ShokzのアフィリエイトとしてPod2Swimは、このサイト上のリンク経由の購入で手数料を得る場合があります。",
   "badge": "ダウンロード",
+  "comingSoon": "近日公開",
   "shotsH": "アプリの中身をチラ見せ",
   "support": "サポート",
   "privacy": "プライバシー",
   "metaDesc": "Pod2Swimは、お気に入りのポッドキャストをShokz OpenSwimなどのUSBヘッドセットに転送。Bluetoothもプールサイドのスマホもなしで、水中で楽しめます。",
   "changelogH": "新着情報",
   "changelog": [
+    {
+      "version": "1.3",
+      "date": "2026-07-20",
+      "entries": [
+        "Pod2Swimが無料になりました。7日間すべての機能を試せます。",
+        "トライアル終了後は、一度の買い切り購入でずっと利用できます。サブスクリプションはありません。",
+        "有料アプリだった頃に購入した方は、追加料金なしで自動的にロック解除されたままです。"
+      ]
+    },
     {
       "version": "1.2",
       "date": "2026-06-16",

@@ -32,18 +32,36 @@
         "Veja o total baixado e limpe tudo com um toque.",
         "A exclusão automática após a exportação mantém tudo organizado."
       ]
+    },
+    {
+      "title": "TESTE GRÁTIS, COMPRA ÚNICA",
+      "bullets": [
+        "Baixe o app de graça e experimente tudo por 7 dias.",
+        "Uma única compra desbloqueia o Pod2Swim para sempre, sem assinatura.",
+        "Comprou o Pod2Swim quando ele era pago? Tudo é desbloqueado automaticamente, sem custo extra."
+      ]
     }
   ],
   "compatH": "Compatibilidade",
   "compat": "O Pod2Swim funciona com o <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, o <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> e outros fones com player de MP3 que aparecem como pen drive USB no app Arquivos. Você vai precisar de um <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C ou Lightning</a> para conectar o fone ao seu iPhone.",
   "disclaimer": "O Pod2Swim não tem vínculo com a Shokz. Shokz e OpenSwim são marcas registradas de seus respectivos proprietários. Como afiliado da Shokz, o Pod2Swim pode receber uma comissão por compras feitas através dos links neste site.",
   "badge": "Baixar na",
+  "comingSoon": "Em breve",
   "shotsH": "Um olhar pelo app",
   "support": "Suporte",
   "privacy": "Privacidade",
   "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda.",
   "changelogH": "Novidades",
   "changelog": [
+    {
+      "version": "1.3",
+      "date": "2026-07-20",
+      "entries": [
+        "O Pod2Swim agora é grátis — experimente tudo por 7 dias.",
+        "Depois do teste, uma única compra desbloqueia o app para sempre, sem assinatura.",
+        "Comprou quando era pago? Você continua desbloqueado automaticamente, sem custo extra."
+      ]
+    },
     {
       "version": "1.2",
       "date": "2026-06-16",

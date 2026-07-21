@@ -32,18 +32,36 @@
         "Vedi quanto spazio occupano i download e liberalo con un solo tocco.",
         "L'eliminazione automatica opzionale dopo l'esportazione mantiene tutto in ordine."
       ]
+    },
+    {
+      "title": "PROVA GRATUITA, ACQUISTO UNICO",
+      "bullets": [
+        "Scarica l'app gratis e prova tutto per 7 giorni.",
+        "Un solo acquisto sblocca Pod2Swim per sempre, senza abbonamento.",
+        "Hai comprato Pod2Swim quando era un'app a pagamento? È tutto sbloccato automaticamente, senza costi aggiuntivi."
+      ]
     }
   ],
   "compatH": "Compatibilità",
   "compat": "Pod2Swim funziona con <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> e altre cuffie con lettore MP3 che compaiono come unità USB nell'app File. Ti servirà un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adattatore USB-C o Lightning</a> per collegare le cuffie all'iPhone.",
   "disclaimer": "Pod2Swim non è affiliata a Shokz. Shokz e OpenSwim sono marchi dei rispettivi proprietari. In qualità di affiliato Shokz, Pod2Swim può guadagnare una commissione sugli acquisti effettuati tramite i link di questo sito.",
   "badge": "Scaricala su",
+  "comingSoon": "In arrivo",
   "shotsH": "Uno sguardo all'app",
   "support": "Supporto",
   "privacy": "Privacy",
   "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina.",
   "changelogH": "Novità",
   "changelog": [
+    {
+      "version": "1.3",
+      "date": "2026-07-20",
+      "entries": [
+        "Pod2Swim ora è gratis: prova tutto per 7 giorni.",
+        "Dopo la prova, un unico acquisto sblocca l'app per sempre, senza abbonamento.",
+        "L'avevi comprata quando era a pagamento? Resti sbloccato automaticamente, senza costi aggiuntivi."
+      ]
+    },
     {
       "version": "1.2",
       "date": "2026-06-16",

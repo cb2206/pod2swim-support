@@ -21,10 +21,12 @@ REPO = os.path.dirname(HERE)
 
 APP_REPO = (sys.argv[1] if len(sys.argv) > 1
             else os.environ.get("POD2SWIM_APP_REPO", "/Users/cb/dev/Pod2Swim"))
-META = os.path.join(APP_REPO, "fastlane", "metadata")
+# The app repo is a two-app monorepo; the iOS App Store metadata lives under ios/.
+META = os.path.join(APP_REPO, "ios", "fastlane", "metadata")
 
 # Live App Store listing (Pod2Swim, app id 6766092966). The id-only URL
-# redirects to each visitor's local storefront.
+# redirects to each visitor's local storefront. The Android build is submitted
+# to Google Play but not yet live, so its tile shows a "coming soon" placeholder.
 APP_STORE_URL = "https://apps.apple.com/app/id6766092966"
 
 # site code -> App Store locale folder
@@ -40,28 +42,28 @@ LANG_NAME = {"en": "English", "de": "Deutsch", "es": "Español", "fr": "Françai
 
 # Short UI strings that are not part of the App Store description.
 CHROME = {
-    "en": {"badge": "Download on the",
+    "en": {"badge": "Download on the", "comingSoon": "Coming soon",
            "shotsH": "A look inside", "support": "Support", "privacy": "Privacy Policy",
            "compatH": "Compatibility", "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."},
-    "de": {"badge": "Laden im",
+    "de": {"badge": "Laden im", "comingSoon": "Bald verfügbar",
            "shotsH": "Ein Blick in die App", "support": "Support", "privacy": "Datenschutz",
            "compatH": "Kompatibilität", "metaDesc": "Pod2Swim lädt deine Lieblingspodcasts auf einen Shokz OpenSwim oder jeden USB-Kopfhörer – zum Hören unter Wasser, ohne Bluetooth und ohne Handy am Beckenrand."},
-    "es": {"badge": "Consíguelo en el",
+    "es": {"badge": "Consíguelo en el", "comingSoon": "Muy pronto",
            "shotsH": "Un vistazo a la app", "support": "Soporte", "privacy": "Privacidad",
            "compatH": "Compatibilidad", "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde."},
-    "fr": {"badge": "Télécharger dans l'",
+    "fr": {"badge": "Télécharger dans l'", "comingSoon": "Bientôt disponible",
            "shotsH": "Un aperçu de l'app", "support": "Assistance", "privacy": "Confidentialité",
            "compatH": "Compatibilité", "metaDesc": "Pod2Swim charge tes podcasts préférés sur un Shokz OpenSwim ou tout casque USB pour écouter sous l'eau, sans Bluetooth ni téléphone au bord du bassin."},
-    "it": {"badge": "Scaricala su",
+    "it": {"badge": "Scaricala su", "comingSoon": "In arrivo",
            "shotsH": "Uno sguardo all'app", "support": "Supporto", "privacy": "Privacy",
            "compatH": "Compatibilità", "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."},
-    "ja": {"badge": "ダウンロード",
+    "ja": {"badge": "ダウンロード", "comingSoon": "近日公開",
            "shotsH": "アプリの中身をチラ見せ", "support": "サポート", "privacy": "プライバシー",
            "compatH": "対応機器", "metaDesc": "Pod2Swimは、お気に入りのポッドキャストをShokz OpenSwimなどのUSBヘッドセットに転送。Bluetoothもプールサイドのスマホもなしで、水中で楽しめます。"},
-    "pt-br": {"badge": "Baixar na",
+    "pt-br": {"badge": "Baixar na", "comingSoon": "Em breve",
               "shotsH": "Um olhar pelo app", "support": "Suporte", "privacy": "Privacidade",
               "compatH": "Compatibilidade", "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda."},
-    "zh-hans": {"badge": "前往下载",
+    "zh-hans": {"badge": "前往下载", "comingSoon": "即将推出",
                 "shotsH": "先睹为快", "support": "支持", "privacy": "隐私政策",
                 "compatH": "兼容设备", "metaDesc": "Pod2Swim 把你喜欢的播客导入 Shokz OpenSwim 等 USB 耳机，水下也能畅听——无需蓝牙，手机留在岸边。"},
 }
@@ -84,6 +86,52 @@ CHANGELOG_H = {
 }
 
 CHANGELOG = [
+    {
+        "version": "1.3",
+        "date": "2026-07-20",
+        "entries": {
+            "en": [
+                "Pod2Swim is now free to download — try everything for 7 days.",
+                "After the trial, one single purchase unlocks the app forever — no subscription.",
+                "Already bought Pod2Swim when it was a paid app? You stay unlocked automatically, at no extra cost.",
+            ],
+            "de": [
+                "Pod2Swim ist jetzt gratis – teste 7 Tage lang alle Funktionen.",
+                "Danach schaltet ein einmaliger Kauf die App für immer frei – kein Abo.",
+                "Schon als Bezahl-App gekauft? Du bleibst automatisch freigeschaltet – ohne Aufpreis.",
+            ],
+            "es": [
+                "Pod2Swim ahora es gratis: pruébalo todo durante 7 días.",
+                "Tras la prueba, una única compra desbloquea la app para siempre, sin suscripción.",
+                "¿La compraste cuando era de pago? Sigues desbloqueado automáticamente, sin coste adicional.",
+            ],
+            "fr": [
+                "Pod2Swim est désormais gratuit — essaie tout pendant 7 jours.",
+                "Après l'essai, un seul achat débloque l'app pour toujours, sans abonnement.",
+                "Tu l'avais achetée quand elle était payante ? Tu restes débloqué automatiquement, sans frais.",
+            ],
+            "it": [
+                "Pod2Swim ora è gratis: prova tutto per 7 giorni.",
+                "Dopo la prova, un unico acquisto sblocca l'app per sempre, senza abbonamento.",
+                "L'avevi comprata quando era a pagamento? Resti sbloccato automaticamente, senza costi aggiuntivi.",
+            ],
+            "ja": [
+                "Pod2Swimが無料になりました。7日間すべての機能を試せます。",
+                "トライアル終了後は、一度の買い切り購入でずっと利用できます。サブスクリプションはありません。",
+                "有料アプリだった頃に購入した方は、追加料金なしで自動的にロック解除されたままです。",
+            ],
+            "pt-br": [
+                "O Pod2Swim agora é grátis — experimente tudo por 7 dias.",
+                "Depois do teste, uma única compra desbloqueia o app para sempre, sem assinatura.",
+                "Comprou quando era pago? Você continua desbloqueado automaticamente, sem custo extra.",
+            ],
+            "zh-hans": [
+                "Pod2Swim 现在可以免费下载——7 天内体验全部功能。",
+                "试用结束后，一次性购买即可永久解锁，无订阅。",
+                "在付费时期购买过？应用会自动保持解锁，无需额外付费。",
+            ],
+        },
+    },
     {
         "version": "1.2",
         "date": "2026-06-16",
@@ -244,6 +292,7 @@ def build_locale(code):
         "disclaimer": (disclaimer + ("" if code in ("ja", "zh-hans") else " ")
                        + DISCLOSURE[code]).strip(),
         "badge": c["badge"],
+        "comingSoon": c["comingSoon"],
         "shotsH": c["shotsH"],
         "support": c["support"],
         "privacy": c["privacy"],
@@ -333,23 +382,28 @@ PAGE = """<!DOCTYPE html>
   .hero .tagline { max-width: 560px; margin: 0 auto 30px; font-size: 17px; opacity: 0.92; }
   .hero .tagline a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 
-  /* App Store download badge */
-  .badgewrap { display: inline-flex; flex-direction: column; align-items: center; gap: 9px; }
-  .appstore {
+  /* store download badges */
+  .badgewrap { display: inline-flex; flex-wrap: wrap; align-items: center;
+    justify-content: center; gap: 12px; }
+  .storebadge {
     display: inline-flex; align-items: center; gap: 11px;
     background: #0c0c0c; color: #fff; border-radius: 11px;
     padding: 10px 18px; text-decoration: none;
     border: 1px solid rgba(255,255,255,0.25); user-select: none;
     transition: transform .12s ease, box-shadow .12s ease;
   }
-  .appstore:hover {
+  a.storebadge:hover {
     text-decoration: none; transform: translateY(-1px);
     box-shadow: 0 12px 28px rgba(8,40,80,0.4);
   }
-  .appstore:active { transform: translateY(0); }
-  .appstore svg { width: 26px; height: 26px; fill: #fff; }
-  .appstore .small { font-size: 11px; line-height: 1; opacity: 0.85; }
-  .appstore .big { font-size: 19px; font-weight: 600; line-height: 1.15; letter-spacing: -0.2px; }
+  a.storebadge:active { transform: translateY(0); }
+  .storebadge svg { width: 26px; height: 26px; }
+  .appstore svg { fill: #fff; }
+  .storebadge .small { font-size: 11px; line-height: 1; opacity: 0.85; }
+  .storebadge .big { font-size: 19px; font-weight: 600; line-height: 1.15; letter-spacing: -0.2px; }
+  /* Google Play — not live yet, so the tile is a dimmed, non-interactive placeholder */
+  .playstore { position: relative; cursor: default; opacity: 0.55; }
+  .playstore .small { text-transform: uppercase; letter-spacing: 0.4px; }
 
   main { max-width: 860px; margin: 0 auto; padding: 0 20px; }
   .pitch { font-size: 18px; color: #25323f; max-width: 680px;
@@ -450,10 +504,14 @@ PAGE = """<!DOCTYPE html>
   <p class="subtitle" id="h-subtitle"></p>
   <p class="tagline" id="h-tagline"></p>
   <div class="badgewrap">
-    <a class="appstore" id="appstore-link" href="__APPSTORE__" target="_blank" rel="noopener" aria-label="Download Pod2Swim on the App Store">
+    <a class="storebadge appstore" id="appstore-link" href="__APPSTORE__" target="_blank" rel="noopener" aria-label="Download Pod2Swim on the App Store">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.78c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.28-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.29 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.13 6.04c.64-.78 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
       <span><span class="small" id="b-small">Download on the</span><br><span class="big">App Store</span></span>
     </a>
+    <span class="storebadge playstore" id="playstore-badge" aria-disabled="true" role="img">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4c-.24.25-.38.63-.38 1.13v16.94c0 .5.14.88.39 1.13l.06.05L13.1 12.1v-.22L3.67 2.35l-.07.05z" fill="#00d0ff"/><path d="M16.24 15.24 13.1 12.1v-.22l3.14-3.14.07.04 3.72 2.12c1.06.6 1.06 1.59 0 2.2l-3.72 2.11-.07.03z" fill="#ffc107"/><path d="m16.31 15.2-3.21-3.21-9.28 9.28c.35.37.93.42 1.58.05l10.91-6.12z" fill="#ff3d47"/><path d="M16.31 8.8 5.4 2.68c-.65-.37-1.23-.32-1.58.05l9.28 9.27L16.31 8.8z" fill="#00e676"/></svg>
+      <span><span class="small" id="ps-small">Coming soon</span><br><span class="big">Google Play</span></span>
+    </span>
   </div>
 </header>
 
@@ -522,6 +580,7 @@ function render(code){
   document.getElementById("h-subtitle").textContent = t.subtitle;
   document.getElementById("h-tagline").innerHTML = t.tagline;
   document.getElementById("b-small").textContent = t.badge;
+  document.getElementById("ps-small").textContent = t.comingSoon;
   document.getElementById("m-pitch").innerHTML = t.pitch;
   document.getElementById("m-shotsH").textContent = t.shotsH;
   document.getElementById("m-compatH").textContent = t.compatH;
