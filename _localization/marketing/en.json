@@ -47,6 +47,8 @@
   "disclaimer": "Pod2Swim is not affiliated with Shokz. Shokz and OpenSwim are trademarks of their respective owner. As a Shokz affiliate, Pod2Swim may earn a commission on purchases made through links on this site.",
   "badge": "Download on the",
   "comingSoon": "Coming soon",
+  "light": "Light",
+  "dark": "Dark",
   "shotsH": "A look inside",
   "support": "Support",
   "privacy": "Privacy Policy",
@@ -55,16 +57,20 @@
   "changelog": [
     {
       "version": "1.3",
-      "date": "2026-07-20",
+      "date": null,
+      "status": "Coming soon for Android and iOS",
       "entries": [
         "Pod2Swim is now free to download — try everything for 7 days.",
         "After the trial, one single purchase unlocks the app forever — no subscription.",
-        "Already bought Pod2Swim when it was a paid app? You stay unlocked automatically, at no extra cost."
+        "Already bought Pod2Swim when it was a paid app? You stay unlocked automatically, at no extra cost.",
+        "iOS: bug fixes and polish, including a more reliable paywall and smoother headset-transfer progress.",
+        "First Android release — the same Pod2Swim, now on Google Play."
       ]
     },
     {
       "version": "1.2",
       "date": "2026-06-16",
+      "status": null,
       "entries": [
         "Global episode search — find any episode across all your podcasts from the Latest tab, with smarter title-match ranking.",
         "More reliable headset transfers — no more truncated or unplayable episodes.",

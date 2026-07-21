@@ -43,33 +43,43 @@ LANG_NAME = {"en": "English", "de": "Deutsch", "es": "Español", "fr": "Françai
 # Short UI strings that are not part of the App Store description.
 CHROME = {
     "en": {"badge": "Download on the", "comingSoon": "Coming soon",
+           "light": "Light", "dark": "Dark",
            "shotsH": "A look inside", "support": "Support", "privacy": "Privacy Policy",
            "compatH": "Compatibility", "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."},
     "de": {"badge": "Laden im", "comingSoon": "Bald verfügbar",
+           "light": "Hell", "dark": "Dunkel",
            "shotsH": "Ein Blick in die App", "support": "Support", "privacy": "Datenschutz",
            "compatH": "Kompatibilität", "metaDesc": "Pod2Swim lädt deine Lieblingspodcasts auf einen Shokz OpenSwim oder jeden USB-Kopfhörer – zum Hören unter Wasser, ohne Bluetooth und ohne Handy am Beckenrand."},
     "es": {"badge": "Consíguelo en el", "comingSoon": "Muy pronto",
+           "light": "Claro", "dark": "Oscuro",
            "shotsH": "Un vistazo a la app", "support": "Soporte", "privacy": "Privacidad",
            "compatH": "Compatibilidad", "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde."},
     "fr": {"badge": "Télécharger dans l'", "comingSoon": "Bientôt disponible",
+           "light": "Clair", "dark": "Sombre",
            "shotsH": "Un aperçu de l'app", "support": "Assistance", "privacy": "Confidentialité",
            "compatH": "Compatibilité", "metaDesc": "Pod2Swim charge tes podcasts préférés sur un Shokz OpenSwim ou tout casque USB pour écouter sous l'eau, sans Bluetooth ni téléphone au bord du bassin."},
     "it": {"badge": "Scaricala su", "comingSoon": "In arrivo",
+           "light": "Chiaro", "dark": "Scuro",
            "shotsH": "Uno sguardo all'app", "support": "Supporto", "privacy": "Privacy",
            "compatH": "Compatibilità", "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."},
     "ja": {"badge": "ダウンロード", "comingSoon": "近日公開",
+           "light": "ライト", "dark": "ダーク",
            "shotsH": "アプリの中身をチラ見せ", "support": "サポート", "privacy": "プライバシー",
            "compatH": "対応機器", "metaDesc": "Pod2Swimは、お気に入りのポッドキャストをShokz OpenSwimなどのUSBヘッドセットに転送。Bluetoothもプールサイドのスマホもなしで、水中で楽しめます。"},
     "pt-br": {"badge": "Baixar na", "comingSoon": "Em breve",
+              "light": "Claro", "dark": "Escuro",
               "shotsH": "Um olhar pelo app", "support": "Suporte", "privacy": "Privacidade",
               "compatH": "Compatibilidade", "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda."},
     "zh-hans": {"badge": "前往下载", "comingSoon": "即将推出",
+                "light": "浅色", "dark": "深色",
                 "shotsH": "先睹为快", "support": "支持", "privacy": "隐私政策",
                 "compatH": "兼容设备", "metaDesc": "Pod2Swim 把你喜欢的播客导入 Shokz OpenSwim 等 USB 耳机，水下也能畅听——无需蓝牙，手机留在岸边。"},
 }
 
-SHOTS = ["p2s-1.png", "p2s-2.png", "p2s-3.png", "p2s-4.png",
-         "p2s-5.png", "p2s-6.png", "p2s-7.png"]
+# Screenshot gallery. Four sets — 2 platforms × 2 appearances — of the same 7
+# screens, stored at assets/shots/<platform>/<mode>/NN.png. The page has a
+# platform tab (iOS / Android) and a light/dark toggle that swap the set live.
+SHOT_NAMES = ["01", "02", "03", "04", "05", "06", "07"]
 
 
 # ---------------------------------------------------------------------------
@@ -77,7 +87,10 @@ SHOTS = ["p2s-1.png", "p2s-2.png", "p2s-3.png", "p2s-4.png",
 # each App Store release, PREPEND one entry (newest first) with the version, an
 # ISO release date (formatted per-locale in the browser), and 3-5 short bullets
 # per locale. Keep it concise — the full notes live in the App Store "What's
-# New" (fastlane/metadata/<locale>/release_notes.txt).
+# New" (ios/fastlane/metadata/<locale>/release_notes.txt).
+# An entry may instead carry `"date": None` plus a per-locale `status` dict; the
+# status string then renders in place of the date (used for a not-yet-live
+# release, e.g. "Coming soon"). Swap it back to a `date` once the stores approve.
 # ---------------------------------------------------------------------------
 CHANGELOG_H = {
     "en": "What's new", "de": "Neuigkeiten", "es": "Novedades",
@@ -88,47 +101,76 @@ CHANGELOG_H = {
 CHANGELOG = [
     {
         "version": "1.3",
-        "date": "2026-07-20",
+        # No release date yet — 1.3 is submitted but not live. A per-locale
+        # `status` string shows in place of the date until the stores approve it;
+        # swap `status` for a `"date": "YYYY-MM-DD"` once both releases are live.
+        "date": None,
+        "status": {
+            "en": "Coming soon for Android and iOS",
+            "de": "Bald für Android und iOS",
+            "es": "Muy pronto para Android y iOS",
+            "fr": "Bientôt sur Android et iOS",
+            "it": "Presto su Android e iOS",
+            "ja": "AndroidとiOSで近日公開",
+            "pt-br": "Em breve para Android e iOS",
+            "zh-hans": "Android 和 iOS 即将推出",
+        },
         "entries": {
             "en": [
                 "Pod2Swim is now free to download — try everything for 7 days.",
                 "After the trial, one single purchase unlocks the app forever — no subscription.",
                 "Already bought Pod2Swim when it was a paid app? You stay unlocked automatically, at no extra cost.",
+                "iOS: bug fixes and polish, including a more reliable paywall and smoother headset-transfer progress.",
+                "First Android release — the same Pod2Swim, now on Google Play.",
             ],
             "de": [
                 "Pod2Swim ist jetzt gratis – teste 7 Tage lang alle Funktionen.",
                 "Danach schaltet ein einmaliger Kauf die App für immer frei – kein Abo.",
                 "Schon als Bezahl-App gekauft? Du bleibst automatisch freigeschaltet – ohne Aufpreis.",
+                "iOS: Fehlerbehebungen und Feinschliff, u. a. eine zuverlässigere Kaufseite und flüssigere Übertragungsanzeige.",
+                "Erste Android-Version – das gleiche Pod2Swim, jetzt bei Google Play.",
             ],
             "es": [
                 "Pod2Swim ahora es gratis: pruébalo todo durante 7 días.",
                 "Tras la prueba, una única compra desbloquea la app para siempre, sin suscripción.",
                 "¿La compraste cuando era de pago? Sigues desbloqueado automáticamente, sin coste adicional.",
+                "iOS: correcciones de errores y mejoras, con una pantalla de compra más fiable y una barra de transferencia más suave.",
+                "Primera versión para Android: el mismo Pod2Swim, ahora en Google Play.",
             ],
             "fr": [
                 "Pod2Swim est désormais gratuit — essaie tout pendant 7 jours.",
                 "Après l'essai, un seul achat débloque l'app pour toujours, sans abonnement.",
                 "Tu l'avais achetée quand elle était payante ? Tu restes débloqué automatiquement, sans frais.",
+                "iOS : corrections de bugs et finitions, dont un écran d'achat plus fiable et une progression de transfert plus fluide.",
+                "Première version Android — le même Pod2Swim, désormais sur Google Play.",
             ],
             "it": [
                 "Pod2Swim ora è gratis: prova tutto per 7 giorni.",
                 "Dopo la prova, un unico acquisto sblocca l'app per sempre, senza abbonamento.",
                 "L'avevi comprata quando era a pagamento? Resti sbloccato automaticamente, senza costi aggiuntivi.",
+                "iOS: correzioni di bug e rifiniture, con una schermata d'acquisto più affidabile e una barra di trasferimento più fluida.",
+                "Prima versione per Android: lo stesso Pod2Swim, ora su Google Play.",
             ],
             "ja": [
                 "Pod2Swimが無料になりました。7日間すべての機能を試せます。",
                 "トライアル終了後は、一度の買い切り購入でずっと利用できます。サブスクリプションはありません。",
                 "有料アプリだった頃に購入した方は、追加料金なしで自動的にロック解除されたままです。",
+                "iOS：不具合の修正と改善。購入画面の信頼性向上や、転送の進捗表示をよりスムーズに。",
+                "Android版が初登場 — 同じPod2SwimがGoogle Playに。",
             ],
             "pt-br": [
                 "O Pod2Swim agora é grátis — experimente tudo por 7 dias.",
                 "Depois do teste, uma única compra desbloqueia o app para sempre, sem assinatura.",
                 "Comprou quando era pago? Você continua desbloqueado automaticamente, sem custo extra.",
+                "iOS: correções de bugs e melhorias, com uma tela de compra mais confiável e barra de transferência mais suave.",
+                "Primeira versão para Android — o mesmo Pod2Swim, agora no Google Play.",
             ],
             "zh-hans": [
                 "Pod2Swim 现在可以免费下载——7 天内体验全部功能。",
                 "试用结束后，一次性购买即可永久解锁，无订阅。",
                 "在付费时期购买过？应用会自动保持解锁，无需额外付费。",
+                "iOS：修复问题并优化体验，包括更可靠的购买页面和更流畅的传输进度。",
+                "首个 Android 版本——同样的 Pod2Swim，现已登陆 Google Play。",
             ],
         },
     },
@@ -293,12 +335,15 @@ def build_locale(code):
                        + DISCLOSURE[code]).strip(),
         "badge": c["badge"],
         "comingSoon": c["comingSoon"],
+        "light": c["light"],
+        "dark": c["dark"],
         "shotsH": c["shotsH"],
         "support": c["support"],
         "privacy": c["privacy"],
         "metaDesc": c["metaDesc"],
         "changelogH": CHANGELOG_H[code],
         "changelog": [{"version": e["version"], "date": e["date"],
+                       "status": e.get("status", {}).get(code),
                        "entries": e["entries"][code]} for e in CHANGELOG],
     }
 
@@ -431,7 +476,25 @@ PAGE = """<!DOCTYPE html>
 
   .shots { margin: 56px 0 8px; }
   .shots h2 { text-align: center; font-size: 24px; font-weight: 800;
-    letter-spacing: -0.4px; margin: 0 0 26px; color: var(--ink); }
+    letter-spacing: -0.4px; margin: 0 0 18px; color: var(--ink); }
+  .gallery-controls {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+    margin: 0 0 22px;
+  }
+  .seg {
+    display: inline-flex; background: rgba(31,122,224,0.08);
+    border: 1px solid var(--line); border-radius: 999px; padding: 3px;
+  }
+  .seg-btn {
+    appearance: none; border: 0; background: transparent; cursor: pointer;
+    font: inherit; font-size: 14px; font-weight: 600; color: var(--blue-dark);
+    padding: 7px 16px; border-radius: 999px; display: inline-flex;
+    align-items: center; gap: 6px;
+    transition: background .15s ease, color .15s ease;
+  }
+  .seg-btn.is-active { background: var(--blue); color: #fff;
+    box-shadow: 0 2px 8px rgba(31,122,224,0.35); }
+  .seg-ico { font-size: 13px; line-height: 1; }
   .gallery {
     display: flex; gap: 18px; overflow-x: auto; padding: 8px 4px 22px;
     scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
@@ -522,6 +585,16 @@ PAGE = """<!DOCTYPE html>
 
   <section class="shots">
     <h2 id="m-shotsH"></h2>
+    <div class="gallery-controls">
+      <div class="seg" id="platform-seg" role="tablist" aria-label="Platform">
+        <button type="button" class="seg-btn is-active" data-platform="ios" role="tab" aria-selected="true">iOS</button>
+        <button type="button" class="seg-btn" data-platform="android" role="tab" aria-selected="false">Android</button>
+      </div>
+      <div class="seg" id="mode-seg" role="group" aria-label="Appearance">
+        <button type="button" class="seg-btn is-active" data-mode="light" aria-pressed="true"><span class="seg-ico" aria-hidden="true">☀</span><span id="lbl-light">Light</span></button>
+        <button type="button" class="seg-btn" data-mode="dark" aria-pressed="false"><span class="seg-ico" aria-hidden="true">☾</span><span id="lbl-dark">Dark</span></button>
+      </div>
+    </div>
     <div class="gallery" id="m-gallery"></div>
   </section>
 
@@ -547,10 +620,29 @@ PAGE = """<!DOCTYPE html>
 </footer>
 
 <script>
-const SHOTS = __SHOTS__;
+const SHOT_NAMES = __SHOT_NAMES__;
 const I18N = __I18N__;
 const ORDER = __ORDER__;
 const LANG_ATTR = __LANG_ATTR__;
+// gallery state: which platform tab + appearance is showing, and the current
+// locale object (for alt text). renderGallery() swaps the image set live.
+let galPlatform = "ios";
+let galMode = "light";
+let galText = null;
+function platformLabel(p){ return p === "android" ? "Android" : "iOS"; }
+function renderGallery(){
+  if (!galText) return;
+  const g = document.getElementById("m-gallery");
+  g.innerHTML = "";
+  const plabel = platformLabel(galPlatform);
+  SHOT_NAMES.forEach((n, i) => {
+    const img = document.createElement("img");
+    img.src = "assets/shots/" + galPlatform + "/" + galMode + "/" + n + ".png";
+    img.loading = "lazy";
+    img.alt = galText.name + " on " + plabel + " — screenshot " + (i+1);
+    g.appendChild(img);
+  });
+}
 // support deep-link path per locale (en lives at support/, others under support/<code>/)
 function supportPath(code){ return code === "en" ? "support/" : "support/" + code + "/"; }
 function privacyPath(code){ return code === "en" ? "support/privacy.html" : "support/" + code + "/privacy.html"; }
@@ -610,8 +702,10 @@ function render(code){
     const head = el("div", "release-head");
     const ver = el("span", "ver"); ver.textContent = t.name + " " + v.version;
     const date = el("span", "date");
-    let dstr = v.date;
-    if (dfmt){ try { dstr = dfmt.format(new Date(v.date + "T00:00:00")); } catch(e){} }
+    let dstr;
+    if (v.status){ dstr = v.status; }               // not-yet-live: show a status label
+    else { dstr = v.date;
+      if (dfmt){ try { dstr = dfmt.format(new Date(v.date + "T00:00:00")); } catch(e){} } }
     date.textContent = dstr;
     head.appendChild(ver); head.appendChild(date);
     rel.appendChild(head);
@@ -621,19 +715,10 @@ function render(code){
     cl.appendChild(rel);
   }
 
-  const g = document.getElementById("m-gallery");
-  if (!g.dataset.filled){
-    SHOTS.forEach((src, i) => {
-      const img = el("img");
-      img.src = "assets/shots/" + src;
-      img.loading = "lazy";
-      img.alt = t.name + " screenshot " + (i+1);
-      g.appendChild(img);
-    });
-    g.dataset.filled = "1";
-  } else {
-    [...g.children].forEach((img, i) => img.alt = t.name + " screenshot " + (i+1));
-  }
+  document.getElementById("lbl-light").textContent = t.light;
+  document.getElementById("lbl-dark").textContent = t.dark;
+  galText = t;
+  renderGallery();
 
   const sup = document.getElementById("f-support");
   sup.textContent = t.support; sup.href = supportPath(code);
@@ -657,6 +742,29 @@ function render(code){
     localStorage.setItem("p2s_lang", e.target.value);
     render(e.target.value);
   });
+  // gallery platform tabs (iOS / Android) + light/dark toggle
+  document.querySelectorAll("#platform-seg .seg-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      galPlatform = btn.dataset.platform;
+      document.querySelectorAll("#platform-seg .seg-btn").forEach(b => {
+        const on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      renderGallery();
+    });
+  });
+  document.querySelectorAll("#mode-seg .seg-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      galMode = btn.dataset.mode;
+      document.querySelectorAll("#mode-seg .seg-btn").forEach(b => {
+        const on = b === btn;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+      renderGallery();
+    });
+  });
   render(pick());
 })();
 </script>
@@ -675,7 +783,7 @@ def main():
             json.dump(data[code], f, ensure_ascii=False, indent=2)
     page = (PAGE
             .replace("__APPSTORE__", APP_STORE_URL)
-            .replace("__SHOTS__", json.dumps(SHOTS))
+            .replace("__SHOT_NAMES__", json.dumps(SHOT_NAMES))
             .replace("__I18N__", json.dumps(data, ensure_ascii=False))
             .replace("__ORDER__", json.dumps(ORDER))
             .replace("__LANG_ATTR__", json.dumps(LANG_ATTR)))
