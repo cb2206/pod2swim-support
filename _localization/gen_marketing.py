@@ -76,9 +76,11 @@ CHROME = {
                 "compatH": "兼容设备", "metaDesc": "Pod2Swim 把你喜欢的播客导入 Shokz OpenSwim 等 USB 耳机，水下也能畅听——无需蓝牙，手机留在岸边。"},
 }
 
-# Screenshot gallery. Four sets — 2 platforms × 2 appearances — of the same 7
-# screens, stored at assets/shots/<platform>/<mode>/NN.png. The page has a
-# platform tab (iOS / Android) and a light/dark toggle that swap the set live.
+# Screenshot gallery. Localized sets of the same 7 screens, one per
+# (language × platform × appearance), stored at
+# assets/shots/<lang>/<platform>/<mode>/NN.webp. The page has a platform tab
+# (iOS / Android) and a light/dark toggle; the language picker swaps the set too.
+# Rebuild the assets with screenshots/… via the build_shots helper.
 SHOT_NAMES = ["01", "02", "03", "04", "05", "06", "07"]
 
 
@@ -624,8 +626,10 @@ const SHOT_NAMES = __SHOT_NAMES__;
 const I18N = __I18N__;
 const ORDER = __ORDER__;
 const LANG_ATTR = __LANG_ATTR__;
-// gallery state: which platform tab + appearance is showing, and the current
-// locale object (for alt text). renderGallery() swaps the image set live.
+// gallery state: current language + platform tab + appearance. renderGallery()
+// swaps the image set live for the current (lang, platform, mode) triple. The
+// screenshots are localized: assets/shots/<lang>/<platform>/<mode>/NN.webp.
+let galLang = "en";
 let galPlatform = "ios";
 let galMode = "light";
 let galText = null;
@@ -635,10 +639,14 @@ function renderGallery(){
   const g = document.getElementById("m-gallery");
   g.innerHTML = "";
   const plabel = platformLabel(galPlatform);
+  const base = "assets/shots/" + galLang + "/" + galPlatform + "/" + galMode + "/";
   SHOT_NAMES.forEach((n, i) => {
     const img = document.createElement("img");
-    img.src = "assets/shots/" + galPlatform + "/" + galMode + "/" + n + ".png";
+    img.src = base + n + ".webp";
+    // lazy: only the shots scrolled into view load, so switching language /
+    // platform / appearance fetches just the newly-shown set, on demand.
     img.loading = "lazy";
+    img.decoding = "async";
     img.alt = galText.name + " on " + plabel + " — screenshot " + (i+1);
     g.appendChild(img);
   });
@@ -717,6 +725,7 @@ function render(code){
 
   document.getElementById("lbl-light").textContent = t.light;
   document.getElementById("lbl-dark").textContent = t.dark;
+  galLang = code;
   galText = t;
   renderGallery();
 
