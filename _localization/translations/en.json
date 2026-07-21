@@ -2,7 +2,7 @@
   "languageName": "English",
   "support": {
     "title": "Pod2Swim — Support",
-    "metaDesc": "Support and help for Pod2Swim, the iOS app that loads podcasts onto your swim headset.",
+    "metaDesc": "Support and help for Pod2Swim, the app that loads podcasts onto your swim headset — for iPhone and Android.",
     "headerTitle": "Pod2Swim Support",
     "headerSubtitle": "Podcasts on your swim headset — help & answers",
     "contactH": "Contact",
@@ -11,19 +11,23 @@
     "gettingStarted": [
       {
         "q": "What does Pod2Swim do?",
-        "a": "It loads podcast episodes onto a Shokz OpenSwim / OpenSwim Pro — or any MP3-player headset that mounts as USB storage — so you can listen while you swim, where Bluetooth doesn't reach. Subscribe, queue episodes, and the app downloads them and copies them straight onto the headset in playback order."
+        "a": "It loads podcast episodes onto a Shokz OpenSwim / OpenSwim Pro — or any MP3-player headset that mounts as USB storage — so you can listen while you swim, where Bluetooth doesn't reach. Subscribe, queue episodes, and the app downloads them and copies them straight onto the headset in playback order. Pod2Swim is available for iPhone (iOS 17 or later) and Android (8.0 or later)."
       },
       {
         "q": "How do I get episodes onto my headset?",
-        "a": "Subscribe to a podcast, add the episodes you want to the <strong>Queue</strong>, and wait for them to finish downloading (each row shows its status). Plug the headset into your iPhone with a USB‑C or Lightning adapter, open the Queue tab, and tap <strong>Export</strong>. The first time, pick the headset's folder in the Files picker — the app remembers it after that."
+        "a": "Subscribe to a podcast, add the episodes you want to the <strong>Queue</strong>, and wait for them to finish downloading (each row shows its status). Then open the Queue tab and tap <strong>Export</strong>.<br><strong>iPhone:</strong> plug the headset in with a USB‑C or Lightning adapter; the first time, pick the headset's folder in the Files picker and the app remembers it.<br><strong>Android:</strong> plug the headset into your phone with a USB‑C cable or OTG adapter — Pod2Swim detects it and asks for permission to open the drive, so tap Allow. If direct access isn't available, pick the headset's folder once and the app remembers it."
       },
       {
         "q": "What do I need?",
-        "a": "An iPhone running iOS 17 or later, an internet connection for downloads, and a USB‑C or Lightning adapter so the headset shows up as readable storage in the Files picker."
+        "a": "A Shokz OpenSwim / OpenSwim Pro (or any MP3-player headset that mounts as USB storage) and an internet connection for downloads.<br><strong>iPhone:</strong> iOS 17 or later and a USB‑C or Lightning adapter so the headset shows up as readable storage.<br><strong>Android:</strong> Android 8.0 or later and a USB‑C cable or OTG adapter to connect the headset."
       },
       {
         "q": "How much does Pod2Swim cost?",
         "a": "Pod2Swim is free to download and everything works for 7 days. After the trial, a single one-time purchase unlocks the app forever — there's no subscription. If you bought Pod2Swim back when it was a paid app, it stays unlocked automatically, at no extra cost."
+      },
+      {
+        "q": "I already bought Pod2Swim — why am I being asked to pay again?",
+        "a": "You shouldn't have to pay twice. Your purchase is tied to your App Store or Google Play account and restores automatically when you reinstall or set up a new device — just sign in with the same account. If the app still shows the trial, open the unlock screen and tap <strong>Restore Purchase</strong>. If you bought Pod2Swim on iPhone while it was a paid app, you're recognized automatically at no extra cost."
       }
     ],
     "usingH": "Using the app",
@@ -42,7 +46,7 @@
       },
       {
         "q": "The headset isn't detected when I tap Export or Scan.",
-        "a": "Make sure the headset is plugged in and powered on, and that it appears under \"Locations\" in the Files app. If the saved folder can't be reached, the app falls back to the Files picker — re‑select the headset's folder there. Some adapters need to be seated firmly; try reconnecting the cable."
+        "a": "Make sure the headset is plugged in and powered on.<br><strong>iPhone:</strong> it should appear under \"Locations\" in the Files app; if the saved folder can't be reached, the app falls back to the Files picker — re‑select the headset's folder there.<br><strong>Android:</strong> confirm you tapped Allow on the USB permission prompt (re‑plug the headset to see it again), and make sure your cable or adapter carries data, not just power. Some adapters need to be seated firmly; try reconnecting the cable."
       },
       {
         "q": "How do I free up storage?",

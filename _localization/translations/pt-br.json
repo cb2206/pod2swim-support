@@ -2,7 +2,7 @@
   "languageName": "Português",
   "support": {
     "title": "Pod2Swim — Suporte",
-    "metaDesc": "Suporte e ajuda para o Pod2Swim, o app de iOS que carrega podcasts nos seus fones de natação.",
+    "metaDesc": "Ajuda e suporte do Pod2Swim, o app que carrega podcasts no seu fone de natação — para iPhone e Android.",
     "headerTitle": "Suporte do Pod2Swim",
     "headerSubtitle": "Podcasts nos seus fones de natação — ajuda e respostas",
     "contactH": "Contato",
@@ -11,19 +11,23 @@
     "gettingStarted": [
       {
         "q": "O que o Pod2Swim faz?",
-        "a": "Ele carrega episódios de podcast em um Shokz OpenSwim / OpenSwim Pro — ou em qualquer fone com MP3 player que apareça como armazenamento USB — para você ouvir enquanto nada, onde o Bluetooth não chega. Assine, coloque episódios na fila, e o app os baixa e copia direto nos fones, na ordem de reprodução."
+        "a": "Ele carrega episódios de podcast em um Shokz OpenSwim / OpenSwim Pro — ou em qualquer fone com MP3 player que apareça como armazenamento USB — para você ouvir enquanto nada, onde o Bluetooth não chega. Assine, coloque episódios na fila, e o app os baixa e copia direto nos fones, na ordem de reprodução. O Pod2Swim está disponível para iPhone (iOS 17 ou posterior) e Android (8.0 ou posterior)."
       },
       {
         "q": "Como coloco episódios nos meus fones?",
-        "a": "Assine um podcast, adicione os episódios que quiser à <strong>Fila</strong> e espere os downloads terminarem (cada linha mostra seu status). Conecte os fones ao seu iPhone com um adaptador USB‑C ou Lightning, abra a aba Fila e toque em <strong>Enviar aos fones</strong>. Na primeira vez, escolha a pasta dos fones no seletor do app Arquivos — depois disso o app vai lembrar dela."
+        "a": "Assine um podcast, adicione os episódios que quiser à <strong>Fila</strong> e espere os downloads terminarem (cada linha mostra seu status). Depois abra a aba Fila e toque em <strong>Enviar aos fones</strong>.<br><strong>iPhone:</strong> conecte os fones com um adaptador USB‑C ou Lightning; na primeira vez, escolha a pasta dos fones no seletor do app Arquivos e o app vai lembrar dela.<br><strong>Android:</strong> conecte os fones ao telefone com um cabo USB‑C ou adaptador OTG — o Pod2Swim os detecta e pede permissão para abrir a unidade, então toque em Permitir. Se não houver acesso direto, escolha uma vez a pasta dos fones e o app vai lembrar dela."
       },
       {
         "q": "Do que eu preciso?",
-        "a": "Um iPhone com iOS 17 ou posterior, conexão com a internet para os downloads e um adaptador USB‑C ou Lightning para que os fones apareçam como armazenamento legível no seletor do app Arquivos."
+        "a": "Um Shokz OpenSwim / OpenSwim Pro (ou qualquer fone com player de MP3 que apareça como armazenamento USB) e conexão com a internet para os downloads.<br><strong>iPhone:</strong> iOS 17 ou posterior e um adaptador USB‑C ou Lightning para que os fones apareçam como armazenamento legível.<br><strong>Android:</strong> Android 8.0 ou posterior e um cabo USB‑C ou adaptador OTG para conectá-los."
       },
       {
         "q": "Quanto custa o Pod2Swim?",
         "a": "O Pod2Swim é grátis para baixar e tudo funciona por 7 dias. Depois do teste, uma única compra desbloqueia o app para sempre, sem assinatura. Se você comprou o Pod2Swim quando ele era pago, ele continua desbloqueado automaticamente, sem custo extra."
+      },
+      {
+        "q": "Já comprei o Pod2Swim — por que estou sendo cobrado de novo?",
+        "a": "Você não deve pagar duas vezes. Sua compra fica vinculada à sua conta da App Store ou Google Play e é restaurada automaticamente ao reinstalar ou configurar um novo aparelho — basta entrar com a mesma conta. Se o app ainda mostrar o teste, abra a tela de desbloqueio e toque em <strong>Restaurar compra</strong>. Se você comprou o Pod2Swim no iPhone quando ele era pago, você é reconhecido automaticamente, sem custo extra."
       }
     ],
     "usingH": "Usando o app",
@@ -42,7 +46,7 @@
       },
       {
         "q": "Os fones não são detectados quando toco em Enviar aos fones ou Escanear.",
-        "a": "Verifique se os fones estão conectados e ligados, e se aparecem em \"Locais\" no app Arquivos. Se a pasta salva não puder ser acessada, o app volta para o seletor do app Arquivos — selecione de novo a pasta dos fones ali. Alguns adaptadores precisam estar bem encaixados; tente reconectar o cabo."
+        "a": "Verifique se os fones estão conectados e ligados.<br><strong>iPhone:</strong> eles devem aparecer em \"Locais\" no app Arquivos; se a pasta salva não puder ser acessada, o app volta ao seletor do app Arquivos — selecione de novo a pasta ali.<br><strong>Android:</strong> confirme que você tocou em Permitir no aviso de permissão USB (reconecte os fones para vê-lo de novo) e que seu cabo ou adaptador transmite dados, não apenas energia. Alguns adaptadores precisam estar bem encaixados; tente reconectar o cabo."
       },
       {
         "q": "Como libero espaço de armazenamento?",

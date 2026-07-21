@@ -2,7 +2,7 @@
   "languageName": "Français",
   "support": {
     "title": "Pod2Swim — Assistance",
-    "metaDesc": "Assistance et aide pour Pod2Swim, l'app iOS qui charge des podcasts sur ton casque de natation.",
+    "metaDesc": "Aide et assistance pour Pod2Swim, l'app qui charge des podcasts sur ton casque de natation — pour iPhone et Android.",
     "headerTitle": "Assistance Pod2Swim",
     "headerSubtitle": "Des podcasts sur ton casque de natation — aide et réponses",
     "contactH": "Contact",
@@ -11,19 +11,23 @@
     "gettingStarted": [
       {
         "q": "Que fait Pod2Swim ?",
-        "a": "Il charge des épisodes de podcast sur un Shokz OpenSwim / OpenSwim Pro — ou n'importe quel casque lecteur MP3 qui se monte comme un stockage USB — pour que tu puisses écouter pendant que tu nages, là où le Bluetooth ne passe pas. Abonne-toi, mets des épisodes en file d'attente, et l'app les télécharge puis les copie directement sur le casque dans l'ordre de lecture."
+        "a": "Il charge des épisodes de podcast sur un Shokz OpenSwim / OpenSwim Pro — ou n'importe quel casque lecteur MP3 qui se monte comme un stockage USB — pour que tu puisses écouter pendant que tu nages, là où le Bluetooth ne passe pas. Abonne-toi, mets des épisodes en file d'attente, et l'app les télécharge puis les copie directement sur le casque dans l'ordre de lecture. Pod2Swim est disponible pour iPhone (iOS 17 ou version ultérieure) et Android (8.0 ou version ultérieure)."
       },
       {
         "q": "Comment mettre des épisodes sur mon casque ?",
-        "a": "Abonne-toi à un podcast, ajoute les épisodes que tu veux à la <strong>File d'attente</strong>, et attends qu'ils finissent de se télécharger (chaque ligne indique son état). Branche le casque sur ton iPhone avec un adaptateur USB‑C ou Lightning, ouvre l'onglet File d'attente et touche <strong>Envoyer vers le casque</strong>. La première fois, sélectionne le dossier du casque dans le sélecteur Fichiers — l'app le mémorise ensuite."
+        "a": "Abonne-toi à un podcast, ajoute les épisodes voulus à la <strong>File d'attente</strong> et attends la fin des téléchargements (chaque ligne indique son état). Ouvre ensuite l'onglet File d'attente et touche <strong>Envoyer vers le casque</strong>.<br><strong>iPhone :</strong> branche le casque avec un adaptateur USB‑C ou Lightning ; la première fois, sélectionne le dossier du casque dans le sélecteur Fichiers et l'app le mémorise.<br><strong>Android :</strong> branche le casque sur le téléphone avec un câble USB‑C ou un adaptateur OTG — Pod2Swim le détecte et demande l'autorisation d'ouvrir le lecteur, touche donc Autoriser. Si l'accès direct n'est pas possible, sélectionne une fois le dossier du casque et l'app le mémorise."
       },
       {
         "q": "De quoi ai-je besoin ?",
-        "a": "Un iPhone sous iOS 17 ou version ultérieure, une connexion internet pour les téléchargements, et un adaptateur USB‑C ou Lightning pour que le casque apparaisse comme un stockage lisible dans le sélecteur Fichiers."
+        "a": "Un Shokz OpenSwim / OpenSwim Pro (ou tout casque lecteur MP3 qui apparaît comme stockage USB) et une connexion internet pour les téléchargements.<br><strong>iPhone :</strong> iOS 17 ou version ultérieure et un adaptateur USB‑C ou Lightning pour que le casque apparaisse comme stockage lisible.<br><strong>Android :</strong> Android 8.0 ou version ultérieure et un câble USB‑C ou un adaptateur OTG pour le brancher."
       },
       {
         "q": "Combien coûte Pod2Swim ?",
         "a": "Pod2Swim est gratuit et tout fonctionne pendant 7 jours. Après l'essai, un seul achat débloque l'app pour toujours, sans abonnement. Si tu avais acheté Pod2Swim quand elle était payante, elle reste débloquée automatiquement, sans frais supplémentaires."
+      },
+      {
+        "q": "J'ai déjà acheté Pod2Swim — pourquoi me demande-t-on de payer à nouveau ?",
+        "a": "Tu ne devrais pas payer deux fois. Ton achat est lié à ton compte App Store ou Google Play et se restaure automatiquement lors d'une réinstallation ou sur un nouvel appareil — connecte-toi simplement avec le même compte. Si l'app affiche encore l'essai, ouvre l'écran de déverrouillage et touche <strong>Restaurer l'achat</strong>. Si tu as acheté Pod2Swim sur iPhone quand elle était payante, tu es reconnu automatiquement, sans frais supplémentaires."
       }
     ],
     "usingH": "Utiliser l'app",
@@ -42,7 +46,7 @@
       },
       {
         "q": "Le casque n'est pas détecté quand je touche Envoyer ou Analyser.",
-        "a": "Assure-toi que le casque est branché et allumé, et qu'il apparaît sous « Emplacements » dans l'app Fichiers. Si le dossier enregistré est inaccessible, l'app bascule vers le sélecteur Fichiers — re‑sélectionne le dossier du casque à cet endroit. Certains adaptateurs doivent être bien enfoncés ; essaie de rebrancher le câble."
+        "a": "Assure-toi que le casque est branché et allumé.<br><strong>iPhone :</strong> il doit apparaître sous « Emplacements » dans l'app Fichiers ; si le dossier enregistré est inaccessible, l'app bascule vers le sélecteur Fichiers — re‑sélectionne le dossier du casque.<br><strong>Android :</strong> vérifie que tu as touché Autoriser sur la demande d'autorisation USB (rebranche le casque pour la revoir) et que ton câble ou adaptateur transmet les données, pas seulement l'alimentation. Certains adaptateurs doivent être bien enfoncés ; essaie de rebrancher le câble."
       },
       {
         "q": "Comment libérer de l'espace de stockage ?",

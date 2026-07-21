@@ -2,7 +2,7 @@
   "languageName": "Deutsch",
   "support": {
     "title": "Pod2Swim — Support",
-    "metaDesc": "Support und Hilfe für Pod2Swim, die iOS-App, die Podcasts auf deinen Schwimm-Kopfhörer lädt.",
+    "metaDesc": "Hilfe und Support für Pod2Swim, die App, die Podcasts auf deinen Schwimm-Kopfhörer lädt – für iPhone und Android.",
     "headerTitle": "Pod2Swim Support",
     "headerSubtitle": "Podcasts auf deinem Schwimm-Kopfhörer — Hilfe & Antworten",
     "contactH": "Kontakt",
@@ -11,19 +11,23 @@
     "gettingStarted": [
       {
         "q": "Was macht Pod2Swim?",
-        "a": "Es lädt Podcast-Folgen auf einen Shokz OpenSwim / OpenSwim Pro — oder jeden MP3-Player-Kopfhörer, der als USB-Speicher eingebunden wird — damit du beim Schwimmen hören kannst, wo Bluetooth nicht hinreicht. Abonniere, reihe Folgen in die Warteschlange ein, und die App lädt sie herunter und kopiert sie in Wiedergabereihenfolge direkt auf den Kopfhörer."
+        "a": "Es lädt Podcast-Folgen auf einen Shokz OpenSwim / OpenSwim Pro — oder jeden MP3-Player-Kopfhörer, der als USB-Speicher eingebunden wird — damit du beim Schwimmen hören kannst, wo Bluetooth nicht hinreicht. Abonniere, reihe Folgen in die Warteschlange ein, und die App lädt sie herunter und kopiert sie in Wiedergabereihenfolge direkt auf den Kopfhörer. Pod2Swim gibt es für iPhone (iOS 17 oder neuer) und Android (8.0 oder neuer)."
       },
       {
         "q": "Wie bekomme ich Folgen auf meinen Kopfhörer?",
-        "a": "Abonniere einen Podcast, füge die gewünschten Folgen zur <strong>Warteschlange</strong> hinzu und warte, bis sie fertig heruntergeladen sind (jede Zeile zeigt ihren Status). Verbinde den Kopfhörer über einen USB‑C- oder Lightning-Adapter mit deinem iPhone, öffne den Tab „Warteschlange“ und tippe auf <strong>Export</strong>. Wähle beim ersten Mal den Ordner des Kopfhörers in der Dateien-Auswahl — danach merkt sich die App ihn."
+        "a": "Abonniere einen Podcast, füge die gewünschten Folgen zur <strong>Warteschlange</strong> hinzu und warte, bis sie fertig heruntergeladen sind (jede Zeile zeigt ihren Status). Öffne dann den Tab „Warteschlange“ und tippe auf <strong>Export</strong>.<br><strong>iPhone:</strong> Schließe den Kopfhörer mit einem USB‑C- oder Lightning-Adapter an; beim ersten Mal wählst du den Ordner des Kopfhörers in der Dateien-Auswahl, danach merkt sich die App ihn.<br><strong>Android:</strong> Verbinde den Kopfhörer über ein USB‑C-Kabel oder einen OTG-Adapter mit dem Handy — Pod2Swim erkennt ihn und fragt nach der Berechtigung, das Laufwerk zu öffnen; tippe auf „Zulassen“. Ist kein direkter Zugriff möglich, wähle einmal den Ordner des Kopfhörers, und die App merkt ihn sich."
       },
       {
         "q": "Was brauche ich?",
-        "a": "Ein iPhone mit iOS 17 oder neuer, eine Internetverbindung für Downloads und einen USB‑C- oder Lightning-Adapter, damit der Kopfhörer als lesbarer Speicher in der Dateien-Auswahl erscheint."
+        "a": "Einen Shokz OpenSwim / OpenSwim Pro (oder einen MP3-Player-Kopfhörer, der als USB-Speicher erscheint) und eine Internetverbindung für Downloads.<br><strong>iPhone:</strong> iOS 17 oder neuer und einen USB‑C- oder Lightning-Adapter, damit der Kopfhörer als lesbarer Speicher erscheint.<br><strong>Android:</strong> Android 8.0 oder neuer und ein USB‑C-Kabel oder einen OTG-Adapter für die Verbindung."
       },
       {
         "q": "Was kostet Pod2Swim?",
         "a": "Pod2Swim ist kostenlos und du kannst 7 Tage lang alle Funktionen nutzen. Danach schaltet ein einmaliger Kauf die App für immer frei – ganz ohne Abo. Wenn du Pod2Swim noch als Bezahl-App gekauft hast, bleibt sie automatisch freigeschaltet, ohne Aufpreis."
+      },
+      {
+        "q": "Ich habe Pod2Swim schon gekauft – warum soll ich erneut zahlen?",
+        "a": "Du musst nicht doppelt zahlen. Dein Kauf ist mit deinem App-Store- bzw. Google-Play-Konto verknüpft und wird bei einer Neuinstallation oder auf einem neuen Gerät automatisch wiederhergestellt — melde dich einfach mit demselben Konto an. Zeigt die App noch die Testphase, öffne den Freischalt-Bildschirm und tippe auf <strong>Kauf wiederherstellen</strong>. Wenn du Pod2Swim auf dem iPhone noch als Bezahl-App gekauft hast, wirst du automatisch und ohne Aufpreis erkannt."
       }
     ],
     "usingH": "Die App nutzen",
@@ -42,7 +46,7 @@
       },
       {
         "q": "Der Kopfhörer wird nicht erkannt, wenn ich auf Export oder Scannen tippe.",
-        "a": "Stelle sicher, dass der Kopfhörer angeschlossen und eingeschaltet ist und dass er in der App „Dateien“ unter „Orte“ erscheint. Wenn der gespeicherte Ordner nicht erreichbar ist, fällt die App auf die Dateien-Auswahl zurück — wähle dort den Ordner des Kopfhörers erneut aus. Manche Adapter müssen fest sitzen; versuche, das Kabel neu zu verbinden."
+        "a": "Stelle sicher, dass der Kopfhörer angeschlossen und eingeschaltet ist.<br><strong>iPhone:</strong> Er sollte in der App „Dateien“ unter „Orte“ erscheinen; ist der gespeicherte Ordner nicht erreichbar, fällt die App auf die Dateien-Auswahl zurück — wähle dort den Ordner erneut aus.<br><strong>Android:</strong> Prüfe, ob du die USB-Berechtigung mit „Zulassen“ bestätigt hast (zum erneuten Anzeigen den Kopfhörer neu anstecken) und ob dein Kabel bzw. Adapter Daten überträgt, nicht nur Strom. Manche Adapter müssen fest sitzen; versuche, das Kabel neu zu verbinden."
       },
       {
         "q": "Wie gebe ich Speicher frei?",
