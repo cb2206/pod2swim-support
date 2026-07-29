@@ -2,7 +2,7 @@
 """Generate the Pod2Swim marketing landing page (repo root index.html).
 
 Source of truth: the App Store metadata in the Pod2Swim app repo
-(fastlane/metadata/<locale>/{description,subtitle,promotional_text,name}.txt).
+(ios/fastlane/metadata/<locale>/{description,subtitle,promotional_text,name}.txt).
 Those descriptions are parsed into structured marketing content and merged with
 the short UI-chrome strings defined below, then baked into a single
 self-contained index.html with embedded translations, browser-language
@@ -24,10 +24,10 @@ APP_REPO = (sys.argv[1] if len(sys.argv) > 1
 # The app repo is a two-app monorepo; the iOS App Store metadata lives under ios/.
 META = os.path.join(APP_REPO, "ios", "fastlane", "metadata")
 
-# Live App Store listing (Pod2Swim, app id 6766092966). The id-only URL
-# redirects to each visitor's local storefront. The Android build is submitted
-# to Google Play but not yet live, so its tile shows a "coming soon" placeholder.
+# Live store listings. The App Store id-only URL redirects to each visitor's
+# local storefront; Google Play localizes by account/browser language itself.
 APP_STORE_URL = "https://apps.apple.com/app/id6766092966"
+PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.pod2swim"
 
 # site code -> App Store locale folder
 LOCALES = {
@@ -42,35 +42,35 @@ LANG_NAME = {"en": "English", "de": "Deutsch", "es": "Español", "fr": "Françai
 
 # Short UI strings that are not part of the App Store description.
 CHROME = {
-    "en": {"badge": "Download on the", "comingSoon": "Coming soon",
+    "en": {"badge": "Download on the", "playBadge": "Get it on",
            "light": "Light", "dark": "Dark",
            "shotsH": "A look inside", "support": "Support", "privacy": "Privacy Policy",
            "compatH": "Compatibility", "metaDesc": "Pod2Swim loads your favourite podcasts onto a Shokz OpenSwim or any USB-storage swim headset, so you can listen underwater — no Bluetooth, no phone at the poolside."},
-    "de": {"badge": "Laden im", "comingSoon": "Bald verfügbar",
+    "de": {"badge": "Laden im", "playBadge": "Jetzt bei",
            "light": "Hell", "dark": "Dunkel",
            "shotsH": "Ein Blick in die App", "support": "Support", "privacy": "Datenschutz",
            "compatH": "Kompatibilität", "metaDesc": "Pod2Swim lädt deine Lieblingspodcasts auf einen Shokz OpenSwim oder jeden USB-Kopfhörer – zum Hören unter Wasser, ohne Bluetooth und ohne Handy am Beckenrand."},
-    "es": {"badge": "Consíguelo en el", "comingSoon": "Muy pronto",
+    "es": {"badge": "Consíguelo en el", "playBadge": "Disponible en",
            "light": "Claro", "dark": "Oscuro",
            "shotsH": "Un vistazo a la app", "support": "Soporte", "privacy": "Privacidad",
            "compatH": "Compatibilidad", "metaDesc": "Pod2Swim carga tus pódcasts favoritos en un Shokz OpenSwim o cualquier auricular USB para escuchar bajo el agua, sin Bluetooth ni móvil en el borde."},
-    "fr": {"badge": "Télécharger dans l'", "comingSoon": "Bientôt disponible",
+    "fr": {"badge": "Télécharger dans l'", "playBadge": "Disponible sur",
            "light": "Clair", "dark": "Sombre",
            "shotsH": "Un aperçu de l'app", "support": "Assistance", "privacy": "Confidentialité",
            "compatH": "Compatibilité", "metaDesc": "Pod2Swim charge tes podcasts préférés sur un Shokz OpenSwim ou tout casque USB pour écouter sous l'eau, sans Bluetooth ni téléphone au bord du bassin."},
-    "it": {"badge": "Scaricala su", "comingSoon": "In arrivo",
+    "it": {"badge": "Scaricala su", "playBadge": "Disponibile su",
            "light": "Chiaro", "dark": "Scuro",
            "shotsH": "Uno sguardo all'app", "support": "Supporto", "privacy": "Privacy",
            "compatH": "Compatibilità", "metaDesc": "Pod2Swim carica i tuoi podcast preferiti su Shokz OpenSwim o qualsiasi cuffia USB per ascoltarli sott'acqua, senza Bluetooth e senza telefono a bordo piscina."},
-    "ja": {"badge": "ダウンロード", "comingSoon": "近日公開",
+    "ja": {"badge": "ダウンロード", "playBadge": "アプリを入手",
            "light": "ライト", "dark": "ダーク",
            "shotsH": "アプリの中身をチラ見せ", "support": "サポート", "privacy": "プライバシー",
            "compatH": "対応機器", "metaDesc": "Pod2Swimは、お気に入りのポッドキャストをShokz OpenSwimなどのUSBヘッドセットに転送。Bluetoothもプールサイドのスマホもなしで、水中で楽しめます。"},
-    "pt-br": {"badge": "Baixar na", "comingSoon": "Em breve",
+    "pt-br": {"badge": "Baixar na", "playBadge": "Disponível no",
               "light": "Claro", "dark": "Escuro",
               "shotsH": "Um olhar pelo app", "support": "Suporte", "privacy": "Privacidade",
               "compatH": "Compatibilidade", "metaDesc": "O Pod2Swim carrega os seus podcasts favoritos num Shokz OpenSwim ou em qualquer fone USB para ouvir embaixo d'água, sem Bluetooth e sem celular na borda."},
-    "zh-hans": {"badge": "前往下载", "comingSoon": "即将推出",
+    "zh-hans": {"badge": "前往下载", "playBadge": "前往下载",
                 "light": "浅色", "dark": "深色",
                 "shotsH": "先睹为快", "support": "支持", "privacy": "隐私政策",
                 "compatH": "兼容设备", "metaDesc": "Pod2Swim 把你喜欢的播客导入 Shokz OpenSwim 等 USB 耳机，水下也能畅听——无需蓝牙，手机留在岸边。"},
@@ -103,20 +103,10 @@ CHANGELOG_H = {
 CHANGELOG = [
     {
         "version": "1.3",
-        # No release date yet — 1.3 is submitted but not live. A per-locale
-        # `status` string shows in place of the date until the stores approve it;
-        # swap `status` for a `"date": "YYYY-MM-DD"` once both releases are live.
-        "date": None,
-        "status": {
-            "en": "Coming soon for Android and iOS",
-            "de": "Bald für Android und iOS",
-            "es": "Muy pronto para Android y iOS",
-            "fr": "Bientôt sur Android et iOS",
-            "it": "Presto su Android e iOS",
-            "ja": "AndroidとiOSで近日公開",
-            "pt-br": "Em breve para Android e iOS",
-            "zh-hans": "Android 和 iOS 即将推出",
-        },
+        # Live on both stores: iOS 1.3 shipped 2026-07-23, the first Android
+        # release went public 2026-07-28. One combined entry, dated when 1.3
+        # became available on both platforms.
+        "date": "2026-07-28",
         "entries": {
             "en": [
                 "Pod2Swim is now free to download — try everything for 7 days.",
@@ -286,6 +276,22 @@ DISCLOSURE = {
 }
 
 
+# The compatibility line is parsed from the *iOS* App Store description, so it
+# only ever talks about iPhone + the Files app. Now that the Android app is live,
+# append a per-locale Android sentence on the website only (same append-on-site
+# pattern as DISCLOSURE above). minSdk 26 = Android 8.0; iOS min is 17.0.
+ANDROID_COMPAT = {
+    "en": "On Android, Pod2Swim talks to the headset directly over USB — connect it with a USB-C cable or an OTG adapter. Pod2Swim needs iOS 17 or later, or Android 8.0 or later.",
+    "de": "Unter Android spricht Pod2Swim den Kopfhörer direkt über USB an – verbinde ihn per USB-C-Kabel oder OTG-Adapter. Pod2Swim benötigt iOS 17 oder neuer bzw. Android 8.0 oder neuer.",
+    "es": "En Android, Pod2Swim se comunica con el auricular directamente por USB: conéctalo con un cable USB-C o un adaptador OTG. Pod2Swim requiere iOS 17 o posterior, o Android 8.0 o posterior.",
+    "fr": "Sur Android, Pod2Swim communique directement avec le casque via USB : branche-le avec un câble USB-C ou un adaptateur OTG. Pod2Swim nécessite iOS 17 ou version ultérieure, ou Android 8.0 ou version ultérieure.",
+    "it": "Su Android, Pod2Swim comunica con le cuffie direttamente via USB: collegale con un cavo USB-C o un adattatore OTG. Pod2Swim richiede iOS 17 o successivo, oppure Android 8.0 o successivo.",
+    "ja": "Androidでは、Pod2SwimはUSB経由でヘッドセットに直接接続します。USB-CケーブルまたはOTGアダプタでつないでください。Pod2SwimにはiOS 17以降、またはAndroid 8.0以降が必要です。",
+    "pt-br": "No Android, o Pod2Swim fala com o fone direto por USB — conecte com um cabo USB-C ou um adaptador OTG. O Pod2Swim precisa de iOS 17 ou posterior, ou Android 8.0 ou posterior.",
+    "zh-hans": "在 Android 上，Pod2Swim 通过 USB 直接连接耳机——用 USB-C 数据线或 OTG 转接头连接即可。Pod2Swim 需要 iOS 17 或更高版本，或 Android 8.0 或更高版本。",
+}
+
+
 def linkify_adapter(text, code):
     phrase = MARKETING_ADAPTER.get(code)
     if phrase and phrase in text:
@@ -331,12 +337,15 @@ def build_locale(code):
         "pitch": linkify_shokz(pitch),
         "sections": sections,
         "compatH": c["compatH"],
-        "compat": linkify_shokz(linkify_adapter(compat, code)),
+        "compat": (linkify_shokz(linkify_adapter(compat, code))
+                   # CJK runs sentences together with no inter-sentence space.
+                   + ("" if code in ("ja", "zh-hans") else " ")
+                   + ANDROID_COMPAT[code]),
         # CJK runs sentences together with no inter-sentence space.
         "disclaimer": (disclaimer + ("" if code in ("ja", "zh-hans") else " ")
                        + DISCLOSURE[code]).strip(),
         "badge": c["badge"],
-        "comingSoon": c["comingSoon"],
+        "playBadge": c["playBadge"],
         "light": c["light"],
         "dark": c["dark"],
         "shotsH": c["shotsH"],
@@ -504,10 +513,10 @@ PAGE = """<!DOCTYPE html>
   .appstore svg { fill: var(--btn-fg); }
   .storebadge .small { font-size: 11px; line-height: 1; opacity: 0.8; }
   .storebadge .big { font-size: 18px; font-weight: 700; line-height: 1.15; letter-spacing: -0.2px; }
-  /* Google Play — not live yet, so the tile is a dimmed, non-interactive placeholder */
-  .playstore { position: relative; cursor: default; opacity: 0.65;
+  /* Google Play tile — live; the logo keeps its own brand colours (per-path
+     fills in the SVG), so no fill override here. */
+  .playstore {
     background: var(--btn2-bg); color: var(--btn2-fg); border: 1px solid var(--btn2-border); }
-  .playstore .small { text-transform: uppercase; letter-spacing: 0.4px; }
 
   /* full-bleed pitch band */
   .pitchband {
@@ -644,10 +653,10 @@ PAGE = """<!DOCTYPE html>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.36 12.78c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.96.9-3.75 2.28-1.6 2.78-.41 6.89 1.15 9.14.76 1.1 1.67 2.34 2.86 2.29 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65zM14.13 6.04c.64-.78 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
       <span><span class="small" id="b-small">Download on the</span><br><span class="big">App Store</span></span>
     </a>
-    <span class="storebadge playstore" id="playstore-badge" aria-disabled="true" role="img">
+    <a class="storebadge playstore" id="playstore-link" href="__PLAYSTORE__" target="_blank" rel="noopener" aria-label="Get Pod2Swim on Google Play">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.4c-.24.25-.38.63-.38 1.13v16.94c0 .5.14.88.39 1.13l.06.05L13.1 12.1v-.22L3.67 2.35l-.07.05z" fill="#00d0ff"/><path d="M16.24 15.24 13.1 12.1v-.22l3.14-3.14.07.04 3.72 2.12c1.06.6 1.06 1.59 0 2.2l-3.72 2.11-.07.03z" fill="#ffc107"/><path d="m16.31 15.2-3.21-3.21-9.28 9.28c.35.37.93.42 1.58.05l10.91-6.12z" fill="#ff3d47"/><path d="M16.31 8.8 5.4 2.68c-.65-.37-1.23-.32-1.58.05l9.28 9.27L16.31 8.8z" fill="#00e676"/></svg>
-      <span><span class="small" id="ps-small">Coming soon</span><br><span class="big">Google Play</span></span>
-    </span>
+      <span><span class="small" id="ps-small">Get it on</span><br><span class="big">Google Play</span></span>
+    </a>
   </div>
     </div>
     <div class="hero-shots" aria-hidden="true">
@@ -782,7 +791,7 @@ function render(code){
   document.getElementById("h-subtitle").textContent = t.subtitle;
   document.getElementById("h-tagline").innerHTML = t.tagline;
   document.getElementById("b-small").textContent = t.badge;
-  document.getElementById("ps-small").textContent = t.comingSoon;
+  document.getElementById("ps-small").textContent = t.playBadge;
   document.getElementById("m-pitch").innerHTML = t.pitch;
   document.getElementById("m-shotsH").textContent = t.shotsH;
   document.getElementById("m-compatH").textContent = t.compatH;
@@ -906,6 +915,7 @@ def main():
             json.dump(data[code], f, ensure_ascii=False, indent=2)
     page = (PAGE
             .replace("__APPSTORE__", APP_STORE_URL)
+            .replace("__PLAYSTORE__", PLAY_STORE_URL)
             .replace("__SHOT_NAMES__", json.dumps(SHOT_NAMES))
             .replace("__I18N__", json.dumps(data, ensure_ascii=False))
             .replace("__ORDER__", json.dumps(ORDER))

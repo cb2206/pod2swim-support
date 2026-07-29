@@ -43,10 +43,10 @@
     }
   ],
   "compatH": "Compatibility",
-  "compat": "Pod2Swim works with the <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a>, and other MP3-player headsets that appear as a USB drive in the Files app. You'll need a <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C or Lightning adapter</a> to connect the headset to your iPhone.",
+  "compat": "Pod2Swim works with the <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a>, and other MP3-player headsets that appear as a USB drive in the Files app. You'll need a <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C or Lightning adapter</a> to connect the headset to your iPhone. On Android, Pod2Swim talks to the headset directly over USB — connect it with a USB-C cable or an OTG adapter. Pod2Swim needs iOS 17 or later, or Android 8.0 or later.",
   "disclaimer": "Pod2Swim is not affiliated with Shokz. Shokz and OpenSwim are trademarks of their respective owner. As a Shokz affiliate, Pod2Swim may earn a commission on purchases made through links on this site.",
   "badge": "Download on the",
-  "comingSoon": "Coming soon",
+  "playBadge": "Get it on",
   "light": "Light",
   "dark": "Dark",
   "shotsH": "A look inside",
@@ -57,8 +57,8 @@
   "changelog": [
     {
       "version": "1.3",
-      "date": null,
-      "status": "Coming soon for Android and iOS",
+      "date": "2026-07-28",
+      "status": null,
       "entries": [
         "Pod2Swim is now free to download — try everything for 7 days.",
         "After the trial, one single purchase unlocks the app forever — no subscription.",

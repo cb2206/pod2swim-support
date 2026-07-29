@@ -43,10 +43,10 @@
     }
   ],
   "compatH": "Kompatibilität",
-  "compat": "Pod2Swim funktioniert mit dem <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> und anderen MP3-Player-Kopfhörern, die in der Dateien-App als USB-Laufwerk erscheinen. Du brauchst einen <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C- oder Lightning-Adapter</a>, um den Kopfhörer mit deinem iPhone zu verbinden.",
+  "compat": "Pod2Swim funktioniert mit dem <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> und anderen MP3-Player-Kopfhörern, die in der Dateien-App als USB-Laufwerk erscheinen. Du brauchst einen <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">USB-C- oder Lightning-Adapter</a>, um den Kopfhörer mit deinem iPhone zu verbinden. Unter Android spricht Pod2Swim den Kopfhörer direkt über USB an – verbinde ihn per USB-C-Kabel oder OTG-Adapter. Pod2Swim benötigt iOS 17 oder neuer bzw. Android 8.0 oder neuer.",
   "disclaimer": "Pod2Swim steht in keiner Verbindung zu Shokz. Shokz und OpenSwim sind Marken ihrer jeweiligen Inhaber. Als Shokz-Partner kann Pod2Swim eine Provision für Käufe über Links auf dieser Website erhalten.",
   "badge": "Laden im",
-  "comingSoon": "Bald verfügbar",
+  "playBadge": "Jetzt bei",
   "light": "Hell",
   "dark": "Dunkel",
   "shotsH": "Ein Blick in die App",
@@ -57,8 +57,8 @@
   "changelog": [
     {
       "version": "1.3",
-      "date": null,
-      "status": "Bald für Android und iOS",
+      "date": "2026-07-28",
+      "status": null,
       "entries": [
         "Pod2Swim ist jetzt gratis – teste 7 Tage lang alle Funktionen.",
         "Danach schaltet ein einmaliger Kauf die App für immer frei – kein Abo.",

@@ -43,10 +43,10 @@
     }
   ],
   "compatH": "Compatibilidad",
-  "compat": "Pod2Swim funciona con el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> y otros auriculares con reproductor MP3 que aparecen como una unidad USB en la app Archivos. Necesitarás un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C o Lightning</a> para conectar el auricular a tu iPhone.",
+  "compat": "Pod2Swim funciona con el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim</a>, el <a href=\"https://shokzsingaporepteltd.pxf.io/QYAGnM\" target=\"_blank\" rel=\"nofollow sponsored noopener\">OpenSwim Pro</a> y otros auriculares con reproductor MP3 que aparecen como una unidad USB en la app Archivos. Necesitarás un <a href=\"https://amzn.to/43mRukS\" target=\"_blank\" rel=\"nofollow sponsored noopener\">adaptador USB-C o Lightning</a> para conectar el auricular a tu iPhone. En Android, Pod2Swim se comunica con el auricular directamente por USB: conéctalo con un cable USB-C o un adaptador OTG. Pod2Swim requiere iOS 17 o posterior, o Android 8.0 o posterior.",
   "disclaimer": "Pod2Swim no está afiliado a Shokz. Shokz y OpenSwim son marcas comerciales de su respectivo propietario. Como afiliado de Shokz, Pod2Swim puede ganar una comisión por las compras realizadas a través de los enlaces de este sitio.",
   "badge": "Consíguelo en el",
-  "comingSoon": "Muy pronto",
+  "playBadge": "Disponible en",
   "light": "Claro",
   "dark": "Oscuro",
   "shotsH": "Un vistazo a la app",
@@ -57,8 +57,8 @@
   "changelog": [
     {
       "version": "1.3",
-      "date": null,
-      "status": "Muy pronto para Android y iOS",
+      "date": "2026-07-28",
+      "status": null,
       "entries": [
         "Pod2Swim ahora es gratis: pruébalo todo durante 7 días.",
         "Tras la prueba, una única compra desbloquea la app para siempre, sin suscripción.",
