@@ -56,6 +56,17 @@
   "changelogH": "What's new",
   "changelog": [
     {
+      "version": "1.4",
+      "date": "2026-09-17",
+      "status": null,
+      "entries": [
+        "Add private and paid podcasts by their feed link — ideal for members-only feeds. Feeds that need a login ask for one; it's stored securely on your device.",
+        "More reliable downloads, processing and headset transfers, and no more duplicate episodes.",
+        "iOS: auto-delete now cleans up exported episodes on schedule, the app follows your text size and works better with VoiceOver, and Settings and Search no longer crash on a Mac.",
+        "Android: unsubscribing asks first and removes all of the podcast's files, and notification permission is only requested when it's needed."
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2026-07-28",
       "status": null,

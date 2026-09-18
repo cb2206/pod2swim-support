@@ -56,6 +56,17 @@
   "changelogH": "Novità",
   "changelog": [
     {
+      "version": "1.4",
+      "date": "2026-09-17",
+      "status": null,
+      "entries": [
+        "Aggiungi podcast privati e a pagamento tramite il link del feed, ideale per i feed riservati agli abbonati. Se un feed richiede l'accesso, l'app ti chiede le credenziali, che restano al sicuro sul tuo dispositivo.",
+        "Download, elaborazione e trasferimenti sulle cuffie più affidabili, e niente più episodi doppi.",
+        "iOS: l'eliminazione automatica ora rimuove gli episodi esportati come previsto, l'app segue la dimensione del testo e funziona meglio con VoiceOver, e Impostazioni e Cerca non vanno più in crash su Mac.",
+        "Android: l'annullamento dell'iscrizione chiede conferma ed elimina tutti i file del podcast, e il permesso per le notifiche viene chiesto solo quando serve."
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2026-07-28",
       "status": null,

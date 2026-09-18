@@ -102,6 +102,62 @@ CHANGELOG_H = {
 
 CHANGELOG = [
     {
+        "version": "1.4",
+        # iOS 1.4 went live on the App Store 2026-09-17; the Android 1.4 draft
+        # was uploaded the same day and is rolled out from Play Console.
+        "date": "2026-09-17",
+        "entries": {
+            "en": [
+                "Add private and paid podcasts by their feed link — ideal for members-only feeds. Feeds that need a login ask for one; it's stored securely on your device.",
+                "More reliable downloads, processing and headset transfers, and no more duplicate episodes.",
+                "iOS: auto-delete now cleans up exported episodes on schedule, the app follows your text size and works better with VoiceOver, and Settings and Search no longer crash on a Mac.",
+                "Android: unsubscribing asks first and removes all of the podcast's files, and notification permission is only requested when it's needed.",
+            ],
+            "de": [
+                "Private und kostenpflichtige Podcasts per Feed-Link hinzufügen – ideal für Mitglieder-Feeds. Verlangt ein Feed eine Anmeldung, fragt die App danach; die Zugangsdaten bleiben sicher auf deinem Gerät.",
+                "Zuverlässigere Downloads, Verarbeitung und Übertragung auf den Kopfhörer – und keine doppelten Folgen mehr.",
+                "iOS: Das automatische Löschen räumt exportierte Folgen jetzt wie eingestellt auf, die App folgt deiner Textgröße und funktioniert besser mit VoiceOver, und auf dem Mac stürzen Einstellungen und Suche nicht mehr ab.",
+                "Android: „Abo beenden“ fragt erst nach und löscht alle Dateien des Podcasts; die Erlaubnis für Benachrichtigungen wird erst bei Bedarf angefragt.",
+            ],
+            "es": [
+                "Añade podcasts privados y de pago con el enlace de su feed, ideal para feeds exclusivos para miembros. Si un feed pide iniciar sesión, la app te lo pedirá; tus datos se guardan de forma segura en tu dispositivo.",
+                "Descargas, procesamiento y transferencias a los auriculares más fiables, y sin episodios duplicados.",
+                "iOS: el borrado automático ya elimina los episodios exportados según lo previsto, la app respeta tu tamaño de texto y funciona mejor con VoiceOver, y Ajustes y Buscar ya no se cierran en un Mac.",
+                "Android: cancelar una suscripción pide confirmación y borra todos los archivos del podcast, y el permiso de notificaciones solo se pide cuando hace falta.",
+            ],
+            "fr": [
+                "Ajoute des podcasts privés et payants grâce au lien de leur flux — idéal pour les flux réservés aux membres. Si un flux demande une connexion, l'app te la demande ; tes identifiants restent en sécurité sur ton appareil.",
+                "Téléchargements, traitement et transferts vers le casque plus fiables, et plus d'épisodes en double.",
+                "iOS : la suppression automatique efface désormais les épisodes exportés comme prévu, l'app suit ta taille de texte et fonctionne mieux avec VoiceOver, et les Réglages et la Recherche ne plantent plus sur Mac.",
+                "Android : la désinscription demande confirmation et supprime tous les fichiers du podcast, et l'autorisation des notifications n'est demandée qu'au besoin.",
+            ],
+            "it": [
+                "Aggiungi podcast privati e a pagamento tramite il link del feed, ideale per i feed riservati agli abbonati. Se un feed richiede l'accesso, l'app ti chiede le credenziali, che restano al sicuro sul tuo dispositivo.",
+                "Download, elaborazione e trasferimenti sulle cuffie più affidabili, e niente più episodi doppi.",
+                "iOS: l'eliminazione automatica ora rimuove gli episodi esportati come previsto, l'app segue la dimensione del testo e funziona meglio con VoiceOver, e Impostazioni e Cerca non vanno più in crash su Mac.",
+                "Android: l'annullamento dell'iscrizione chiede conferma ed elimina tutti i file del podcast, e il permesso per le notifiche viene chiesto solo quando serve.",
+            ],
+            "ja": [
+                "フィードのリンクから非公開・有料のポッドキャストを追加できるようになりました。会員限定のフィードに最適です。ログインが必要な場合は入力を求められ、ログイン情報はデバイス内に安全に保存されます。",
+                "ダウンロード、変換処理、ヘッドセットへの転送の信頼性が向上し、エピソードの重複もなくなりました。",
+                "iOS：自動削除で書き出し済みのエピソードが設定どおりに削除されるようになりました。文字サイズの設定に対応し、VoiceOverでも使いやすくなったほか、Macで「設定」と「検索」が終了する問題を修正しました。",
+                "Android：登録解除の前に確認し、そのポッドキャストのファイルをすべて削除します。通知の許可は、必要になった時点で求めるようになりました。",
+            ],
+            "pt-br": [
+                "Adicione podcasts privados e pagos pelo link do feed — ideal para feeds exclusivos para membros. Se um feed pedir login, o app vai solicitá-lo; seus dados ficam guardados com segurança no seu dispositivo.",
+                "Downloads, processamento e transferências para os fones mais confiáveis, e chega de episódios duplicados.",
+                "iOS: a exclusão automática agora apaga os episódios exportados como previsto, o app segue o tamanho de texto que você definiu e funciona melhor com o VoiceOver, e Ajustes e Buscar não travam mais no Mac.",
+                "Android: cancelar uma assinatura pede confirmação e remove todos os arquivos do podcast, e a permissão de notificações só é pedida quando necessária.",
+            ],
+            "zh-hans": [
+                "现在可以通过订阅源链接添加私密和付费播客——非常适合会员专属订阅源。需要登录的订阅源会提示你输入，登录信息安全地保存在你的设备上。",
+                "下载、处理和传输到耳机更加可靠，也不再出现重复单集。",
+                "iOS：自动删除现在会按设定删除已导出的单集；应用会遵循你的文字大小设置并更好地支持 VoiceOver；在 Mac 上“设置”和“搜索”不再崩溃。",
+                "Android：取消订阅前会先确认，并删除该播客的所有文件；通知权限仅在需要时才会请求。",
+            ],
+        },
+    },
+    {
         "version": "1.3",
         # Live on both stores: iOS 1.3 shipped 2026-07-23, the first Android
         # release went public 2026-07-28. One combined entry, dated when 1.3

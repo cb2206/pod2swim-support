@@ -56,6 +56,17 @@
   "changelogH": "Neuigkeiten",
   "changelog": [
     {
+      "version": "1.4",
+      "date": "2026-09-17",
+      "status": null,
+      "entries": [
+        "Private und kostenpflichtige Podcasts per Feed-Link hinzufügen – ideal für Mitglieder-Feeds. Verlangt ein Feed eine Anmeldung, fragt die App danach; die Zugangsdaten bleiben sicher auf deinem Gerät.",
+        "Zuverlässigere Downloads, Verarbeitung und Übertragung auf den Kopfhörer – und keine doppelten Folgen mehr.",
+        "iOS: Das automatische Löschen räumt exportierte Folgen jetzt wie eingestellt auf, die App folgt deiner Textgröße und funktioniert besser mit VoiceOver, und auf dem Mac stürzen Einstellungen und Suche nicht mehr ab.",
+        "Android: „Abo beenden“ fragt erst nach und löscht alle Dateien des Podcasts; die Erlaubnis für Benachrichtigungen wird erst bei Bedarf angefragt."
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2026-07-28",
       "status": null,

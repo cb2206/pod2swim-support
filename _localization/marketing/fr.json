@@ -56,6 +56,17 @@
   "changelogH": "Nouveautés",
   "changelog": [
     {
+      "version": "1.4",
+      "date": "2026-09-17",
+      "status": null,
+      "entries": [
+        "Ajoute des podcasts privés et payants grâce au lien de leur flux — idéal pour les flux réservés aux membres. Si un flux demande une connexion, l'app te la demande ; tes identifiants restent en sécurité sur ton appareil.",
+        "Téléchargements, traitement et transferts vers le casque plus fiables, et plus d'épisodes en double.",
+        "iOS : la suppression automatique efface désormais les épisodes exportés comme prévu, l'app suit ta taille de texte et fonctionne mieux avec VoiceOver, et les Réglages et la Recherche ne plantent plus sur Mac.",
+        "Android : la désinscription demande confirmation et supprime tous les fichiers du podcast, et l'autorisation des notifications n'est demandée qu'au besoin."
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2026-07-28",
       "status": null,

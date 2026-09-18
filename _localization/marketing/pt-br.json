@@ -56,6 +56,17 @@
   "changelogH": "Novidades",
   "changelog": [
     {
+      "version": "1.4",
+      "date": "2026-09-17",
+      "status": null,
+      "entries": [
+        "Adicione podcasts privados e pagos pelo link do feed — ideal para feeds exclusivos para membros. Se um feed pedir login, o app vai solicitá-lo; seus dados ficam guardados com segurança no seu dispositivo.",
+        "Downloads, processamento e transferências para os fones mais confiáveis, e chega de episódios duplicados.",
+        "iOS: a exclusão automática agora apaga os episódios exportados como previsto, o app segue o tamanho de texto que você definiu e funciona melhor com o VoiceOver, e Ajustes e Buscar não travam mais no Mac.",
+        "Android: cancelar uma assinatura pede confirmação e remove todos os arquivos do podcast, e a permissão de notificações só é pedida quando necessária."
+      ]
+    },
+    {
       "version": "1.3",
       "date": "2026-07-28",
       "status": null,
