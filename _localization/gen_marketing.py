@@ -102,6 +102,67 @@ CHANGELOG_H = {
 
 CHANGELOG = [
     {
+        "version": "1.4.1",
+        # iOS only — submitted 2026-10-19, in App Store review. Swap the status
+        # for "date": "<release day>" once it is live. (No Android release.)
+        "date": None,
+        "status": {
+            "en": "Coming soon", "de": "Demnächst", "es": "Muy pronto",
+            "fr": "Bientôt disponible", "it": "In arrivo", "ja": "近日公開",
+            "pt-br": "Em breve", "zh-hans": "即将推出",
+        },
+        "entries": {
+            "en": [
+                "iOS: made for iPhone Duo. Unfolded, Latest and your queue sit side by side, so a tapped + lands in the queue right before your eyes.",
+                "On iPhone Duo, Library shows your podcasts next to their episodes, and Queue shows what's already on your headset. The layout follows the fold.",
+                "After a transfer, the headset list updates on its own.",
+                "Fixes: the trial reminder no longer covers screen titles, and layouts work better with very large text.",
+            ],
+            "de": [
+                "iOS: gemacht für das iPhone Duo. Aufgeklappt stehen „Neueste“ und deine Warteschlange nebeneinander – ein Tipp auf + landet direkt sichtbar in der Warteschlange.",
+                "Auf dem iPhone Duo zeigt die Mediathek deine Podcasts neben ihren Folgen, und die Warteschlange zeigt, was schon auf deinem Kopfhörer ist. Die Ansicht folgt dem Falz.",
+                "Nach einer Übertragung aktualisiert sich die Kopfhörer-Liste von selbst.",
+                "Fehlerbehebungen: Der Hinweis zum Testzeitraum verdeckt keine Überschriften mehr, und bei sehr großer Schrift passt die Darstellung besser.",
+            ],
+            "es": [
+                "iOS: diseñada para el iPhone Duo. Desplegado, Recientes y tu cola aparecen lado a lado, así ves al instante cómo llega a la cola cada episodio que añades con +.",
+                "En el iPhone Duo, Biblioteca muestra tus podcasts junto a sus episodios, y Cola muestra lo que ya tienes en tus auriculares. La vista se adapta al pliegue.",
+                "Tras una transferencia, la lista de los auriculares se actualiza sola.",
+                "Correcciones: el aviso de la prueba ya no tapa los títulos y el diseño funciona mejor con textos muy grandes.",
+            ],
+            "fr": [
+                "iOS : conçue pour l'iPhone Duo. Déplié, Récents et ta file d'attente s'affichent côte à côte : chaque épisode ajouté avec + arrive sous tes yeux dans la file.",
+                "Sur iPhone Duo, Bibliothèque affiche tes podcasts à côté de leurs épisodes, et File d'attente montre ce qui est déjà sur ton casque. L'affichage suit le pli.",
+                "Après un transfert, la liste du casque se met à jour toute seule.",
+                "Corrections : le rappel de l'essai ne masque plus les titres, et la mise en page fonctionne mieux avec les très grandes tailles de texte.",
+            ],
+            "it": [
+                "iOS: pensata per iPhone Duo. Da aperto, Recenti e la tua coda stanno fianco a fianco: ogni episodio aggiunto con + compare subito nella coda.",
+                "Su iPhone Duo, Libreria mostra i tuoi podcast accanto ai loro episodi, e Coda mostra cosa c'è già sulle tue cuffie. La vista segue la piega.",
+                "Dopo un trasferimento, l'elenco delle cuffie si aggiorna da solo.",
+                "Correzioni: il promemoria della prova non copre più i titoli e il layout funziona meglio con testo molto grande.",
+            ],
+            "ja": [
+                "iOS：iPhone Duoに対応。開いた状態では「最新」とキューが横に並び、+ をタップしたエピソードがキューに追加される様子がすぐに見えます。",
+                "iPhone Duoでは、「ライブラリ」にポッドキャストとそのエピソードを並べて表示し、「キュー」ではヘッドセットに入っている内容も並べて表示します。画面は折り目に合わせて分かれます。",
+                "転送が終わると、ヘッドセットの一覧が自動で更新されます。",
+                "修正：無料体験のお知らせが画面のタイトルに重ならなくなり、文字サイズを大きくしたときのレイアウトも改善しました。",
+            ],
+            "pt-br": [
+                "iOS: feito para o iPhone Duo. Aberto, Recentes e sua fila ficam lado a lado, e cada episódio adicionado com + aparece na hora na fila.",
+                "No iPhone Duo, Biblioteca mostra seus podcasts ao lado dos episódios, e Fila mostra o que já está nos seus fones. O layout acompanha a dobra.",
+                "Depois de uma transferência, a lista dos fones se atualiza sozinha.",
+                "Correções: o aviso do período de teste não cobre mais os títulos, e o layout funciona melhor com textos muito grandes.",
+            ],
+            "zh-hans": [
+                "iOS：为 iPhone Duo 打造。展开时，“最新”和播放队列并排显示，轻点 + 添加的单集会立即出现在队列中。",
+                "在 iPhone Duo 上，“媒体库”将播客与其单集并排显示，“播放队列”旁边会显示耳机中已有的内容。布局随折叠变化。",
+                "传输完成后，耳机列表会自动更新。",
+                "修复：试用提醒不再遮挡页面标题，超大字号下的布局也更加合理。",
+            ],
+        },
+    },
+    {
         "version": "1.4",
         # iOS 1.4 went live on the App Store 2026-09-17; the Android 1.4 draft
         # was uploaded the same day and is rolled out from Play Console.

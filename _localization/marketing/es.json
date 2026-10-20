@@ -56,6 +56,17 @@
   "changelogH": "Novedades",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "Muy pronto",
+      "entries": [
+        "iOS: diseñada para el iPhone Duo. Desplegado, Recientes y tu cola aparecen lado a lado, así ves al instante cómo llega a la cola cada episodio que añades con +.",
+        "En el iPhone Duo, Biblioteca muestra tus podcasts junto a sus episodios, y Cola muestra lo que ya tienes en tus auriculares. La vista se adapta al pliegue.",
+        "Tras una transferencia, la lista de los auriculares se actualiza sola.",
+        "Correcciones: el aviso de la prueba ya no tapa los títulos y el diseño funciona mejor con textos muy grandes."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,

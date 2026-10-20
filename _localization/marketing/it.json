@@ -56,6 +56,17 @@
   "changelogH": "Novità",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "In arrivo",
+      "entries": [
+        "iOS: pensata per iPhone Duo. Da aperto, Recenti e la tua coda stanno fianco a fianco: ogni episodio aggiunto con + compare subito nella coda.",
+        "Su iPhone Duo, Libreria mostra i tuoi podcast accanto ai loro episodi, e Coda mostra cosa c'è già sulle tue cuffie. La vista segue la piega.",
+        "Dopo un trasferimento, l'elenco delle cuffie si aggiorna da solo.",
+        "Correzioni: il promemoria della prova non copre più i titoli e il layout funziona meglio con testo molto grande."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,

@@ -56,6 +56,17 @@
   "changelogH": "Novidades",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "Em breve",
+      "entries": [
+        "iOS: feito para o iPhone Duo. Aberto, Recentes e sua fila ficam lado a lado, e cada episódio adicionado com + aparece na hora na fila.",
+        "No iPhone Duo, Biblioteca mostra seus podcasts ao lado dos episódios, e Fila mostra o que já está nos seus fones. O layout acompanha a dobra.",
+        "Depois de uma transferência, a lista dos fones se atualiza sozinha.",
+        "Correções: o aviso do período de teste não cobre mais os títulos, e o layout funciona melhor com textos muito grandes."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,

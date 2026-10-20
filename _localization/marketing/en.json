@@ -56,6 +56,17 @@
   "changelogH": "What's new",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "Coming soon",
+      "entries": [
+        "iOS: made for iPhone Duo. Unfolded, Latest and your queue sit side by side, so a tapped + lands in the queue right before your eyes.",
+        "On iPhone Duo, Library shows your podcasts next to their episodes, and Queue shows what's already on your headset. The layout follows the fold.",
+        "After a transfer, the headset list updates on its own.",
+        "Fixes: the trial reminder no longer covers screen titles, and layouts work better with very large text."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,

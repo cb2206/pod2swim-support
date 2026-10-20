@@ -56,6 +56,17 @@
   "changelogH": "Nouveautés",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "Bientôt disponible",
+      "entries": [
+        "iOS : conçue pour l'iPhone Duo. Déplié, Récents et ta file d'attente s'affichent côte à côte : chaque épisode ajouté avec + arrive sous tes yeux dans la file.",
+        "Sur iPhone Duo, Bibliothèque affiche tes podcasts à côté de leurs épisodes, et File d'attente montre ce qui est déjà sur ton casque. L'affichage suit le pli.",
+        "Après un transfert, la liste du casque se met à jour toute seule.",
+        "Corrections : le rappel de l'essai ne masque plus les titres, et la mise en page fonctionne mieux avec les très grandes tailles de texte."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,

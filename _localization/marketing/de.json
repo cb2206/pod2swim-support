@@ -56,6 +56,17 @@
   "changelogH": "Neuigkeiten",
   "changelog": [
     {
+      "version": "1.4.1",
+      "date": null,
+      "status": "Demnächst",
+      "entries": [
+        "iOS: gemacht für das iPhone Duo. Aufgeklappt stehen „Neueste“ und deine Warteschlange nebeneinander – ein Tipp auf + landet direkt sichtbar in der Warteschlange.",
+        "Auf dem iPhone Duo zeigt die Mediathek deine Podcasts neben ihren Folgen, und die Warteschlange zeigt, was schon auf deinem Kopfhörer ist. Die Ansicht folgt dem Falz.",
+        "Nach einer Übertragung aktualisiert sich die Kopfhörer-Liste von selbst.",
+        "Fehlerbehebungen: Der Hinweis zum Testzeitraum verdeckt keine Überschriften mehr, und bei sehr großer Schrift passt die Darstellung besser."
+      ]
+    },
+    {
       "version": "1.4",
       "date": "2026-09-17",
       "status": null,
