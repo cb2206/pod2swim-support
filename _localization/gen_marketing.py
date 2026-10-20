@@ -103,14 +103,9 @@ CHANGELOG_H = {
 CHANGELOG = [
     {
         "version": "1.4.1",
-        # iOS only — submitted 2026-10-19, in App Store review. Swap the status
-        # for "date": "<release day>" once it is live. (No Android release.)
-        "date": None,
-        "status": {
-            "en": "Coming soon", "de": "Demnächst", "es": "Muy pronto",
-            "fr": "Bientôt disponible", "it": "In arrivo", "ja": "近日公開",
-            "pt-br": "Em breve", "zh-hans": "即将推出",
-        },
+        # iOS only — went live on the App Store 2026-10-20 (released on
+        # approval). No Android release.
+        "date": "2026-10-20",
         "entries": {
             "en": [
                 "iOS: made for iPhone Duo. Unfolded, Latest and your queue sit side by side, so a tapped + lands in the queue right before your eyes.",

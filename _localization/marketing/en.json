@@ -57,8 +57,8 @@
   "changelog": [
     {
       "version": "1.4.1",
-      "date": null,
-      "status": "Coming soon",
+      "date": "2026-10-20",
+      "status": null,
       "entries": [
         "iOS: made for iPhone Duo. Unfolded, Latest and your queue sit side by side, so a tapped + lands in the queue right before your eyes.",
         "On iPhone Duo, Library shows your podcasts next to their episodes, and Queue shows what's already on your headset. The layout follows the fold.",
